@@ -1,0 +1,16 @@
+SHUFFLE Enabled
+Election type: OPL
+Election was ran on: Sun May 01 16:58:08 2022
+
+Election Results:
+Type: OPL
+Number of Candidates: 5
+Number of Seats: 2
+Number of Ballots: 100000
+Calculated Droop Quota: 50000
+Candidates: Rosen/D,Susan/D,Kleinberg/R,Himmelberg/R,Chou/I
+ | Parties |  | Votes |  | Seats |  | Remainder |  | Seats |  | Final Seats |  | %vote/%seats |   
+ |       R |  | 40187 |  |     0 |  |     40187 |  |     1 |  |           1 |  |    40% / 50% |   
+ |       D |  | 39842 |  |     0 |  |     39842 |  |     1 |  |           1 |  |    39% / 50% |   
+ |       I |  | 19971 |  |     0 |  |     19971 |  |     0 |  |           0 |  |     19% / 0% |   
+--- END OF AUDIT FILE ---

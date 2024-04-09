@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_config_8h" xml:lang="en-US">
+<title>helpers/config.h File Reference</title>
+<indexterm><primary>helpers/config.h</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_config_8h_1a7eaa04366167815aabce5f711f4c1c4d">SHUFFLE</link></para>
+
+<para>Configuration file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_config_8h_1a7eaa04366167815aabce5f711f4c1c4d"/><section>
+    <title>SHUFFLE</title>
+<indexterm><primary>SHUFFLE</primary><secondary>config.h</secondary></indexterm>
+<indexterm><primary>config.h</primary><secondary>SHUFFLE</secondary></indexterm>
+<para><computeroutput>bool SHUFFLE<computeroutput>[extern]</computeroutput></computeroutput></para><para>
+
+<para>Configuration file. </para>
+</para>
+
+<para>stores global shuffle boolean </para>
+<para>
+Definition at line <link linkend="__main_8cpp_source_1l00017">17</link> of file <link linkend="__main_8cpp_source">Main.cpp</link>.</para>
+</section>
+</section>
+</section>

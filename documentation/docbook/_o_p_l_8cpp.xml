@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_p_l_8cpp" xml:lang="en-US">
+<title>OPL.cpp File Reference</title>
+<indexterm><primary>OPL.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;OPL.h&quot;
+#include &lt;stdexcept&gt;
+#include &lt;fstream&gt;
+#include &lt;algorithm&gt;
+#include &lt;ctime&gt;
+#include &lt;sstream&gt;
+#include &lt;stdio.h&gt;
+#include &lt;iomanip&gt;
+#include &quot;helpers/colors.h&quot;
+#include &quot;helpers/config.h&quot;
+</programlisting></section>

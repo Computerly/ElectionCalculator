@@ -1,0 +1,325 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_party" xml:lang="en-US">
+<title>Party Class Reference</title>
+<indexterm><primary>Party</primary></indexterm>
+<para>
+
+<para>Represents a <link linkend="_class_party">Party</link> in election. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Party.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_party_1aa13b1e291513fa8d07037ac7c951462f">Party</link> (std::string partyName)</para>
+
+<para>Construct a new <link linkend="_class_party">Party</link> object. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_party_1a811267ac4e72134c41aedbbc7294ac14">getNumVotes</link> ()</para>
+
+<para>Gets the total number of votes for the party by summing all the candidate&apos;s votes. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_party_1ab932eef76367372050d26d862e05db20">getNumSeats</link> ()</para>
+
+<para>Gets the number of seats allocated to the party. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_party_1ad14b136bbc9fc8f330e695e8dc45d35a">getRemainder</link> ()</para>
+
+<para>Gets the remainder of the number of votes for a party divided by the quota (for <link linkend="_class_o_p_l">OPL</link>) </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_party_1a6b94f18eb753e0ecaac6bd8a39c762b7">getHistory</link> (int n)</para>
+
+<para>Gets the number of votes at a point in time. </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_party_1a293a3b078fea59f28a96a82cfec2af8b">getPartyName</link> ()</para>
+
+<para>Gets the party&apos;s name (e.g. Democrat, Republican, etc.) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_party_1a7d33d2aa3635b5cf7eab8856c351f550">incrementVotes</link> (int n=1)</para>
+
+<para>Increments the numVotes variable for the party by the parameter n. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_party_1aff037af5b049bd74a5c7bdf63214ada0">incrementSeats</link> (int n=1)</para>
+
+<para>Increments the nSeats variable for the party by the parameter n. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_party_1ab4cb9e0cfee3df9e472597a2fb72faa2">setRemainder</link> (int n)</para>
+
+<para>Sets the remainder to the input value n. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_party_1ae44aaa5f6272074b39afd7ab88c0d996">log</link> (int n)</para>
+
+<para>Adds n to logs . </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents a <link linkend="_class_party">Party</link> in election. </para>
+<para>
+Definition at line <link linkend="__party_8h_source_1l00014">14</link> of file <link linkend="__party_8h_source">Party.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_party_1aa13b1e291513fa8d07037ac7c951462f"/><section>
+    <title>Party()</title>
+<indexterm><primary>Party</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>Party</secondary></indexterm>
+<para><computeroutput>Party::Party (std::string partyName)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_party">Party</link> object. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name is the name of the party </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00005">5</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_party_1a6b94f18eb753e0ecaac6bd8a39c762b7"/><section>
+    <title>getHistory()</title>
+<indexterm><primary>getHistory</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>getHistory</secondary></indexterm>
+<para><computeroutput>int Party::getHistory (int n)</computeroutput></para><para>
+
+<para>Gets the number of votes at a point in time. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>number of _ at point of time (either vote count or delta vote count) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00014">14</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1ab932eef76367372050d26d862e05db20"/><section>
+    <title>getNumSeats()</title>
+<indexterm><primary>getNumSeats</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>getNumSeats</secondary></indexterm>
+<para><computeroutput>int Party::getNumSeats ( )</computeroutput></para><para>
+
+<para>Gets the number of seats allocated to the party. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int (the number of seats) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00018">18</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1a811267ac4e72134c41aedbbc7294ac14"/><section>
+    <title>getNumVotes()</title>
+<indexterm><primary>getNumVotes</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>getNumVotes</secondary></indexterm>
+<para><computeroutput>int Party::getNumVotes ( )</computeroutput></para><para>
+
+<para>Gets the total number of votes for the party by summing all the candidate&apos;s votes. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int (the total number of votes for the party) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00012">12</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1a293a3b078fea59f28a96a82cfec2af8b"/><section>
+    <title>getPartyName()</title>
+<indexterm><primary>getPartyName</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>getPartyName</secondary></indexterm>
+<para><computeroutput>std::string Party::getPartyName ( )</computeroutput></para><para>
+
+<para>Gets the party&apos;s name (e.g. Democrat, Republican, etc.) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string (the party name) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00016">16</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1ad14b136bbc9fc8f330e695e8dc45d35a"/><section>
+    <title>getRemainder()</title>
+<indexterm><primary>getRemainder</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>getRemainder</secondary></indexterm>
+<para><computeroutput>int Party::getRemainder ( )</computeroutput></para><para>
+
+<para>Gets the remainder of the number of votes for a party divided by the quota (for <link linkend="_class_o_p_l">OPL</link>) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int (the remainder) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00020">20</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1aff037af5b049bd74a5c7bdf63214ada0"/><section>
+    <title>incrementSeats()</title>
+<indexterm><primary>incrementSeats</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>incrementSeats</secondary></indexterm>
+<para><computeroutput>void Party::incrementSeats (int n = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+
+<para>Increments the nSeats variable for the party by the parameter n. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Increment</entry><entry>
+<para>numSeats by n (optional, default 1) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00026">26</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1a7d33d2aa3635b5cf7eab8856c351f550"/><section>
+    <title>incrementVotes()</title>
+<indexterm><primary>incrementVotes</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>incrementVotes</secondary></indexterm>
+<para><computeroutput>void Party::incrementVotes (int n = <computeroutput>1</computeroutput>
+)</computeroutput></para><para>
+
+<para>Increments the numVotes variable for the party by the parameter n. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Increment</entry><entry>
+<para>numVotes by n (optional, default 1) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00024">24</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1ae44aaa5f6272074b39afd7ab88c0d996"/><section>
+    <title>log()</title>
+<indexterm><primary>log</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>log</secondary></indexterm>
+<para><computeroutput>void Party::log (int n)</computeroutput></para><para>
+
+<para>Adds n to logs . </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Number</entry><entry>
+<para>to be pushed back on logs. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00028">28</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_party_1ab4cb9e0cfee3df9e472597a2fb72faa2"/><section>
+    <title>setRemainder()</title>
+<indexterm><primary>setRemainder</primary><secondary>Party</secondary></indexterm>
+<indexterm><primary>Party</primary><secondary>setRemainder</secondary></indexterm>
+<para><computeroutput>void Party::setRemainder (int n)</computeroutput></para><para>
+
+<para>Sets the remainder to the input value n. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>Sets</entry><entry>
+<para>the remainder to n. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__party_8cpp_source_1l00022">22</link> of file <link linkend="__party_8cpp_source">Party.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__party_8h">Party.h</link><link linkend="__party_8cpp">Party.cpp</link></section>
+</section>

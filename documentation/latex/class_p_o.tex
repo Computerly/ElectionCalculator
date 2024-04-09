@@ -1,0 +1,228 @@
+\hypertarget{class_p_o}{}\doxysection{PO Class Reference}
+\label{class_p_o}\index{PO@{PO}}
+
+
+Represents an \mbox{\hyperlink{class_i_r_v}{IRV}} (Instant Runoff Voting) election.  
+
+
+
+
+{\ttfamily \#include $<$PO.\+h$>$}
+
+Inheritance diagram for PO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_p_o}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_p_o_a6b0d93e78bd6fb62a90faa710fa7104d}{PO}} (vector$<$ string $>$ \+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_p_o}{PO}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_p_o_a72014c8c461b68470955dd0984bc1eec}{$\sim$\+PO}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV\+::\+IRV}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_aad1ca29b89c0515ff34459b6cdc3ab0b}{run\+Election}} ()
+\begin{DoxyCompactList}\small\item\em Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_afb780451687085bcc78ac106e7e27b4f}{run\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}{display\+Results}} (bool do\+Colors=0)
+\begin{DoxyCompactList}\small\item\em Method to display the \mbox{\hyperlink{class_p_o}{PO}} election results to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_ac994e74935bcad8df1db591b5bda35c2}{write\+To\+Audit}} (string s=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Method to write the election progression to an audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_ac1b64bb0e8d3806ee868e7ef2470578f}{digest}} (string buff)
+\begin{DoxyCompactList}\small\item\em Parses the election file and updates candidate\textquotesingle{}s votes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_a18a1823c5de1ac5918b0f955412afacd}{process\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Method to store headers(strings) into their respective variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_p_o_a3876aa6a9712fc8d8236a7488ae733f9}{confirm\+Headers\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Confirms everything processed thus far, appears correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an \mbox{\hyperlink{class_i_r_v}{IRV}} (Instant Runoff Voting) election. 
+
+Implements \mbox{\hyperlink{class_election}{Election}} 
+
+Definition at line \mbox{\hyperlink{_p_o_8h_source_l00017}{17}} of file \mbox{\hyperlink{_p_o_8h_source}{PO.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_p_o_a6b0d93e78bd6fb62a90faa710fa7104d}\label{class_p_o_a6b0d93e78bd6fb62a90faa710fa7104d}} 
+\index{PO@{PO}!PO@{PO}}
+\index{PO@{PO}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{PO()}{PO()}}
+{\footnotesize\ttfamily PO\+::\+PO (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_p_o}{PO}} object. 
+
+Initializes and confirms election
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::vector$<$std\+::string$>$} & \+\_\+file\+\_\+name. A vector of all files to run \mbox{\hyperlink{class_i_r_v}{IRV}} the election. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_a72014c8c461b68470955dd0984bc1eec}\label{class_p_o_a72014c8c461b68470955dd0984bc1eec}} 
+\index{PO@{PO}!````~PO@{$\sim$PO}}
+\index{````~PO@{$\sim$PO}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{$\sim$PO()}{~PO()}}
+{\footnotesize\ttfamily PO\+::$\sim$\+PO (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV\+::\+IRV}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_p_o_a3876aa6a9712fc8d8236a7488ae733f9}\label{class_p_o_a3876aa6a9712fc8d8236a7488ae733f9}} 
+\index{PO@{PO}!confirmHeadersDisplay@{confirmHeadersDisplay}}
+\index{confirmHeadersDisplay@{confirmHeadersDisplay}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{confirmHeadersDisplay()}{confirmHeadersDisplay()}}
+{\footnotesize\ttfamily void PO\+::confirm\+Headers\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Confirms everything processed thus far, appears correctly. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a0019d751dfca855ee50b7800884450fb}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_ac1b64bb0e8d3806ee868e7ef2470578f}\label{class_p_o_ac1b64bb0e8d3806ee868e7ef2470578f}} 
+\index{PO@{PO}!digest@{digest}}
+\index{digest@{digest}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{digest()}{digest()}}
+{\footnotesize\ttfamily void PO\+::digest (\begin{DoxyParamCaption}\item[{string}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Parses the election file and updates candidate\textquotesingle{}s votes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string,a} & line from the election file representing a ballot, where a \char`\"{}1\char`\"{} represents the voter\textquotesingle{}s vote. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_aaaf320a6c7863b363f34bd47320b68ef}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00140}{140}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}\label{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}} 
+\index{PO@{PO}!displayResults@{displayResults}}
+\index{displayResults@{displayResults}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{displayResults()}{displayResults()}}
+{\footnotesize\ttfamily void PO\+::display\+Results (\begin{DoxyParamCaption}\item[{bool}]{do\+Colors = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to display the \mbox{\hyperlink{class_p_o}{PO}} election results to the screen. 
+
+\begin{DoxyNote}{Note}
+Includes the election information as well
+\end{DoxyNote}
+@params bool do\+Colors (see \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election\+::display\+Results()}} for more) 
+
+Implements \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_a18a1823c5de1ac5918b0f955412afacd}\label{class_p_o_a18a1823c5de1ac5918b0f955412afacd}} 
+\index{PO@{PO}!processHeaders@{processHeaders}}
+\index{processHeaders@{processHeaders}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{processHeaders()}{processHeaders()}}
+{\footnotesize\ttfamily void PO\+::process\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to store headers(strings) into their respective variables. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a9f2a807ba12358daa9d2ed94946748de}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00169}{169}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_aad1ca29b89c0515ff34459b6cdc3ab0b}\label{class_p_o_aad1ca29b89c0515ff34459b6cdc3ab0b}} 
+\index{PO@{PO}!runElection@{runElection}}
+\index{runElection@{runElection}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{runElection()}{runElection()}}
+{\footnotesize\ttfamily void PO\+::run\+Election (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. 
+
+Calls methods stratigically to compute election results 
+
+Implements \mbox{\hyperlink{class_election_a1d84fd2f5cd7b14b2e9a729e7804286f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_afb780451687085bcc78ac106e7e27b4f}\label{class_p_o_afb780451687085bcc78ac106e7e27b4f}} 
+\index{PO@{PO}!runOff@{runOff}}
+\index{runOff@{runOff}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{runOff()}{runOff()}}
+{\footnotesize\ttfamily void PO\+::run\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. 
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00132}{132}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+\mbox{\Hypertarget{class_p_o_ac994e74935bcad8df1db591b5bda35c2}\label{class_p_o_ac994e74935bcad8df1db591b5bda35c2}} 
+\index{PO@{PO}!writeToAudit@{writeToAudit}}
+\index{writeToAudit@{writeToAudit}!PO@{PO}}
+\doxysubsubsection{\texorpdfstring{writeToAudit()}{writeToAudit()}}
+{\footnotesize\ttfamily void PO\+::write\+To\+Audit (\begin{DoxyParamCaption}\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to write the election progression to an audit file. 
+
+Writes each line from audits vector to file
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & s is the file name of the to-\/be-\/generated audit file \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_a82e0c840e14b8b54cb40eef54dd29f1f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_p_o_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{_p_o_8cpp_source}{PO.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_p_o_8h}{PO.\+h}}\item 
+\mbox{\hyperlink{_p_o_8cpp}{PO.\+cpp}}\end{DoxyCompactItemize}

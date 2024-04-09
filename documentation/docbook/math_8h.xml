@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_math_8h" xml:lang="en-US">
+<title>helpers/math.h File Reference</title>
+<indexterm><primary>helpers/math.h</primary></indexterm>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_math_8h_1a819d456075bb2b4b250844103b3cae8d">pow10</link> [10]</para>
+
+<para>Power lut. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_math_8h_1a819d456075bb2b4b250844103b3cae8d"/><section>
+    <title>pow10</title>
+<indexterm><primary>pow10</primary><secondary>math.h</secondary></indexterm>
+<indexterm><primary>math.h</primary><secondary>pow10</secondary></indexterm>
+<para><computeroutput>int pow10[10]</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">=&#32;{
+&#32;&#32;&#32;&#32;1,&#32;10,&#32;100,&#32;1000,&#32;10000,&#32;
+&#32;&#32;&#32;&#32;100000,&#32;1000000,&#32;10000000,&#32;100000000,&#32;1000000000
+}
+</programlisting><para>
+
+<para>Power lut. </para>
+</para>
+<para>
+Definition at line <link linkend="_math_8h_source_1l00029">29</link> of file <link linkend="_math_8h_source">math.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_config_8h_source" xml:lang="en-US">
+<title>config.h</title>
+<indexterm><primary>helpers/config.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_config_8h_source_1l00001"/>00001 
+<anchor xml:id="_config_8h_source_1l00007"/>00007 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_config_8h_1a7eaa04366167815aabce5f711f4c1c4d">SHUFFLE</link>;
+</programlisting></section>

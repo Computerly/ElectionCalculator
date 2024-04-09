@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__p_o_8h_source" xml:lang="en-US">
+<title>PO.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__p_o_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;PO_H</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;PO_H</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00003"/>00003 
+<anchor xml:id="__p_o_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__election_8h">Election.h</link>&quot;</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00008"/>00008 
+<anchor xml:id="__p_o_8h_source_1l00009"/>00009 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__p_o_8h_source_1l00010"/>00010 
+<anchor xml:id="__p_o_8h_source_1l00017"/><link linkend="_class_p_o">00017</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_p_o">PO</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_election">Election</link>{
+<anchor xml:id="__p_o_8h_source_1l00018"/>00018 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__p_o_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Constructor&#32;and&#32;Destructor&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;
+<anchor xml:id="__p_o_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<link linkend="_class_p_o_1a6b0d93e78bd6fb62a90faa710fa7104d">PO</link>(vector&lt;string&gt;&#32;_file_name);
+<anchor xml:id="__p_o_8h_source_1l00031"/>00031 
+<anchor xml:id="__p_o_8h_source_1l00036"/><link linkend="_class_p_o_1a72014c8c461b68470955dd0984bc1eec">00036</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_p_o_1a72014c8c461b68470955dd0984bc1eec">~PO</link>();
+<anchor xml:id="__p_o_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;
+<anchor xml:id="__p_o_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Other&#32;Methods&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__p_o_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;
+<anchor xml:id="__p_o_8h_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1aad1ca29b89c0515ff34459b6cdc3ab0b">runElection</link>();
+<anchor xml:id="__p_o_8h_source_1l00049"/>00049 
+<anchor xml:id="__p_o_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1afb780451687085bcc78ac106e7e27b4f">runOff</link>();
+<anchor xml:id="__p_o_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;
+<anchor xml:id="__p_o_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1adaa1725adb8ab847e9f1f6569db9a91a">displayResults</link>(<emphasis role="keywordtype">bool</emphasis>&#32;doColors&#32;=&#32;0);
+<anchor xml:id="__p_o_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;
+<anchor xml:id="__p_o_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1ac994e74935bcad8df1db591b5bda35c2">writeToAudit</link>(<emphasis role="keywordtype">string</emphasis>&#32;s&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__p_o_8h_source_1l00073"/>00073 
+<anchor xml:id="__p_o_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1ac1b64bb0e8d3806ee868e7ef2470578f">digest</link>(<emphasis role="keywordtype">string</emphasis>&#32;buff);
+<anchor xml:id="__p_o_8h_source_1l00081"/>00081 
+<anchor xml:id="__p_o_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1a18a1823c5de1ac5918b0f955412afacd">processHeaders</link>();
+<anchor xml:id="__p_o_8h_source_1l00087"/>00087 
+<anchor xml:id="__p_o_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_p_o_1a3876aa6a9712fc8d8236a7488ae733f9">confirmHeadersDisplay</link>();
+<anchor xml:id="__p_o_8h_source_1l00093"/>00093 };
+<anchor xml:id="__p_o_8h_source_1l00094"/>00094 
+<anchor xml:id="__p_o_8h_source_1l00095"/>00095 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

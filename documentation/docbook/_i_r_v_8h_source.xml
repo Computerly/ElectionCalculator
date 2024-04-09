@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_r_v_8h_source" xml:lang="en-US">
+<title>IRV.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__i_r_v_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;IRV_H</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;IRV_H</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00006"/>00006 
+<anchor xml:id="__i_r_v_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__candidate_8h">Candidate.h</link>&quot;</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__election_8h">Election.h</link>&quot;</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00009"/>00009 
+<anchor xml:id="__i_r_v_8h_source_1l00017"/>00017 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__i_r_v_8h_source_1l00018"/>00018 
+<anchor xml:id="__i_r_v_8h_source_1l00019"/><link linkend="_class_i_r_v">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_i_r_v">IRV</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_election">Election</link>{
+<anchor xml:id="__i_r_v_8h_source_1l00020"/>00020 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__i_r_v_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Constructor&#32;and&#32;Destructor&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00024"/>00024 
+<anchor xml:id="__i_r_v_8h_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV</link>(vector&lt;string&gt;&#32;_file_name);
+<anchor xml:id="__i_r_v_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;
+<anchor xml:id="__i_r_v_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_i_r_v_1a09a459a75055282e8d17ce307cfe653e">~IRV</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00039"/>00039 
+<anchor xml:id="__i_r_v_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Other&#32;Methods&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;
+<anchor xml:id="__i_r_v_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a04ae8c5e99fce4eb302221f850904de5">runElection</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;
+<anchor xml:id="__i_r_v_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a2f64e517f315a0510f16920af733c865">writeToAudit</link>(<emphasis role="keywordtype">string</emphasis>&#32;s&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__i_r_v_8h_source_1l00060"/>00060 
+<anchor xml:id="__i_r_v_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1aae6a20a766c9e6e2492b2069b4fb5248">addAuditLine</link>(<emphasis role="keywordtype">string</emphasis>&#32;s);
+<anchor xml:id="__i_r_v_8h_source_1l00069"/>00069 
+<anchor xml:id="__i_r_v_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a9edf85c29fad64404c8d0e42bee903ff">displayResults</link>(<emphasis role="keywordtype">bool</emphasis>&#32;doColors&#32;=&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__i_r_v_8h_source_1l00078"/>00078 
+<anchor xml:id="__i_r_v_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a04e425b6602f4e390b12a260ff588b38">digest</link>(<emphasis role="keywordtype">string</emphasis>&#32;buff);
+<anchor xml:id="__i_r_v_8h_source_1l00107"/>00107 
+<anchor xml:id="__i_r_v_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a231d64cf7feb73a1436650dead9cd545">runOff</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00113"/>00113 
+<anchor xml:id="__i_r_v_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a8cd20dbf4211087d3e5a0f962a8d9fae">invalidateBallot</link>(<emphasis role="keywordtype">string</emphasis>&#32;ballot);
+<anchor xml:id="__i_r_v_8h_source_1l00124"/>00124 
+<anchor xml:id="__i_r_v_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1ae4f0feda005a48723ad7368611bff74e">writeInvalidBallots</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00133"/>00133 
+<anchor xml:id="__i_r_v_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a3ed58707bc287c3f39ceb3c9b706bad1">processHeaders</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00139"/>00139 
+<anchor xml:id="__i_r_v_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1ab5dabb07b08c1ecbe24a3082365eb3ec">confirmHeadersDisplay</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00145"/>00145 
+<anchor xml:id="__i_r_v_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Helpers&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__i_r_v_8h_source_1l00149"/>00149 
+<anchor xml:id="__i_r_v_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a5c291d6c4b5b8c1e9ce0f1c763de7c1e">handleWin</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00156"/>00156 
+<anchor xml:id="__i_r_v_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_i_r_v_1a2f710125e74170809d38a0caaabf59fa">logCandidates</link>();
+<anchor xml:id="__i_r_v_8h_source_1l00163"/>00163 
+<anchor xml:id="__i_r_v_8h_source_1l00164"/>00164 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__i_r_v_8h_source_1l00169"/>00169 &#32;&#32;&#32;&#32;vector&lt;int&gt;&#32;vBallotArray;
+<anchor xml:id="__i_r_v_8h_source_1l00170"/>00170 
+<anchor xml:id="__i_r_v_8h_source_1l00175"/>00175 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;audits;
+<anchor xml:id="__i_r_v_8h_source_1l00176"/>00176 
+<anchor xml:id="__i_r_v_8h_source_1l00181"/>00181 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;invalidBallots;
+<anchor xml:id="__i_r_v_8h_source_1l00182"/>00182 };
+<anchor xml:id="__i_r_v_8h_source_1l00183"/>00183 
+<anchor xml:id="__i_r_v_8h_source_1l00184"/>00184 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

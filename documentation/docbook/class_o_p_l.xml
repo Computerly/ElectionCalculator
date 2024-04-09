@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_o_p_l" xml:lang="en-US">
+<title>OPL Class Reference</title>
+<indexterm><primary>OPL</primary></indexterm>
+<para>
+
+<para>Represents an <link linkend="_class_o_p_l">OPL</link> (Open <link linkend="_class_party">Party</link> Listing) election. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;OPL.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for OPL:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_o_p_l.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">OPL</link> (vector&lt; string &gt; _file_name)</para>
+
+<para>Construct a new <link linkend="_class_o_p_l">OPL</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_o_p_l_1a22c35b5bf51f6b8f8451a48fcc1f88ba">~OPL</link> ()</para>
+
+<para>Destroy the <link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">OPL::OPL</link> object. </para>
+</listitem>
+            <listitem><para>int <link linkend="_class_o_p_l_1a77cc401b4c3f4ac76a777ec3181a4a64">getNumParties</link> ()</para>
+
+<para>Gets the number of parties participating in the election. </para>
+</listitem>
+            <listitem><para>vector&lt; <link linkend="_class_party">Party</link> &gt; &amp; <link linkend="_class_o_p_l_1a266e693fb56998fc47931a0081d90aba">getParties</link> ()</para>
+
+<para>Gets the vector of the parties participating in the election. </para>
+</listitem>
+            <listitem><para><link linkend="_class_party">Party</link> * <link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">getParty</link> (string p)</para>
+
+<para>Gets a pointer to a <link linkend="_class_party">Party</link> object with <link linkend="_class_party">Party</link>&apos;s name matching string p. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363">addParty</link> (string p)</para>
+
+<para>Uniquely adds a <link linkend="_class_party">Party</link> object with name p. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1aedd9d37949a496c00e0cbe2746833699">runElection</link> ()</para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db">runOff</link> ()</para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">displayResults</link> (bool doColors=true)</para>
+
+<para>Method to display the <link linkend="_class_i_r_v">IRV</link> election results to the screen. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7">writeToAudit</link> (string s=&quot;&quot;)</para>
+
+<para>Method to write the election progression to an audit file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1ae85e2dd6e582337dc4ffec599516446a">addAuditLine</link> (string s)</para>
+
+<para>Adds line to audit file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1a5419c9d466da3dca3e51a616bda6c428">digest</link> (string buff)</para>
+
+<para>Parses the election file and updates candidate and party votes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47">processHeaders</link> ()</para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_o_p_l_1ace92dde13267db78dc93987743cdc2b0">confirmHeadersDisplay</link> ()</para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents an <link linkend="_class_o_p_l">OPL</link> (Open <link linkend="_class_party">Party</link> Listing) election. </para>
+
+
+
+<para>Implements <link linkend="_class_election">Election</link> </para>
+<para>
+Definition at line <link linkend="__o_p_l_8h_source_1l00021">21</link> of file <link linkend="__o_p_l_8h_source">OPL.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b"/><section>
+    <title>OPL()</title>
+<indexterm><primary>OPL</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>OPL</secondary></indexterm>
+<para><computeroutput>OPL::OPL (vector&lt; string &gt; _file_name)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_o_p_l">OPL</link> object. </para>
+</para>
+
+<para>Initializes and confirms election</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::vector&lt;std::string&gt;</entry><entry>
+<para>_file_name. A vector of all files to run <link linkend="_class_i_r_v">IRV</link> the election. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00015">15</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a22c35b5bf51f6b8f8451a48fcc1f88ba"/><section>
+    <title>~OPL()</title>
+<indexterm><primary>~OPL</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>~OPL</secondary></indexterm>
+<para><computeroutput>OPL::~OPL ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destroy the <link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">OPL::OPL</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_o_p_l_1ae85e2dd6e582337dc4ffec599516446a"/><section>
+    <title>addAuditLine()</title>
+<indexterm><primary>addAuditLine</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>addAuditLine</secondary></indexterm>
+<para><computeroutput>void OPL::addAuditLine (string s)</computeroutput></para><para>
+
+<para>Adds line to audit file. </para>
+</para>
+
+<para>Adds a string to a vector of strings to be added to an audit file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para>String to be added to the audit file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363"/><section>
+    <title>addParty()</title>
+<indexterm><primary>addParty</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>addParty</secondary></indexterm>
+<para><computeroutput>void OPL::addParty (string p)</computeroutput></para><para>
+
+<para>Uniquely adds a <link linkend="_class_party">Party</link> object with name p. </para>
+</para>
+
+<para>Creates and adds a new <link linkend="_class_party">Party</link> object with name p to the vector of parties. 
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name of party </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00241">241</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1ace92dde13267db78dc93987743cdc2b0"/><section>
+    <title>confirmHeadersDisplay()</title>
+<indexterm><primary>confirmHeadersDisplay</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>confirmHeadersDisplay</secondary></indexterm>
+<para><computeroutput>void OPL::confirmHeadersDisplay ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a0019d751dfca855ee50b7800884450fb">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00256">256</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a5419c9d466da3dca3e51a616bda6c428"/><section>
+    <title>digest()</title>
+<indexterm><primary>digest</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>digest</secondary></indexterm>
+<para><computeroutput>void OPL::digest (string buff)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Parses the election file and updates candidate and party votes. </para>
+</para>
+
+<para>Parses who was voted for, then updates the candidates votes count, then finds the candidate&apos;s party and updates the party&apos;s total votes as well.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string, a</entry><entry>
+<para>line from the election file representing a ballot, where a &quot;1&quot; represents the voter&apos;s vote </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1aaaf320a6c7863b363f34bd47320b68ef">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00167">167</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548"/><section>
+    <title>displayResults()</title>
+<indexterm><primary>displayResults</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>displayResults</secondary></indexterm>
+<para><computeroutput>void OPL::displayResults (bool doColors = <computeroutput>true</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to display the <link linkend="_class_i_r_v">IRV</link> election results to the screen. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Includes the election information as well</para>
+</note>
+@params bool doColors (see <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election::displayResults()</link> for more) </para>
+<para>
+Implements <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00115">115</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a77cc401b4c3f4ac76a777ec3181a4a64"/><section>
+    <title>getNumParties()</title>
+<indexterm><primary>getNumParties</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>getNumParties</secondary></indexterm>
+<para><computeroutput>int OPL::getNumParties ( )</computeroutput></para><para>
+
+<para>Gets the number of parties participating in the election. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int representing the number of parties in the election </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a266e693fb56998fc47931a0081d90aba"/><section>
+    <title>getParties()</title>
+<indexterm><primary>getParties</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>getParties</secondary></indexterm>
+<para><computeroutput>vector&lt; <link linkend="_class_party">Party</link> &gt; &amp; OPL::getParties ( )</computeroutput></para><para>
+
+<para>Gets the vector of the parties participating in the election. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::vector&lt;Party&gt; reference to the vector of parties </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0"/><section>
+    <title>getParty()</title>
+<indexterm><primary>getParty</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>getParty</secondary></indexterm>
+<para><computeroutput><link linkend="_class_party">Party</link> * OPL::getParty (string p)</computeroutput></para><para>
+
+<para>Gets a pointer to a <link linkend="_class_party">Party</link> object with <link linkend="_class_party">Party</link>&apos;s name matching string p. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name of party </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Point to a <link linkend="_class_party">Party</link> object or null if none found </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00249">249</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47"/><section>
+    <title>processHeaders()</title>
+<indexterm><primary>processHeaders</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>processHeaders</secondary></indexterm>
+<para><computeroutput>void OPL::processHeaders ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a9f2a807ba12358daa9d2ed94946748de">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00215">215</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1aedd9d37949a496c00e0cbe2746833699"/><section>
+    <title>runElection()</title>
+<indexterm><primary>runElection</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>runElection</secondary></indexterm>
+<para><computeroutput>void OPL::runElection ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</para>
+
+<para>Calls methods stratigically to compute election results </para>
+<para>
+Implements <link linkend="_class_election_1a1d84fd2f5cd7b14b2e9a729e7804286f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00032">32</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db"/><section>
+    <title>runOff()</title>
+<indexterm><primary>runOff</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>runOff</secondary></indexterm>
+<para><computeroutput>void OPL::runOff ( )</computeroutput></para><para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00064">64</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7"/><section>
+    <title>writeToAudit()</title>
+<indexterm><primary>writeToAudit</primary><secondary>OPL</secondary></indexterm>
+<indexterm><primary>OPL</primary><secondary>writeToAudit</secondary></indexterm>
+<para><computeroutput>void OPL::writeToAudit (string s = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to write the election progression to an audit file. </para>
+</para>
+
+<para>Writes each line from audits vector to file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>s is the file name of the to-be-generated audit file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1a82e0c840e14b8b54cb40eef54dd29f1f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__o_p_l_8cpp_source_1l00181">181</link> of file <link linkend="__o_p_l_8cpp_source">OPL.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__o_p_l_8h">OPL.h</link><link linkend="__o_p_l_8cpp">OPL.cpp</link></section>
+</section>

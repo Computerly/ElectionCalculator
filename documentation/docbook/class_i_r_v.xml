@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_i_r_v" xml:lang="en-US">
+<title>IRV Class Reference</title>
+<indexterm><primary>IRV</primary></indexterm>
+<para>
+<computeroutput>#include &lt;IRV.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for IRV:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_i_r_v.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV</link> (vector&lt; string &gt; _file_name)</para>
+
+<para>Construct a new <link linkend="_class_i_r_v">IRV</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_i_r_v_1a09a459a75055282e8d17ce307cfe653e">~IRV</link> ()</para>
+
+<para>Destroy the <link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV::IRV</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a04ae8c5e99fce4eb302221f850904de5">runElection</link> ()</para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a2f64e517f315a0510f16920af733c865">writeToAudit</link> (string s=&quot;&quot;)</para>
+
+<para>Method to write the election progression to an audit file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1aae6a20a766c9e6e2492b2069b4fb5248">addAuditLine</link> (string s)</para>
+
+<para>Adds line to audit file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a9edf85c29fad64404c8d0e42bee903ff">displayResults</link> (bool doColors=true)</para>
+
+<para>Method to display the <link linkend="_class_i_r_v">IRV</link> election results to the screen. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a04e425b6602f4e390b12a260ff588b38">digest</link> (string buff)</para>
+
+<para>Parses the election file and inserts ballots in the tally array. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a231d64cf7feb73a1436650dead9cd545">runOff</link> ()</para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a8cd20dbf4211087d3e5a0f962a8d9fae">invalidateBallot</link> (string ballot)</para>
+
+<para>Method to invalidate a ballot. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1ae4f0feda005a48723ad7368611bff74e">writeInvalidBallots</link> ()</para>
+
+<para>Writes invalidated ballots to file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a3ed58707bc287c3f39ceb3c9b706bad1">processHeaders</link> ()</para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1ab5dabb07b08c1ecbe24a3082365eb3ec">confirmHeadersDisplay</link> ()</para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a5c291d6c4b5b8c1e9ce0f1c763de7c1e">handleWin</link> ()</para>
+
+<para>Helper to handle the vote tally for a round. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_i_r_v_1a2f710125e74170809d38a0caaabf59fa">logCandidates</link> ()</para>
+
+<para>Helper to log the Candidates status quo. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__i_r_v_8h_source_1l00019">19</link> of file <link linkend="__i_r_v_8h_source">IRV.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76"/><section>
+    <title>IRV()</title>
+<indexterm><primary>IRV</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>IRV</secondary></indexterm>
+<para><computeroutput>IRV::IRV (vector&lt; string &gt; _file_name)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_i_r_v">IRV</link> object. </para>
+</para>
+
+<para>Initializes and confirms election</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::vector&lt;std::string&gt;</entry><entry>
+<para>_file_name. A vector of all files to run <link linkend="_class_i_r_v">IRV</link> the election. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00023">23</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a09a459a75055282e8d17ce307cfe653e"/><section>
+    <title>~IRV()</title>
+<indexterm><primary>~IRV</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>~IRV</secondary></indexterm>
+<para><computeroutput>IRV::~IRV ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destroy the <link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV::IRV</link> object. </para>
+</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00045">45</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_i_r_v_1aae6a20a766c9e6e2492b2069b4fb5248"/><section>
+    <title>addAuditLine()</title>
+<indexterm><primary>addAuditLine</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>addAuditLine</secondary></indexterm>
+<para><computeroutput>void IRV::addAuditLine (string s)</computeroutput></para><para>
+
+<para>Adds line to audit file. </para>
+</para>
+
+<para>Adds a string to a vector of strings to be added to an audit file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>s</entry><entry>
+<para>String to be added to the audit file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00401">401</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1ab5dabb07b08c1ecbe24a3082365eb3ec"/><section>
+    <title>confirmHeadersDisplay()</title>
+<indexterm><primary>confirmHeadersDisplay</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>confirmHeadersDisplay</secondary></indexterm>
+<para><computeroutput>void IRV::confirmHeadersDisplay ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a0019d751dfca855ee50b7800884450fb">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00069">69</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a04e425b6602f4e390b12a260ff588b38"/><section>
+    <title>digest()</title>
+<indexterm><primary>digest</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>digest</secondary></indexterm>
+<para><computeroutput>void IRV::digest (string buff)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Parses the election file and inserts ballots in the tally array. </para>
+</para>
+
+<para>Each ballot (row), is converted into a ranking number. Ranking numbers are formed by ordering the nPreference of the candidates. For example: &quot;2,1,3,5,4&quot; is a given ballot. The first choice is the second candidate. So the first number in the ranking number is 2. Then the second choice is the first candidate. So the second number in the ranking number is 1. This repeats until all choices are recorded. For this given ballot, the corollary ranking number is: &quot;21354&quot;.</para>
+
+<para>If a voter does not vote for all candidates (but at least one), it is translated into a zero. So for example, if not all of the candidates were chosen, a ballot could look like &quot;4,,1,3,2&quot;. Its corollary ranking number would be: &quot;35410&quot; because there was no fifth choice given.</para>
+
+<para>While digesting ballots and converting into rankings, the first choice is automatically tallied into the tally array.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string, a</entry><entry>
+<para>line from the election file representing a ballot, where a &quot;1&quot; represents the voter&apos;s first choice </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1aaaf320a6c7863b363f34bd47320b68ef">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00350">350</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a9edf85c29fad64404c8d0e42bee903ff"/><section>
+    <title>displayResults()</title>
+<indexterm><primary>displayResults</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>displayResults</secondary></indexterm>
+<para><computeroutput>void IRV::displayResults (bool doColors = <computeroutput>true</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to display the <link linkend="_class_i_r_v">IRV</link> election results to the screen. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Includes the election information as well</para>
+</note>
+@params bool doColors (see <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election::displayResults()</link> for more) </para>
+<para>
+Implements <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00262">262</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a5c291d6c4b5b8c1e9ce0f1c763de7c1e"/><section>
+    <title>handleWin()</title>
+<indexterm><primary>handleWin</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>handleWin</secondary></indexterm>
+<para><computeroutput>void IRV::handleWin ( )</computeroutput></para><para>
+
+<para>Helper to handle the vote tally for a round. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Adds the non-winning candidates to the loser vector </para>
+</note>
+</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00383">383</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a8cd20dbf4211087d3e5a0f962a8d9fae"/><section>
+    <title>invalidateBallot()</title>
+<indexterm><primary>invalidateBallot</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>invalidateBallot</secondary></indexterm>
+<para><computeroutput>void IRV::invalidateBallot (string ballot)</computeroutput></para><para>
+
+<para>Method to invalidate a ballot. </para>
+</para>
+
+<para>Adds ballot to a vector of invalidated ballots, removes the ballot from the total ballot count, and creates a log in audit.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>ballot, string representing a ballot to be invalidated </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00449">449</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a2f710125e74170809d38a0caaabf59fa"/><section>
+    <title>logCandidates()</title>
+<indexterm><primary>logCandidates</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>logCandidates</secondary></indexterm>
+<para><computeroutput>void IRV::logCandidates ( )</computeroutput></para><para>
+
+<para>Helper to log the Candidates status quo. </para>
+</para>
+
+<para>Logs the current vote count and adds a line in audit with vote count. </para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00441">441</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a3ed58707bc287c3f39ceb3c9b706bad1"/><section>
+    <title>processHeaders()</title>
+<indexterm><primary>processHeaders</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>processHeaders</secondary></indexterm>
+<para><computeroutput>void IRV::processHeaders ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a9f2a807ba12358daa9d2ed94946748de">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00049">49</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a04ae8c5e99fce4eb302221f850904de5"/><section>
+    <title>runElection()</title>
+<indexterm><primary>runElection</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>runElection</secondary></indexterm>
+<para><computeroutput>void IRV::runElection ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</para>
+
+<para>Calls methods stratigically to compute election results </para>
+<para>
+Implements <link linkend="_class_election_1a1d84fd2f5cd7b14b2e9a729e7804286f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00086">86</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a231d64cf7feb73a1436650dead9cd545"/><section>
+    <title>runOff()</title>
+<indexterm><primary>runOff</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>runOff</secondary></indexterm>
+<para><computeroutput>void IRV::runOff ( )</computeroutput></para><para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00125">125</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1ae4f0feda005a48723ad7368611bff74e"/><section>
+    <title>writeInvalidBallots()</title>
+<indexterm><primary>writeInvalidBallots</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>writeInvalidBallots</secondary></indexterm>
+<para><computeroutput>void IRV::writeInvalidBallots ( )</computeroutput></para><para>
+
+<para>Writes invalidated ballots to file. </para>
+</para>
+
+<para>Similar to writeToAudit, writes each line in invalidBallots vector to a file of invalidated ballots. </para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00457">457</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_i_r_v_1a2f64e517f315a0510f16920af733c865"/><section>
+    <title>writeToAudit()</title>
+<indexterm><primary>writeToAudit</primary><secondary>IRV</secondary></indexterm>
+<indexterm><primary>IRV</primary><secondary>writeToAudit</secondary></indexterm>
+<para><computeroutput>void IRV::writeToAudit (string s = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to write the election progression to an audit file. </para>
+</para>
+
+<para>Writes each line from audits vector to file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>s is the file name of the to-be-generated audit file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1a82e0c840e14b8b54cb40eef54dd29f1f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__i_r_v_8cpp_source_1l00403">403</link> of file <link linkend="__i_r_v_8cpp_source">IRV.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__i_r_v_8h">IRV.h</link><link linkend="__i_r_v_8cpp">IRV.cpp</link></section>
+</section>

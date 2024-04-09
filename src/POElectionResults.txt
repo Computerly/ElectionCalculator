@@ -1,0 +1,6 @@
+ |  Candidate |  |  Votes |  | % votes |   
+ |       Chou |  |  20151 |  |     20% |   
+ | Himmelberg |  |  20097 |  |     20% |   
+ |      Susan |  |  19962 |  |     20% |   
+ |  Kleinberg |  |  19909 |  |     20% |   
+ |      Rosen |  |  19881 |  |     20% |   

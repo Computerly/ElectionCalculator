@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_candidate" xml:lang="en-US">
+<title>Candidate Class Reference</title>
+<indexterm><primary>Candidate</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Candidate.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_candidate_1aa2747741fb662af5e8f3d01d1d1a43b6">Candidate</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_candidate_1a99c1eda1eeecf4bbd054049449954c90">Candidate</link> (std::string name)</para>
+</listitem>
+            <listitem><para><link linkend="_class_candidate_1a412fc0077905ad69ed193f1529252fcc">Candidate</link> (std::string name, std::string party)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_candidate_1a9555babb846eb95fef6330638e5df8e4">getNumVotes</link> ()</para>
+
+<para>Gets the number of votes for the candidate. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_1a4e3b593e8a65268416ac3f050cf6bb9c">isWinner</link> ()</para>
+
+<para>Function to determine if a candidate is a winner based on the value of the win variable. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_candidate_1a9dc0ef13c114e3a9103c88d64919dee1">isLoser</link> ()</para>
+
+<para>Function to determine if a candidate is a loser based on the value of the lose variable. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a4224c7f51cb63e69605bd8451a389635">incrementVotes</link> (int n=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1aaa427a0f8ab188e7a15d4b5372387acc">incrementPartyVotes</link> (int n=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a32cf9b31e0283eb24253c26421decbd5">decrementVotes</link> (int n=1)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a18383878c328f64845b46b9f8df10cd1">setName</link> (std::string name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a7a845d7f4f9de3de4edd8fea2e4d2cfd">setParty</link> (std::string party)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a62c9714ed024011aa807198e0cdeaf70">setVotes</link> (int n)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a30c20d3678cd6e55355065d2fa6b3179">logVoteCount</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1a06e5cfc8517529f1d1ea6e9ce8ec2181">setWinState</link> (bool _win)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_candidate_1ab7f754d6af134f03f4e3f0926a1efbf3">setLoseState</link> (bool _lose)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_candidate_1af862d92e21d66d74f1d5cae92937d3da">getName</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_candidate_1a459c7d0c4e5708ded61d1ad33182a1e3">getParty</link> ()</para>
+
+<para>Gets the party of the candidate. </para>
+</listitem>
+            <listitem><para>std::vector&lt; int &gt; <link linkend="_class_candidate_1a8b5d99efb1d7e2ece68cf0b10cfe59f4">getVoteHistory</link> ()</para>
+
+<para>Returns the vote history of the <link linkend="_class_candidate">Candidate</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_class_candidate_1a0a8f074830cbcfe2eff08a2c78b8af6e">candidateName</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="__candidate_8h_source_1l00011">11</link> of file <link linkend="__candidate_8h_source">Candidate.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_candidate_1aa2747741fb662af5e8f3d01d1d1a43b6"/><section>
+    <title>Candidate()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<para><computeroutput>Candidate::Candidate ( )</computeroutput></para>
+<para>Constructs <link linkend="_class_candidate">Candidate</link> object with nothing initialized.</para>
+
+<para>Sets all other members to default state of 0 or false </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00005">5</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a99c1eda1eeecf4bbd054049449954c90"/><section>
+    <title>Candidate()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<para><computeroutput>Candidate::Candidate (std::string name)</computeroutput></para>
+<para>Constructs <link linkend="_class_candidate">Candidate</link> object with name initialized.</para>
+
+<para>Sets all other members to default state of 0 or false</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00012">12</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a412fc0077905ad69ed193f1529252fcc"/><section>
+    <title>Candidate()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>Candidate</secondary></indexterm>
+<para><computeroutput>Candidate::Candidate (std::string name, std::string party)</computeroutput></para>
+<para>Constructs <link linkend="_class_candidate">Candidate</link> object with name and party initialized.</para>
+
+<para>Sets all other members to default state of 0 or false</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name </para>
+</entry>
+                            </row>
+                            <row>
+<entry>std::string</entry><entry>
+<para>party </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00019">19</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_candidate_1a32cf9b31e0283eb24253c26421decbd5"/><section>
+    <title>decrementVotes()</title>
+<indexterm><primary>decrementVotes</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>decrementVotes</secondary></indexterm>
+<para><computeroutput>void Candidate::decrementVotes (int n = <computeroutput>1</computeroutput>
+)</computeroutput></para>
+<para>Decrements <link linkend="_class_candidate">Candidate</link>&apos;s votes by n amount</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para>n (optional, default 1) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00031">31</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1af862d92e21d66d74f1d5cae92937d3da"/><section>
+    <title>getName()</title>
+<indexterm><primary>getName</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>getName</secondary></indexterm>
+<para><computeroutput>std::string Candidate::getName ( )</computeroutput></para>
+<para>Returns the name of the <link linkend="_class_candidate">Candidate</link> </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00033">33</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a9555babb846eb95fef6330638e5df8e4"/><section>
+    <title>getNumVotes()</title>
+<indexterm><primary>getNumVotes</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>getNumVotes</secondary></indexterm>
+<para><computeroutput>int Candidate::getNumVotes ( )</computeroutput></para><para>
+
+<para>Gets the number of votes for the candidate. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>int (the number of votes) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00027">27</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a459c7d0c4e5708ded61d1ad33182a1e3"/><section>
+    <title>getParty()</title>
+<indexterm><primary>getParty</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>getParty</secondary></indexterm>
+<para><computeroutput>std::string Candidate::getParty ( )</computeroutput></para><para>
+
+<para>Gets the party of the candidate. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::string (the name of the party that the candidate belongs to) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00035">35</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a8b5d99efb1d7e2ece68cf0b10cfe59f4"/><section>
+    <title>getVoteHistory()</title>
+<indexterm><primary>getVoteHistory</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>getVoteHistory</secondary></indexterm>
+<para><computeroutput>std::vector&lt; int &gt; Candidate::getVoteHistory ( )</computeroutput></para><para>
+
+<para>Returns the vote history of the <link linkend="_class_candidate">Candidate</link>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>std::vector&lt;int&gt; (the vote history vector) </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00054">54</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1aaa427a0f8ab188e7a15d4b5372387acc"/><section>
+    <title>incrementPartyVotes()</title>
+<indexterm><primary>incrementPartyVotes</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>incrementPartyVotes</secondary></indexterm>
+<para><computeroutput>void Candidate::incrementPartyVotes (int n = <computeroutput>1</computeroutput>
+)</computeroutput></para>
+<para>Increments <link linkend="_class_candidate">Candidate</link>&apos;s party votes by n amount</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para>n (optional, default 1) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_class_candidate_1a4224c7f51cb63e69605bd8451a389635"/><section>
+    <title>incrementVotes()</title>
+<indexterm><primary>incrementVotes</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>incrementVotes</secondary></indexterm>
+<para><computeroutput>void Candidate::incrementVotes (int n = <computeroutput>1</computeroutput>
+)</computeroutput></para>
+<para>Increments <link linkend="_class_candidate">Candidate</link>&apos;s votes by n amount</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para>n (optional, default 1) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00029">29</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a9dc0ef13c114e3a9103c88d64919dee1"/><section>
+    <title>isLoser()</title>
+<indexterm><primary>isLoser</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>isLoser</secondary></indexterm>
+<para><computeroutput>bool Candidate::isLoser ( )</computeroutput></para><para>
+
+<para>Function to determine if a candidate is a loser based on the value of the lose variable. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true If lose&apos;s value is true </para>
+
+<para>false If lose&apos;s value is false </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00057">57</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a4e3b593e8a65268416ac3f050cf6bb9c"/><section>
+    <title>isWinner()</title>
+<indexterm><primary>isWinner</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>isWinner</secondary></indexterm>
+<para><computeroutput>bool Candidate::isWinner ( )</computeroutput></para><para>
+
+<para>Function to determine if a candidate is a winner based on the value of the win variable. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>true If win&apos;s value is true </para>
+
+<para>false If win&apos;s value is false </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00056">56</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a30c20d3678cd6e55355065d2fa6b3179"/><section>
+    <title>logVoteCount()</title>
+<indexterm><primary>logVoteCount</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>logVoteCount</secondary></indexterm>
+<para><computeroutput>void Candidate::logVoteCount ( )</computeroutput></para>
+<para>Logs current vote count of <link linkend="_class_candidate">Candidate</link></para>
+
+<para>This is used by <link linkend="_class_i_r_v">IRV</link> to track candidates during runoff </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00041">41</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1ab7f754d6af134f03f4e3f0926a1efbf3"/><section>
+    <title>setLoseState()</title>
+<indexterm><primary>setLoseState</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>setLoseState</secondary></indexterm>
+<para><computeroutput>void Candidate::setLoseState (bool _lose)</computeroutput></para>
+<para>Sets lose state of the <link linkend="_class_candidate">Candidate</link> to _lose</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bool</entry><entry>
+<para>_lose </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00060">60</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a18383878c328f64845b46b9f8df10cd1"/><section>
+    <title>setName()</title>
+<indexterm><primary>setName</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>setName</secondary></indexterm>
+<para><computeroutput>void Candidate::setName (std::string name)</computeroutput></para>
+<para>Sets <link linkend="_class_candidate">Candidate</link>&apos;s name to name</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>name </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00037">37</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a7a845d7f4f9de3de4edd8fea2e4d2cfd"/><section>
+    <title>setParty()</title>
+<indexterm><primary>setParty</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>setParty</secondary></indexterm>
+<para><computeroutput>void Candidate::setParty (std::string party)</computeroutput></para>
+<para>Sets <link linkend="_class_candidate">Candidate</link>&apos;s party to party</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00039">39</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a62c9714ed024011aa807198e0cdeaf70"/><section>
+    <title>setVotes()</title>
+<indexterm><primary>setVotes</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>setVotes</secondary></indexterm>
+<para><computeroutput>void Candidate::setVotes (int n)</computeroutput></para>
+<para>Sets <link linkend="_class_candidate">Candidate</link>&apos;s votes to n</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>int</entry><entry>
+<para>n </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00062">62</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_candidate_1a06e5cfc8517529f1d1ea6e9ce8ec2181"/><section>
+    <title>setWinState()</title>
+<indexterm><primary>setWinState</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>setWinState</secondary></indexterm>
+<para><computeroutput>void Candidate::setWinState (bool _win)</computeroutput></para>
+<para>Sets win state of the <link linkend="_class_candidate">Candidate</link> to _win</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>bool</entry><entry>
+<para>_win </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__candidate_8cpp_source_1l00059">59</link> of file <link linkend="__candidate_8cpp_source">Candidate.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_class_candidate_1a0a8f074830cbcfe2eff08a2c78b8af6e"/><section>
+    <title>candidateName</title>
+<indexterm><primary>candidateName</primary><secondary>Candidate</secondary></indexterm>
+<indexterm><primary>Candidate</primary><secondary>candidateName</secondary></indexterm>
+<para><computeroutput>std::string Candidate::candidateName</computeroutput></para><para>
+Definition at line <link linkend="__candidate_8h_source_1l00147">147</link> of file <link linkend="__candidate_8h_source">Candidate.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__candidate_8h">Candidate.h</link><link linkend="__candidate_8cpp">Candidate.cpp</link></section>
+</section>

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_colors_8h" xml:lang="en-US">
+<title>helpers/colors.h File Reference</title>
+<indexterm><primary>helpers/colors.h</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>   &quot;\033[0m&quot;			/* RESET */</para>
+
+<para>Definitions of colors used on the console. </para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a7b3b25cba33b07c303f3060fe41887f6">BLACK</link>   &quot;\033[30m&quot;			/* Black */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a8d23feea868a983c8c2b661e1e16972f">RED</link>   &quot;\033[31m&quot;			/* Red */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1acfbc006ea433ad708fdee3e82996e721">GREEN</link>   &quot;\033[32m&quot;			/* Green */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1abf681265909adf3d3e8116c93c0ba179">YELLOW</link>   &quot;\033[33m&quot;			/* Yellow */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a79d10e672abb49ad63eeaa8aaef57c38">BLUE</link>   &quot;\033[34m&quot;			/* Blue */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a6f699060902f800f12aaae150f3a708e">MAGENTA</link>   &quot;\033[35m&quot;			/* Magenta */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1ad243f93c16bc4c1d3e0a13b84421d760">CYAN</link>   &quot;\033[36m&quot;			/* Cyan */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a87b537f5fa5c109d3c05c13d6b18f382">WHITE</link>   &quot;\033[37m&quot;			/* White */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1aef2fe95894117165b29036718221979f">BOLDBLACK</link>   &quot;\033[1m\033[30m&quot;	/* Bold Black */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1ab912d02c7998c3d47d05f87be4e2c920">BOLDRED</link>   &quot;\033[1m\033[31m&quot;	/* Bold Red */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a4a6c893a1703c33ede7d702fe5f97c91">BOLDGREEN</link>   &quot;\033[1m\033[32m&quot;	/* Bold Green */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a8cec79108dfc3c61e8e32d390ec28b26">BOLDYELLOW</link>   &quot;\033[1m\033[33m&quot;	/* Bold Yellow */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1a11e77c19555cbd15bcc744ff36a18635">BOLDBLUE</link>   &quot;\033[1m\033[34m&quot;	/* Bold Blue */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1ac4723c5ee12cfca16e2172b57b99cb07">BOLDMAGENTA</link>   &quot;\033[1m\033[35m&quot;	/* Bold Magenta */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1ae87af5e6363eb1913b17f24dcb60a22d">BOLDCYAN</link>   &quot;\033[1m\033[36m&quot;	/* Bold Cyan */</para>
+</listitem>
+            <listitem><para>#define <link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>   &quot;\033[1m\033[37m&quot;	/* Bold White */</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_colors_8h_1a7b3b25cba33b07c303f3060fe41887f6"/><section>
+    <title>BLACK</title>
+<indexterm><primary>BLACK</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BLACK</secondary></indexterm>
+<para><computeroutput>#define BLACK   &quot;\033[30m&quot;			/* Black */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00010">10</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a79d10e672abb49ad63eeaa8aaef57c38"/><section>
+    <title>BLUE</title>
+<indexterm><primary>BLUE</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BLUE</secondary></indexterm>
+<para><computeroutput>#define BLUE   &quot;\033[34m&quot;			/* Blue */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00014">14</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1aef2fe95894117165b29036718221979f"/><section>
+    <title>BOLDBLACK</title>
+<indexterm><primary>BOLDBLACK</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDBLACK</secondary></indexterm>
+<para><computeroutput>#define BOLDBLACK   &quot;\033[1m\033[30m&quot;	/* Bold Black */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00018">18</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a11e77c19555cbd15bcc744ff36a18635"/><section>
+    <title>BOLDBLUE</title>
+<indexterm><primary>BOLDBLUE</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDBLUE</secondary></indexterm>
+<para><computeroutput>#define BOLDBLUE   &quot;\033[1m\033[34m&quot;	/* Bold Blue */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00022">22</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1ae87af5e6363eb1913b17f24dcb60a22d"/><section>
+    <title>BOLDCYAN</title>
+<indexterm><primary>BOLDCYAN</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDCYAN</secondary></indexterm>
+<para><computeroutput>#define BOLDCYAN   &quot;\033[1m\033[36m&quot;	/* Bold Cyan */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00024">24</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a4a6c893a1703c33ede7d702fe5f97c91"/><section>
+    <title>BOLDGREEN</title>
+<indexterm><primary>BOLDGREEN</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDGREEN</secondary></indexterm>
+<para><computeroutput>#define BOLDGREEN   &quot;\033[1m\033[32m&quot;	/* Bold Green */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00020">20</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1ac4723c5ee12cfca16e2172b57b99cb07"/><section>
+    <title>BOLDMAGENTA</title>
+<indexterm><primary>BOLDMAGENTA</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDMAGENTA</secondary></indexterm>
+<para><computeroutput>#define BOLDMAGENTA   &quot;\033[1m\033[35m&quot;	/* Bold Magenta */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00023">23</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1ab912d02c7998c3d47d05f87be4e2c920"/><section>
+    <title>BOLDRED</title>
+<indexterm><primary>BOLDRED</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDRED</secondary></indexterm>
+<para><computeroutput>#define BOLDRED   &quot;\033[1m\033[31m&quot;	/* Bold Red */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00019">19</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7"/><section>
+    <title>BOLDWHITE</title>
+<indexterm><primary>BOLDWHITE</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDWHITE</secondary></indexterm>
+<para><computeroutput>#define BOLDWHITE   &quot;\033[1m\033[37m&quot;	/* Bold White */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00025">25</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a8cec79108dfc3c61e8e32d390ec28b26"/><section>
+    <title>BOLDYELLOW</title>
+<indexterm><primary>BOLDYELLOW</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>BOLDYELLOW</secondary></indexterm>
+<para><computeroutput>#define BOLDYELLOW   &quot;\033[1m\033[33m&quot;	/* Bold Yellow */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00021">21</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1ad243f93c16bc4c1d3e0a13b84421d760"/><section>
+    <title>CYAN</title>
+<indexterm><primary>CYAN</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>CYAN</secondary></indexterm>
+<para><computeroutput>#define CYAN   &quot;\033[36m&quot;			/* Cyan */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00016">16</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1acfbc006ea433ad708fdee3e82996e721"/><section>
+    <title>GREEN</title>
+<indexterm><primary>GREEN</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>GREEN</secondary></indexterm>
+<para><computeroutput>#define GREEN   &quot;\033[32m&quot;			/* Green */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00012">12</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a6f699060902f800f12aaae150f3a708e"/><section>
+    <title>MAGENTA</title>
+<indexterm><primary>MAGENTA</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>MAGENTA</secondary></indexterm>
+<para><computeroutput>#define MAGENTA   &quot;\033[35m&quot;			/* Magenta */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00015">15</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a8d23feea868a983c8c2b661e1e16972f"/><section>
+    <title>RED</title>
+<indexterm><primary>RED</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>RED</secondary></indexterm>
+<para><computeroutput>#define RED   &quot;\033[31m&quot;			/* Red */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00011">11</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299"/><section>
+    <title>RESET</title>
+<indexterm><primary>RESET</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>RESET</secondary></indexterm>
+<para><computeroutput>#define RESET   &quot;\033[0m&quot;			/* RESET */</computeroutput></para><para>
+
+<para>Definitions of colors used on the console. </para>
+</para>
+<para>
+Definition at line <link linkend="_colors_8h_source_1l00009">9</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1a87b537f5fa5c109d3c05c13d6b18f382"/><section>
+    <title>WHITE</title>
+<indexterm><primary>WHITE</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>WHITE</secondary></indexterm>
+<para><computeroutput>#define WHITE   &quot;\033[37m&quot;			/* White */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00017">17</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+<anchor xml:id="_colors_8h_1abf681265909adf3d3e8116c93c0ba179"/><section>
+    <title>YELLOW</title>
+<indexterm><primary>YELLOW</primary><secondary>colors.h</secondary></indexterm>
+<indexterm><primary>colors.h</primary><secondary>YELLOW</secondary></indexterm>
+<para><computeroutput>#define YELLOW   &quot;\033[33m&quot;			/* Yellow */</computeroutput></para><para>
+Definition at line <link linkend="_colors_8h_source_1l00013">13</link> of file <link linkend="_colors_8h_source">colors.h</link>.</para>
+</section>
+</section>
+</section>

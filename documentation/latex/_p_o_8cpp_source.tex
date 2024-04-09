@@ -1,0 +1,191 @@
+\hypertarget{_p_o_8cpp_source}{}\doxysection{PO.\+cpp}
+\mbox{\hyperlink{_p_o_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <ctime>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00007}00007 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_p_o_8h}{PO.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_candidate_8h}{Candidate.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{colors_8h}{helpers/colors.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00013}\mbox{\hyperlink{class_p_o_a6b0d93e78bd6fb62a90faa710fa7104d}{00013}} \mbox{\hyperlink{class_p_o_a6b0d93e78bd6fb62a90faa710fa7104d}{PO::PO}}(vector<string> files) : \mbox{\hyperlink{class_election}{Election}}(files)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00014}00014     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00015}00015     \textcolor{comment}{// *                              Process Headers                             *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00016}00016     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00018}00018     \mbox{\hyperlink{class_p_o_a18a1823c5de1ac5918b0f955412afacd}{processHeaders}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00020}00020     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00021}00021     \textcolor{comment}{// *                  Confirm Headers are processed correctly                 *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00022}00022     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00024}00024     \mbox{\hyperlink{class_election_ad5f014c63a9069df284ccbd1676f2cce}{confirmHeaders}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00025}00025 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00027}00027 \mbox{\hyperlink{class_p_o_a72014c8c461b68470955dd0984bc1eec}{PO::\string~PO}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00029}\mbox{\hyperlink{class_p_o_aad1ca29b89c0515ff34459b6cdc3ab0b}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_aad1ca29b89c0515ff34459b6cdc3ab0b}{PO::runElection}}()\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00031}00031     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00032}00032     \textcolor{comment}{// *                              Digest ballots                              *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00033}00033     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00035}00035     \mbox{\hyperlink{class_election_a65200d7f72c9ac0f7678e91b4f660730}{digestBallots}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00037}00037     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00038}00038     \textcolor{comment}{// *                              Computer Winner                             *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00039}00039     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00041}00041     \mbox{\hyperlink{class_p_o_afb780451687085bcc78ac106e7e27b4f}{runOff}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00043}00043     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00044}00044     \textcolor{comment}{// *                        Display Results of Election                       *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00045}00045     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00047}00047     \mbox{\hyperlink{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}{displayResults}}(1);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00048}00048     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00049}00049     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00050}00050     \textcolor{comment}{// *                             Write Audit File                             *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00051}00051     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00053}00053     \mbox{\hyperlink{class_p_o_ac994e74935bcad8df1db591b5bda35c2}{writeToAudit}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00055}00055     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00056}00056     \textcolor{comment}{// *                          Write Election Results                          *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00057}00057     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00059}00059     \mbox{\hyperlink{class_election_a9d6f8d633b57aa2cd89ce1ab6f7e553e}{writeElectionResults}}(\textcolor{stringliteral}{"{}POElectionResults.txt"{}});}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00060}00060 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00062}\mbox{\hyperlink{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}{00062}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}{PO::displayResults}}(\textcolor{keywordtype}{bool} doColors \textcolor{comment}{/*= true*/})\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00063}00063     \textcolor{keyword}{auto} column = [](\textcolor{keyword}{auto} s, \textcolor{keywordtype}{int} width)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00064}00064         \textcolor{keywordtype}{string} sep = \textcolor{stringliteral}{"{} | "{}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00065}00065         cout << sep << setw(width) << s << sep << setw(3);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00066}00066     \};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00068}00068     vector<int> widths\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00069}00069         9,}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00070}00070         (int)\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}().at(3).length(),}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00071}00071         7}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00072}00072     \};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00074}00074     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_election_aea563e0f8efc014fe5bc6ca55b078d9a}{getNumCandidates}}(); i++)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00075}00075         widths.at(0) = max(widths.at(0), (\textcolor{keywordtype}{int})\mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}().at(i).getName().length() );}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00076}00076     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00078}00078     \textcolor{keywordflow}{if} (doColors) \{ cout << \mbox{\hyperlink{colors_8h_ac4723c5ee12cfca16e2172b57b99cb07}{BOLDMAGENTA}}; \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00079}00079     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00080}00080     column(\textcolor{stringliteral}{"{}Candidate"{}}, widths.at(0));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00081}00081     column(\textcolor{stringliteral}{"{}Votes"{}}, widths.at(1));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00082}00082     column(\textcolor{stringliteral}{"{}\% votes"{}}, widths.at(2));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00084}00084     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00085}00085     cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00086}00086     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00087}00087     \textcolor{keywordflow}{if} (doColors) \{ cout << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}}; \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00089}00089     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_election_aea563e0f8efc014fe5bc6ca55b078d9a}{getNumCandidates}}(); ++i)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00090}00090         \textcolor{keywordflow}{if}(doColors \&\& i == 0)\{ cout << \mbox{\hyperlink{colors_8h_a4a6c893a1703c33ede7d702fe5f97c91}{BOLDGREEN}}; \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00091}00091         column(\mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[i].getName(), widths.at(0));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00092}00092         column(\mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[i].getNumVotes(), widths.at(1));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00093}00093         \textcolor{keywordtype}{int} percentVote = (((float)\mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[i].getNumVotes() / (float)\mbox{\hyperlink{class_election_ade6ad99d57f425d06f7f6f5bf28bed5c}{getNumBallots}}()) * 100.0) + 0.5;}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00094}00094         column(to\_string(percentVote) + \textcolor{stringliteral}{"{}\%"{}}, widths.at(2));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00095}00095         \textcolor{keywordflow}{if}(doColors)\{ cout << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}}; \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00096}00096         cout << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00097}00097     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00098}00098 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00100}\mbox{\hyperlink{class_p_o_ac994e74935bcad8df1db591b5bda35c2}{00100}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_ac994e74935bcad8df1db591b5bda35c2}{PO::writeToAudit}}(\textcolor{keywordtype}{string} s \textcolor{comment}{/*= "{}"{}*/})\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00101}00101     time\_t t = time(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00102}00102     \textcolor{keywordflow}{if}(s.length() == 0)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00103}00103         s = \textcolor{stringliteral}{"{}POElectionAudit"{}} + to\_string(t) + \textcolor{stringliteral}{"{}.txt"{}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00104}00104     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00105}00105     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00106}00106     ofstream auditFile(s);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00107}00107     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00108}00108     \textcolor{keywordflow}{if}(auditFile.good())\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00109}00109         auditFile   << \textcolor{stringliteral}{"{}Election was ran on: "{}}<< asctime(localtime(\&t)) << \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00110}00110         }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00111}00111         streambuf *psbuf, *backup;}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00113}00113         backup = std::cout.rdbuf();     \textcolor{comment}{// back up cout's streambuf}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00115}00115         psbuf = auditFile.rdbuf();      \textcolor{comment}{// get file's streambuf}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00116}00116         cout.rdbuf(psbuf);              \textcolor{comment}{// assign streambuf to cout}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00118}00118         \mbox{\hyperlink{class_p_o_adaa1725adb8ab847e9f1f6569db9a91a}{displayResults}}(\textcolor{keyword}{false});            \textcolor{comment}{// Prevent colors}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00120}00120         cout.rdbuf(backup);             \textcolor{comment}{// restore cout's original streambuf}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00122}00122         auditFile << \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/ END OF AUDIT FILE -\/-\/-\/"{}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00124}00124         auditFile.close();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00125}00125         cout << \mbox{\hyperlink{colors_8h_ad243f93c16bc4c1d3e0a13b84421d760}{CYAN}} << \textcolor{stringliteral}{"{}Audit file created at: "{}} + s + \textcolor{stringliteral}{"{}\(\backslash\)n"{}} << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00126}00126     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00127}00127         cout << \mbox{\hyperlink{colors_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}} << \textcolor{stringliteral}{"{}ERROR: Creating audit file failed!\(\backslash\)n"{}} << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00128}00128     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00129}00129     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00130}00130 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00132}\mbox{\hyperlink{class_p_o_afb780451687085bcc78ac106e7e27b4f}{00132}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_afb780451687085bcc78ac106e7e27b4f}{PO::runOff}}()\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00133}00133     \textcolor{comment}{// sort candidates}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00134}00134     sort(\mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}().begin(), \mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}().end(), [](\mbox{\hyperlink{class_candidate}{Candidate}} \&a, \mbox{\hyperlink{class_candidate}{Candidate}} \&b) \{ }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00135}00135         \textcolor{keywordflow}{if}(a.\mbox{\hyperlink{class_candidate_a9555babb846eb95fef6330638e5df8e4}{getNumVotes}}() != b.\mbox{\hyperlink{class_candidate_a9555babb846eb95fef6330638e5df8e4}{getNumVotes}}())\{ return a.getNumVotes() > b.getNumVotes(); \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00136}00136         \textcolor{keywordflow}{return} \mbox{\hyperlink{class_election_a5a36c9bc9296e09825b49d8deb3f3874}{Election::flipCoin}}();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00137}00137     \});}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00138}00138 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00140}\mbox{\hyperlink{class_p_o_ac1b64bb0e8d3806ee868e7ef2470578f}{00140}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_ac1b64bb0e8d3806ee868e7ef2470578f}{PO::digest}}(\textcolor{keywordtype}{string} buff)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00141}00141     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} pos = 0;}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00142}00142     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < buff.length(); i++)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00143}00143         \textcolor{keywordflow}{if}(buff[i] == \textcolor{charliteral}{','}) \{ }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00144}00144             \textcolor{keywordflow}{if}(i == 0 || buff[i -\/ 1] == \textcolor{charliteral}{','}) \{ pos++; \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00145}00145             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00146}00146         \}\textcolor{keywordflow}{else} \{ }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00147}00147             \mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[pos].incrementVotes();}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00148}00148             pos++; }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00149}00149         \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00150}00150     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00151}00151 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00153}\mbox{\hyperlink{class_p_o_a3876aa6a9712fc8d8236a7488ae733f9}{00153}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_a3876aa6a9712fc8d8236a7488ae733f9}{PO::confirmHeadersDisplay}}()\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00154}00154     cout << \textcolor{stringliteral}{"{}Election Type: "{}} << \mbox{\hyperlink{colors_8h_aa4ef051614aa0bd503b0a18ee158c5d7}{BOLDWHITE}} << \mbox{\hyperlink{class_election_af9ffbf9414f3129a2db5cab5b2827751}{getElectionType}}() << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}} << \textcolor{charliteral}{'\(\backslash\)n'}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00155}00155              << \textcolor{stringliteral}{"{}Number of Candidates: "{}} << \mbox{\hyperlink{colors_8h_aa4ef051614aa0bd503b0a18ee158c5d7}{BOLDWHITE}} << \mbox{\hyperlink{class_election_aea563e0f8efc014fe5bc6ca55b078d9a}{getNumCandidates}}() << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}} << \textcolor{charliteral}{'\(\backslash\)n'}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00156}00156              << \textcolor{stringliteral}{"{}Number of Ballots: "{}} << \mbox{\hyperlink{colors_8h_aa4ef051614aa0bd503b0a18ee158c5d7}{BOLDWHITE}} << \mbox{\hyperlink{class_election_ade6ad99d57f425d06f7f6f5bf28bed5c}{getNumBallots}}() << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}} << \textcolor{charliteral}{'\(\backslash\)n'}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00157}00157              << \textcolor{stringliteral}{"{}Candidates: "{}}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00158}00158              << \mbox{\hyperlink{colors_8h_aa4ef051614aa0bd503b0a18ee158c5d7}{BOLDWHITE}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00159}00159         }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00160}00160         \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00161}00161         \textcolor{comment}{// *                           Print each candidate                           *}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00162}00162         \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00164}00164         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_election_aea563e0f8efc014fe5bc6ca55b078d9a}{getNumCandidates}}(); i++)\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00165}00165             cout << \mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[i].getName() << \textcolor{charliteral}{'/'} << \mbox{\hyperlink{class_election_a89c14e25245d84d5214e58809f04e336}{getCandidates}}()[i].getParty() << \textcolor{stringliteral}{"{}, "{}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00166}00166         \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00167}00167 \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00168}00168 }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00169}\mbox{\hyperlink{class_p_o_a18a1823c5de1ac5918b0f955412afacd}{00169}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_p_o_a18a1823c5de1ac5918b0f955412afacd}{PO::processHeaders}}()\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00170}00170     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}().size() != 4) \{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00171}00171         cout << \mbox{\hyperlink{colors_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}} <<\textcolor{stringliteral}{"{}ERROR. Unexpected header size\(\backslash\)nExpected 4, found "{}} << \mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}().size() << \textcolor{charliteral}{'\(\backslash\)n'} << \mbox{\hyperlink{colors_8h_ab702106cf3b3e96750b6845ded4e0299}{RESET}};}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00172}00172         exit(-\/1);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00173}00173     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00174}00174     \mbox{\hyperlink{class_election_a2679563e40fa9fefa255377bcafc9c0e}{setElectionType}}(\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}()[0]);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00175}00175     \mbox{\hyperlink{class_election_a97214525cf583a21e43f80a770ed23dc}{setNumberOfCandidates}}(stoi(\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}()[1]));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00176}00176     \mbox{\hyperlink{class_election_af03da7d47d1d0e594dde51971e26889a}{addBallots}}(stoi(\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}()[3]));}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00177}00177     }
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00178}00178     stringstream cStream(\mbox{\hyperlink{class_election_abfa41a8e17a3a1869fc42aabb0054bbc}{getHeader}}()[2]);}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00179}00179     \textcolor{keywordflow}{while}(cStream.good())\{}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00180}00180         \textcolor{keywordtype}{string} candidate;}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00181}00181         \textcolor{keywordtype}{string} party;}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00182}00182         getline(cStream, candidate, \textcolor{charliteral}{'/'});}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00183}00183         getline(cStream, party, \textcolor{charliteral}{','});}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00184}00184         \mbox{\hyperlink{class_election_aef61e7926b2322a0ae07cc0873a14401}{addCandidate}}(\mbox{\hyperlink{class_candidate}{Candidate}}(candidate, party)); \textcolor{comment}{//add the candidate to the candidates vector            }}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00185}00185     \}}
+\DoxyCodeLine{\Hypertarget{_p_o_8cpp_source_l00186}00186 \}}
+
+\end{DoxyCode}

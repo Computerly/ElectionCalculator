@@ -1,0 +1,39 @@
+\hypertarget{perm_generator_8py_source}{}\doxysection{perm\+Generator.\+py}
+\label{perm_generator_8py_source}\index{helpers/permGenerator.py@{helpers/permGenerator.py}}
+\mbox{\hyperlink{perm_generator_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00001}\mbox{\hyperlink{namespaceperm_generator}{00001}} \textcolor{comment}{\# ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00002}00002 \textcolor{comment}{\# *                           Permutation Generator                          *}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00003}00003 \textcolor{comment}{\# *   Permutation Generator outputs every possible combination a person can  *}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00004}00004 \textcolor{comment}{\# *                    vote in an election of given length                   *}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00005}00005 \textcolor{comment}{\# ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00006}00006 \textcolor{keyword}{import} itertools}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00008}\mbox{\hyperlink{namespaceperm_generator_adbe9b5776a9833bfdb029594405ce574}{00008}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceperm_generator_adbe9b5776a9833bfdb029594405ce574}{pad}}(s):}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00009}00009     \textcolor{keyword}{global} n}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00010}00010     zeros = \textcolor{stringliteral}{'0'} * (n -\/ len(s))}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00011}00011     \textcolor{keywordflow}{return} s + zeros}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00013}\mbox{\hyperlink{namespaceperm_generator_ad10636165ebd16db2136edd7cf8ee370}{00013}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceperm_generator_ad10636165ebd16db2136edd7cf8ee370}{main}}():}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00014}00014     \textcolor{comment}{\# request length}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00015}00015     \textcolor{comment}{\# generate from 1 to n, format with 0's to fill to n}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00016}00016     \textcolor{comment}{\# print list}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00017}00017     n = int(input(\textcolor{stringliteral}{"{}Number of Candidates\(\backslash\)n>>> "{}}))}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00018}00018     l = []}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00019}00019     dataset = [str(x) \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} range(1, n+1)]   \textcolor{comment}{\# generate list of number 1 to n}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00020}00020     \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} range(1, n+2):}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00021}00021         l += itertools.permutations(dataset,i)  \textcolor{comment}{\# add permutations of subset to list}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00023}00023     intList = []}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00024}00024     \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} l:}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00025}00025         tmp = \textcolor{stringliteral}{''}.join(x).ljust(n, \textcolor{stringliteral}{'0'})  \textcolor{comment}{\# join to string, pad with 0's to n length}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00026}00026         intList.append(int(tmp))        \textcolor{comment}{\# Cast to int}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00028}00028     intList.sort()  \textcolor{comment}{\# sort numerically}}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00029}00029     print(intList)}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00030}00030     print(f\textcolor{stringliteral}{"{}Length: \{len(intList)\}"{}})}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00032}00032 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{'\_\_main\_\_'}:}
+\DoxyCodeLine{\Hypertarget{perm_generator_8py_source_l00033}00033     \mbox{\hyperlink{namespaceperm_generator_ad10636165ebd16db2136edd7cf8ee370}{main}}()}
+
+\end{DoxyCode}

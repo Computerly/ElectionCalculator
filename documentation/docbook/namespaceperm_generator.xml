@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceperm_generator" xml:lang="en-US">
+<title>permGenerator Namespace Reference</title>
+<indexterm><primary>permGenerator</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespaceperm_generator_1adbe9b5776a9833bfdb029594405ce574">pad</link> (s)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceperm_generator_1ad10636165ebd16db2136edd7cf8ee370">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceperm_generator_1ad10636165ebd16db2136edd7cf8ee370"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>permGenerator</secondary></indexterm>
+<indexterm><primary>permGenerator</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>def permGenerator.main ( )</computeroutput></para><para>
+Definition at line <link linkend="_perm_generator_8py_source_1l00013">13</link> of file <link linkend="_perm_generator_8py_source">permGenerator.py</link>.</para>
+</section>
+<anchor xml:id="_namespaceperm_generator_1adbe9b5776a9833bfdb029594405ce574"/><section>
+    <title>pad()</title>
+<indexterm><primary>pad</primary><secondary>permGenerator</secondary></indexterm>
+<indexterm><primary>permGenerator</primary><secondary>pad</secondary></indexterm>
+<para><computeroutput>def permGenerator.pad ( s)</computeroutput></para><para>
+Definition at line <link linkend="_perm_generator_8py_source_1l00008">8</link> of file <link linkend="_perm_generator_8py_source">permGenerator.py</link>.</para>
+</section>
+</section>
+</section>

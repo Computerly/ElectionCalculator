@@ -1,0 +1,33 @@
+\hypertarget{_party_8cpp_source}{}\doxysection{Party.\+cpp}
+\mbox{\hyperlink{_party_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_party_8h}{Party.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00005}\mbox{\hyperlink{class_party_aa13b1e291513fa8d07037ac7c951462f}{00005}} \mbox{\hyperlink{class_party_aa13b1e291513fa8d07037ac7c951462f}{Party::Party}}(std::string name)\{}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00006}00006     partyName = name;}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00007}00007     numVotes = 0;}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00008}00008     nSeats = 0;}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00009}00009     nRemainder = 0;}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00012}\mbox{\hyperlink{class_party_a811267ac4e72134c41aedbbc7294ac14}{00012}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_party_a811267ac4e72134c41aedbbc7294ac14}{Party::getNumVotes}}()\{ \textcolor{keywordflow}{return} numVotes; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00014}\mbox{\hyperlink{class_party_a6b94f18eb753e0ecaac6bd8a39c762b7}{00014}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_party_a6b94f18eb753e0ecaac6bd8a39c762b7}{Party::getHistory}}(\textcolor{keywordtype}{int} n)\{ \textcolor{keywordflow}{return} vnHistory.at(n); \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00016}\mbox{\hyperlink{class_party_a293a3b078fea59f28a96a82cfec2af8b}{00016}} std::string \mbox{\hyperlink{class_party_a293a3b078fea59f28a96a82cfec2af8b}{Party::getPartyName}}()\{ \textcolor{keywordflow}{return} partyName; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00018}\mbox{\hyperlink{class_party_ab932eef76367372050d26d862e05db20}{00018}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_party_ab932eef76367372050d26d862e05db20}{Party::getNumSeats}}()\{ \textcolor{keywordflow}{return} nSeats; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00020}\mbox{\hyperlink{class_party_ad14b136bbc9fc8f330e695e8dc45d35a}{00020}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_party_ad14b136bbc9fc8f330e695e8dc45d35a}{Party::getRemainder}}()\{ \textcolor{keywordflow}{return} nRemainder; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00022}\mbox{\hyperlink{class_party_ab4cb9e0cfee3df9e472597a2fb72faa2}{00022}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_party_ab4cb9e0cfee3df9e472597a2fb72faa2}{Party::setRemainder}}(\textcolor{keywordtype}{int} n) \{ nRemainder = n; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00024}\mbox{\hyperlink{class_party_a7d33d2aa3635b5cf7eab8856c351f550}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_party_a7d33d2aa3635b5cf7eab8856c351f550}{Party::incrementVotes}}(\textcolor{keywordtype}{int} n \textcolor{comment}{/*= 1*/})\{ numVotes += n; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00026}\mbox{\hyperlink{class_party_aff037af5b049bd74a5c7bdf63214ada0}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_party_aff037af5b049bd74a5c7bdf63214ada0}{Party::incrementSeats}}(\textcolor{keywordtype}{int} n \textcolor{comment}{/*= 1*/})\{ nSeats += n; \}}
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_party_8cpp_source_l00028}\mbox{\hyperlink{class_party_ae44aaa5f6272074b39afd7ab88c0d996}{00028}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_party_ae44aaa5f6272074b39afd7ab88c0d996}{Party::log}}(\textcolor{keywordtype}{int} n)\{ vnHistory.push\_back( n ); \}}
+
+\end{DoxyCode}

@@ -1,0 +1,63 @@
+\hypertarget{_candidate_8h_source}{}\doxysection{Candidate.\+h}
+\mbox{\hyperlink{_candidate_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef CANDIDATE\_H}}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00002}00002 \textcolor{preprocessor}{\#define CANDIDATE\_H}}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_party_8h}{Party.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00009}00009 \textcolor{keyword}{class }\mbox{\hyperlink{class_party}{Party}};}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00011}\mbox{\hyperlink{class_candidate}{00011}} \textcolor{keyword}{class }\mbox{\hyperlink{class_candidate}{Candidate}}\{}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00012}00012 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00019}00019     \mbox{\hyperlink{class_candidate_aa2747741fb662af5e8f3d01d1d1a43b6}{Candidate}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00028}00028     \mbox{\hyperlink{class_candidate_aa2747741fb662af5e8f3d01d1d1a43b6}{Candidate}}(std::string name);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00038}00038     \mbox{\hyperlink{class_candidate_aa2747741fb662af5e8f3d01d1d1a43b6}{Candidate}}(std::string name, std::string party);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00039}00039     }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00045}00045     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_candidate_a9555babb846eb95fef6330638e5df8e4}{getNumVotes}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00053}00053     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_candidate_a4e3b593e8a65268416ac3f050cf6bb9c}{isWinner}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00061}00061     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_candidate_a9dc0ef13c114e3a9103c88d64919dee1}{isLoser}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00068}00068     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a4224c7f51cb63e69605bd8451a389635}{incrementVotes}}(\textcolor{keywordtype}{int} n = 1);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00075}\mbox{\hyperlink{class_candidate_aaa427a0f8ab188e7a15d4b5372387acc}{00075}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_aaa427a0f8ab188e7a15d4b5372387acc}{incrementPartyVotes}}(\textcolor{keywordtype}{int} n = 1);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00082}00082     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a32cf9b31e0283eb24253c26421decbd5}{decrementVotes}}(\textcolor{keywordtype}{int} n = 1);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00089}00089     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a18383878c328f64845b46b9f8df10cd1}{setName}}(std::string name);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00096}00096     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a7a845d7f4f9de3de4edd8fea2e4d2cfd}{setParty}}(std::string party);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00103}00103     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a62c9714ed024011aa807198e0cdeaf70}{setVotes}}(\textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00111}00111     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a30c20d3678cd6e55355065d2fa6b3179}{logVoteCount}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00118}00118     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_a06e5cfc8517529f1d1ea6e9ce8ec2181}{setWinState}}(\textcolor{keywordtype}{bool} \_win);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00125}00125     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_candidate_ab7f754d6af134f03f4e3f0926a1efbf3}{setLoseState}}(\textcolor{keywordtype}{bool} \_lose);}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00131}00131     std::string \mbox{\hyperlink{class_candidate_af862d92e21d66d74f1d5cae92937d3da}{getName}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00138}00138     std::string \mbox{\hyperlink{class_candidate_a459c7d0c4e5708ded61d1ad33182a1e3}{getParty}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00145}00145     std::vector<int> \mbox{\hyperlink{class_candidate_a8b5d99efb1d7e2ece68cf0b10cfe59f4}{getVoteHistory}}();}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00146}00146 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00147}\mbox{\hyperlink{class_candidate_a0a8f074830cbcfe2eff08a2c78b8af6e}{00147}}     std::string \mbox{\hyperlink{class_candidate_a0a8f074830cbcfe2eff08a2c78b8af6e}{candidateName}};}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00148}00148 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00149}00149     \textcolor{keywordtype}{int} numVotes;}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00150}00150     \textcolor{keywordtype}{bool} win;}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00151}00151     \textcolor{keywordtype}{bool} lose;}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00152}00152     std::string candidateParty;}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00153}00153     std::vector<int> vnVoteHistory;}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00154}00154 \};}
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{_candidate_8h_source_l00156}00156 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

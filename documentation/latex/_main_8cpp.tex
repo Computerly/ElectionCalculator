@@ -1,0 +1,69 @@
+\hypertarget{_main_8cpp}{}\doxysection{Main.\+cpp File Reference}
+\label{_main_8cpp}\index{Main.cpp@{Main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}Election.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}IRV.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}OPL.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}PO.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}helpers/colors.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}helpers/config.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}{main}} (int argc, char const $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function for facilitating system execution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_main_8cpp_a7eaa04366167815aabce5f711f4c1c4d}{SHUFFLE}} = true
+\begin{DoxyCompactList}\small\item\em Configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}\label{_main_8cpp_abf9e6b7e6f15df4b525a2e7705ba3089}} 
+\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char const $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Main function for facilitating system execution. 
+
+Checks if \char`\"{}-\/\+S\char`\"{} has been passed to enable shuffle. Asks for input files until successful. Runs appropriate election based on first line in the first election file passed. Tracks how long an election takes to run and outputs time after election finishes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command line arguments \\
+\hline
+{\em argv} & The actual command line arguments \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The return value, where 0 represents successful execution, anything else error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_main_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{_main_8cpp_source}{Main.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_main_8cpp_a7eaa04366167815aabce5f711f4c1c4d}\label{_main_8cpp_a7eaa04366167815aabce5f711f4c1c4d}} 
+\index{Main.cpp@{Main.cpp}!SHUFFLE@{SHUFFLE}}
+\index{SHUFFLE@{SHUFFLE}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{SHUFFLE}{SHUFFLE}}
+{\footnotesize\ttfamily bool SHUFFLE = true}
+
+
+
+Configuration file. 
+
+stores global shuffle boolean 
+
+Definition at line \mbox{\hyperlink{_main_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{_main_8cpp_source}{Main.\+cpp}}.
+

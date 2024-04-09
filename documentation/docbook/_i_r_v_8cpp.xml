@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__i_r_v_8cpp" xml:lang="en-US">
+<title>IRV.cpp File Reference</title>
+<indexterm><primary>IRV.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;IRV.h&quot;
+#include &lt;fstream&gt;
+#include &lt;cmath&gt;
+#include &lt;random&gt;
+#include &lt;iomanip&gt;
+#include &lt;algorithm&gt;
+#include &lt;ctime&gt;
+#include &quot;helpers/Combinations.h&quot;
+#include &quot;helpers/math.h&quot;
+#include &quot;helpers/colors.h&quot;
+#include &quot;helpers/config.h&quot;
+#include &quot;Candidate.h&quot;
+</programlisting></section>

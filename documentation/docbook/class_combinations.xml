@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_combinations" xml:lang="en-US">
+<title>Combinations Class Reference</title>
+<indexterm><primary>Combinations</primary></indexterm>
+<para>
+
+<para>Helper class to <link linkend="_class_i_r_v">IRV</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;Combinations.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_combinations_1ae7994808e00dbaf95f08fc84965c824d">Combinations</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_class_combinations_1a068122df79d72ceeeb420ec1ea1b321d">~Combinations</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static int <link linkend="_class_combinations_1a32b8f4a3054aa26eec676ab99f90b060">indexOf</link> (int ranking, int combinations)</para>
+
+<para>Finds the position of a ranking number in a combinations array. </para>
+</listitem>
+            <listitem><para>static int <link linkend="_class_combinations_1ad45f1a1978ccea1941a0082907474687">sizeOf</link> (unsigned short combinations)</para>
+
+<para>Determines number of possible combinations of votes, given number of candidates. </para>
+</listitem>
+            <listitem><para>static int <link linkend="_class_combinations_1a96dc9a20d355bd4757e9277caa9adc22">getRankingNumber</link> (unsigned int index, unsigned int combinations)</para>
+
+<para>Finds the ranking numnber given an index in a given combinations array. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Helper class to <link linkend="_class_i_r_v">IRV</link>. </para>
+
+
+
+<para>Helps create ranking numbers. </para>
+<para>
+Definition at line <link linkend="__combinations_8h_source_1l00012">12</link> of file <link linkend="__combinations_8h_source">Combinations.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_combinations_1ae7994808e00dbaf95f08fc84965c824d"/><section>
+    <title>Combinations()</title>
+<indexterm><primary>Combinations</primary><secondary>Combinations</secondary></indexterm>
+<indexterm><primary>Combinations</primary><secondary>Combinations</secondary></indexterm>
+<para><computeroutput>Combinations::Combinations ( )</computeroutput></para><para>
+Definition at line <link linkend="__combinations_8cpp_source_1l00006">6</link> of file <link linkend="__combinations_8cpp_source">Combinations.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_combinations_1a068122df79d72ceeeb420ec1ea1b321d"/><section>
+    <title>~Combinations()</title>
+<indexterm><primary>~Combinations</primary><secondary>Combinations</secondary></indexterm>
+<indexterm><primary>Combinations</primary><secondary>~Combinations</secondary></indexterm>
+<para><computeroutput>Combinations::~Combinations ( )</computeroutput></para><para>
+Definition at line <link linkend="__combinations_8cpp_source_1l00007">7</link> of file <link linkend="__combinations_8cpp_source">Combinations.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_combinations_1a96dc9a20d355bd4757e9277caa9adc22"/><section>
+    <title>getRankingNumber()</title>
+<indexterm><primary>getRankingNumber</primary><secondary>Combinations</secondary></indexterm>
+<indexterm><primary>Combinations</primary><secondary>getRankingNumber</secondary></indexterm>
+<para><computeroutput>int Combinations::getRankingNumber (unsigned int index, unsigned int combinations)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Finds the ranking numnber given an index in a given combinations array. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>index, index</entry><entry>
+<para>in combinations </para>
+</entry>
+                            </row>
+                            <row>
+<entry>combinations</entry><entry>
+<para>arrray (index)</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>ranking number from given params. </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__combinations_8cpp_source_1l00016">16</link> of file <link linkend="__combinations_8cpp_source">Combinations.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_combinations_1a32b8f4a3054aa26eec676ab99f90b060"/><section>
+    <title>indexOf()</title>
+<indexterm><primary>indexOf</primary><secondary>Combinations</secondary></indexterm>
+<indexterm><primary>Combinations</primary><secondary>indexOf</secondary></indexterm>
+<para><computeroutput>int Combinations::indexOf (int ranking, int combinations)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Finds the position of a ranking number in a combinations array. </para>
+</para>
+
+<para>Using a binary search, indexOf find the position of the give ranking number in the given combinations array.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ranking</entry><entry>
+<para>int (see <link linkend="_class_i_r_v">IRV</link> for more information) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>combinations</entry><entry>
+<para>int references what combinations array to use.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>index of ranking number in combinations array </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__combinations_8cpp_source_1l00009">9</link> of file <link linkend="__combinations_8cpp_source">Combinations.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_combinations_1ad45f1a1978ccea1941a0082907474687"/><section>
+    <title>sizeOf()</title>
+<indexterm><primary>sizeOf</primary><secondary>Combinations</secondary></indexterm>
+<indexterm><primary>Combinations</primary><secondary>sizeOf</secondary></indexterm>
+<para><computeroutput>int Combinations::sizeOf (unsigned short combinations)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Determines number of possible combinations of votes, given number of candidates. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>unsigned</entry><entry>
+<para>short number of candidates</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>number of combinations </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__combinations_8cpp_source_1l00013">13</link> of file <link linkend="__combinations_8cpp_source">Combinations.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+helpers/<link linkend="__combinations_8h">Combinations.h</link>helpers/<link linkend="__combinations_8cpp">Combinations.cpp</link></section>
+</section>

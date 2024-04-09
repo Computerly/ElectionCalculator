@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__election_8cpp" xml:lang="en-US">
+<title>Election.cpp File Reference</title>
+<indexterm><primary>Election.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+#include &lt;sstream&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctime&gt;
+#include &quot;Election.h&quot;
+#include &quot;Candidate.h&quot;
+#include &quot;helpers/colors.h&quot;
+</programlisting></section>

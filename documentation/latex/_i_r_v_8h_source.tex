@@ -1,0 +1,67 @@
+\hypertarget{_i_r_v_8h_source}{}\doxysection{IRV.\+h}
+\mbox{\hyperlink{_i_r_v_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef IRV\_H}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00002}00002 \textcolor{preprocessor}{\#define IRV\_H}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00004}00004 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00005}00005 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00007}00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_candidate_8h}{Candidate.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_election_8h}{Election.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00017}00017 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00019}\mbox{\hyperlink{class_i_r_v}{00019}} \textcolor{keyword}{class }\mbox{\hyperlink{class_i_r_v}{IRV}} : \textcolor{keyword}{public} \mbox{\hyperlink{class_election}{Election}}\{}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00020}00020 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00021}00021     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00022}00022     \textcolor{comment}{// *                        Constructor and Destructor                        *}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00023}00023     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00032}00032     \mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV}}(vector<string> \_file\_name);}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00033}00033     }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00038}00038     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_i_r_v_a09a459a75055282e8d17ce307cfe653e}{\string~IRV}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00040}00040     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00041}00041     \textcolor{comment}{// *                               Other Methods                              *}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00042}00042     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00043}00043     }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00050}00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a04ae8c5e99fce4eb302221f850904de5}{runElection}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00051}00051     }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00059}00059     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a2f64e517f315a0510f16920af733c865}{writeToAudit}}(\textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00068}00068     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_aae6a20a766c9e6e2492b2069b4fb5248}{addAuditLine}}(\textcolor{keywordtype}{string} s);}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00077}00077     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a9edf85c29fad64404c8d0e42bee903ff}{displayResults}}(\textcolor{keywordtype}{bool} doColors = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00106}00106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a04e425b6602f4e390b12a260ff588b38}{digest}}(\textcolor{keywordtype}{string} buff);}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00112}00112     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a231d64cf7feb73a1436650dead9cd545}{runOff}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00123}00123     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a8cd20dbf4211087d3e5a0f962a8d9fae}{invalidateBallot}}(\textcolor{keywordtype}{string} ballot);}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00132}00132     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_ae4f0feda005a48723ad7368611bff74e}{writeInvalidBallots}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00133}00133 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00138}00138     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a3ed58707bc287c3f39ceb3c9b706bad1}{processHeaders}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00144}00144     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_ab5dabb07b08c1ecbe24a3082365eb3ec}{confirmHeadersDisplay}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00146}00146     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00147}00147     \textcolor{comment}{// *                                  Helpers                                 *}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00148}00148     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00155}00155     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a5c291d6c4b5b8c1e9ce0f1c763de7c1e}{handleWin}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00162}00162     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_i_r_v_a2f710125e74170809d38a0caaabf59fa}{logCandidates}}();}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00164}00164 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00169}00169     vector<int> vBallotArray;}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00175}00175     vector<string> audits;}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00181}00181     vector<string> invalidBallots;}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00182}00182 \};}
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_i_r_v_8h_source_l00184}00184 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

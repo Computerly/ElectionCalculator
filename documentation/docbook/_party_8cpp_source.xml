@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__party_8cpp_source" xml:lang="en-US">
+<title>Party.cpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__party_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__party_8h">Party.h</link>&quot;</emphasis>
+<anchor xml:id="__party_8cpp_source_1l00002"/>00002 
+<anchor xml:id="__party_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;stdexcept&gt;</emphasis>
+<anchor xml:id="__party_8cpp_source_1l00004"/>00004 
+<anchor xml:id="__party_8cpp_source_1l00005"/><link linkend="_class_party_1aa13b1e291513fa8d07037ac7c951462f">00005</link> <link linkend="_class_party_1aa13b1e291513fa8d07037ac7c951462f">Party::Party</link>(std::string&#32;name){
+<anchor xml:id="__party_8cpp_source_1l00006"/>00006 &#32;&#32;&#32;&#32;partyName&#32;=&#32;name;
+<anchor xml:id="__party_8cpp_source_1l00007"/>00007 &#32;&#32;&#32;&#32;numVotes&#32;=&#32;0;
+<anchor xml:id="__party_8cpp_source_1l00008"/>00008 &#32;&#32;&#32;&#32;nSeats&#32;=&#32;0;
+<anchor xml:id="__party_8cpp_source_1l00009"/>00009 &#32;&#32;&#32;&#32;nRemainder&#32;=&#32;0;
+<anchor xml:id="__party_8cpp_source_1l00010"/>00010 }
+<anchor xml:id="__party_8cpp_source_1l00011"/>00011 
+<anchor xml:id="__party_8cpp_source_1l00012"/><link linkend="_class_party_1a811267ac4e72134c41aedbbc7294ac14">00012</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_party_1a811267ac4e72134c41aedbbc7294ac14">Party::getNumVotes</link>(){&#32;<emphasis role="keywordflow">return</emphasis>&#32;numVotes;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00013"/>00013 
+<anchor xml:id="__party_8cpp_source_1l00014"/><link linkend="_class_party_1a6b94f18eb753e0ecaac6bd8a39c762b7">00014</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_party_1a6b94f18eb753e0ecaac6bd8a39c762b7">Party::getHistory</link>(<emphasis role="keywordtype">int</emphasis>&#32;n){&#32;<emphasis role="keywordflow">return</emphasis>&#32;vnHistory.at(n);&#32;}
+<anchor xml:id="__party_8cpp_source_1l00015"/>00015 
+<anchor xml:id="__party_8cpp_source_1l00016"/><link linkend="_class_party_1a293a3b078fea59f28a96a82cfec2af8b">00016</link> std::string&#32;<link linkend="_class_party_1a293a3b078fea59f28a96a82cfec2af8b">Party::getPartyName</link>(){&#32;<emphasis role="keywordflow">return</emphasis>&#32;partyName;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00017"/>00017 
+<anchor xml:id="__party_8cpp_source_1l00018"/><link linkend="_class_party_1ab932eef76367372050d26d862e05db20">00018</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_party_1ab932eef76367372050d26d862e05db20">Party::getNumSeats</link>(){&#32;<emphasis role="keywordflow">return</emphasis>&#32;nSeats;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00019"/>00019 
+<anchor xml:id="__party_8cpp_source_1l00020"/><link linkend="_class_party_1ad14b136bbc9fc8f330e695e8dc45d35a">00020</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_party_1ad14b136bbc9fc8f330e695e8dc45d35a">Party::getRemainder</link>(){&#32;<emphasis role="keywordflow">return</emphasis>&#32;nRemainder;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00021"/>00021 
+<anchor xml:id="__party_8cpp_source_1l00022"/><link linkend="_class_party_1ab4cb9e0cfee3df9e472597a2fb72faa2">00022</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_party_1ab4cb9e0cfee3df9e472597a2fb72faa2">Party::setRemainder</link>(<emphasis role="keywordtype">int</emphasis>&#32;n)&#32;{&#32;nRemainder&#32;=&#32;n;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00023"/>00023 
+<anchor xml:id="__party_8cpp_source_1l00024"/><link linkend="_class_party_1a7d33d2aa3635b5cf7eab8856c351f550">00024</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_party_1a7d33d2aa3635b5cf7eab8856c351f550">Party::incrementVotes</link>(<emphasis role="keywordtype">int</emphasis>&#32;n&#32;<emphasis role="comment">/*=&#32;1*/</emphasis>){&#32;numVotes&#32;+=&#32;n;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00025"/>00025 
+<anchor xml:id="__party_8cpp_source_1l00026"/><link linkend="_class_party_1aff037af5b049bd74a5c7bdf63214ada0">00026</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_party_1aff037af5b049bd74a5c7bdf63214ada0">Party::incrementSeats</link>(<emphasis role="keywordtype">int</emphasis>&#32;n&#32;<emphasis role="comment">/*=&#32;1*/</emphasis>){&#32;nSeats&#32;+=&#32;n;&#32;}
+<anchor xml:id="__party_8cpp_source_1l00027"/>00027 
+<anchor xml:id="__party_8cpp_source_1l00028"/><link linkend="_class_party_1ae44aaa5f6272074b39afd7ab88c0d996">00028</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_party_1ae44aaa5f6272074b39afd7ab88c0d996">Party::log</link>(<emphasis role="keywordtype">int</emphasis>&#32;n){&#32;vnHistory.push_back(&#32;n&#32;);&#32;}
+</programlisting></section>

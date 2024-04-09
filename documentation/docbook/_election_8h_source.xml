@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__election_8h_source" xml:lang="en-US">
+<title>Election.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__election_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;ELECTION_H</emphasis>
+<anchor xml:id="__election_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;ELECTION_H</emphasis>
+<anchor xml:id="__election_8h_source_1l00003"/>00003 
+<anchor xml:id="__election_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__election_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__election_8h_source_1l00006"/>00006 
+<anchor xml:id="__election_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__candidate_8h">Candidate.h</link>&quot;</emphasis>
+<anchor xml:id="__election_8h_source_1l00008"/>00008 
+<anchor xml:id="__election_8h_source_1l00009"/>00009 
+<anchor xml:id="__election_8h_source_1l00017"/>00017 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__election_8h_source_1l00018"/>00018 
+<anchor xml:id="__election_8h_source_1l00019"/><link linkend="_class_election">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_election">Election</link>{
+<anchor xml:id="__election_8h_source_1l00020"/>00020 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__election_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Constructor&#32;and&#32;Destructor&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__election_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00024"/>00024 
+<anchor xml:id="__election_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a59bbbe10e8f82e28edf933cd7e763e09">Election</link>(vector&lt;string&gt;&#32;inFiles);
+<anchor xml:id="__election_8h_source_1l00031"/>00031 
+<anchor xml:id="__election_8h_source_1l00036"/><link linkend="_class_election_1a5716fcfc390fe42d3cce8ae8eac51ee5">00036</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_election_1a5716fcfc390fe42d3cce8ae8eac51ee5">~Election</link>();
+<anchor xml:id="__election_8h_source_1l00037"/>00037 
+<anchor xml:id="__election_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Getters&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__election_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1a0b68106ee52f33286364ef5d617d77ee">getNumSeats</link>();
+<anchor xml:id="__election_8h_source_1l00048"/>00048 
+<anchor xml:id="__election_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>();
+<anchor xml:id="__election_8h_source_1l00055"/>00055 
+<anchor xml:id="__election_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1ade6ad99d57f425d06f7f6f5bf28bed5c">getNumBallots</link>();
+<anchor xml:id="__election_8h_source_1l00062"/>00062 
+<anchor xml:id="__election_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1a4c69a091a1504383315328f505a5f30f">getDroopQuota</link>();
+<anchor xml:id="__election_8h_source_1l00069"/>00069 
+<anchor xml:id="__election_8h_source_1l00070"/>00070 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="__election_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1ad1870564672bdb4d2d054d4b7f065d5d">getNumWinners</link>();
+<anchor xml:id="__election_8h_source_1l00077"/>00077 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_election_1a80881f59d3a334dc61a0a3d086456635">getNumLosers</link>();
+<anchor xml:id="__election_8h_source_1l00084"/>00084 
+<anchor xml:id="__election_8h_source_1l00090"/>00090 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_class_election_1af9ffbf9414f3129a2db5cab5b2827751">getElectionType</link>();
+<anchor xml:id="__election_8h_source_1l00091"/>00091 
+<anchor xml:id="__election_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;vector&lt;Candidate&gt;&#32;&amp;<link linkend="_class_election_1a89c14e25245d84d5214e58809f04e336">getCandidates</link>();
+<anchor xml:id="__election_8h_source_1l00098"/>00098 
+<anchor xml:id="__election_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;vector&lt;Candidate*&gt;&#32;<link linkend="_class_election_1a0258ea1cae7db815ff507c82ce1d75a0">getWinners</link>();
+<anchor xml:id="__election_8h_source_1l00105"/>00105 
+<anchor xml:id="__election_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;vector&lt;Candidate*&gt;&#32;<link linkend="_class_election_1a698e580dcf403280456bc77f70799405">getLosers</link>();
+<anchor xml:id="__election_8h_source_1l00112"/>00112 
+<anchor xml:id="__election_8h_source_1l00118"/>00118 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;&amp;<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>();
+<anchor xml:id="__election_8h_source_1l00119"/>00119 
+<anchor xml:id="__election_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Setters&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__election_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00123"/>00123 
+<anchor xml:id="__election_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a3cfb8628a0841dc5bb41c565e8177c2d">addWinner</link>(<link linkend="_class_candidate">Candidate</link>&#32;*c);
+<anchor xml:id="__election_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a2e3af400db4cd7b2ced380dbce0c5a7e">addLoser</link>(<link linkend="_class_candidate">Candidate</link>&#32;*c);
+<anchor xml:id="__election_8h_source_1l00137"/>00137 
+<anchor xml:id="__election_8h_source_1l00143"/>00143 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a8b0fa9b711db7a7f7236d44749729c2c">setDroopQuota</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;n);
+<anchor xml:id="__election_8h_source_1l00144"/>00144 
+<anchor xml:id="__election_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1af03da7d47d1d0e594dde51971e26889a">addBallots</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;n);
+<anchor xml:id="__election_8h_source_1l00151"/>00151 
+<anchor xml:id="__election_8h_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a365a0111ad658420788253fb423b8cf1">removeBallots</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;n&#32;=&#32;1);
+<anchor xml:id="__election_8h_source_1l00158"/>00158 
+<anchor xml:id="__election_8h_source_1l00164"/>00164 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a97214525cf583a21e43f80a770ed23dc">setNumberOfCandidates</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>);
+<anchor xml:id="__election_8h_source_1l00165"/>00165 
+<anchor xml:id="__election_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a948d46c6c930e1a759df8370282e382b">setNumberOfSeats</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>);
+<anchor xml:id="__election_8h_source_1l00172"/>00172 
+<anchor xml:id="__election_8h_source_1l00178"/>00178 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a056dcc5d34f21305c298a27282703119">setNumberOfBallots</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>);
+<anchor xml:id="__election_8h_source_1l00179"/>00179 
+<anchor xml:id="__election_8h_source_1l00185"/>00185 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1aef61e7926b2322a0ae07cc0873a14401">addCandidate</link>(<link linkend="_class_candidate">Candidate</link>&#32;c);
+<anchor xml:id="__election_8h_source_1l00186"/>00186 
+<anchor xml:id="__election_8h_source_1l00192"/>00192 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a2679563e40fa9fefa255377bcafc9c0e">setElectionType</link>(<emphasis role="keywordtype">string</emphasis>&#32;type);
+<anchor xml:id="__election_8h_source_1l00193"/>00193 
+<anchor xml:id="__election_8h_source_1l00194"/>00194 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00195"/>00195 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Other&#32;Methods&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__election_8h_source_1l00196"/>00196 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__election_8h_source_1l00197"/>00197 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_election_1a5a36c9bc9296e09825b49d8deb3f3874">flipCoin</link>();
+<anchor xml:id="__election_8h_source_1l00205"/>00205 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00210"/><link linkend="_class_election_1a1d84fd2f5cd7b14b2e9a729e7804286f">00210</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a1d84fd2f5cd7b14b2e9a729e7804286f">runElection</link>()&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00211"/>00211 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00217"/><link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">00217</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">displayResults</link>(<emphasis role="keywordtype">bool</emphasis>&#32;doColors&#32;=&#32;1)&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00218"/>00218 
+<anchor xml:id="__election_8h_source_1l00224"/><link linkend="_class_election_1a82e0c840e14b8b54cb40eef54dd29f1f">00224</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a82e0c840e14b8b54cb40eef54dd29f1f">writeToAudit</link>(<emphasis role="keywordtype">string</emphasis>&#32;s&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>)&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00225"/>00225 
+<anchor xml:id="__election_8h_source_1l00231"/><link linkend="_class_election_1aaaf320a6c7863b363f34bd47320b68ef">00231</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1aaaf320a6c7863b363f34bd47320b68ef">digest</link>(<emphasis role="keywordtype">string</emphasis>&#32;buff)&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00232"/>00232 
+<anchor xml:id="__election_8h_source_1l00237"/><link linkend="_class_election_1a9f2a807ba12358daa9d2ed94946748de">00237</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a9f2a807ba12358daa9d2ed94946748de">processHeaders</link>()&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00238"/>00238 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00244"/><link linkend="_class_election_1a0019d751dfca855ee50b7800884450fb">00244</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a0019d751dfca855ee50b7800884450fb">confirmHeadersDisplay</link>()&#32;=&#32;0;
+<anchor xml:id="__election_8h_source_1l00245"/>00245 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00251"/>00251 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1ad5f014c63a9069df284ccbd1676f2cce">confirmHeaders</link>();
+<anchor xml:id="__election_8h_source_1l00252"/>00252 
+<anchor xml:id="__election_8h_source_1l00262"/>00262 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a65200d7f72c9ac0f7678e91b4f660730">digestBallots</link>();
+<anchor xml:id="__election_8h_source_1l00263"/>00263 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00271"/>00271 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_election_1a9d6f8d633b57aa2cd89ce1ab6f7e553e">writeElectionResults</link>(<emphasis role="keywordtype">string</emphasis>&#32;s);
+<anchor xml:id="__election_8h_source_1l00272"/>00272 
+<anchor xml:id="__election_8h_source_1l00273"/>00273 
+<anchor xml:id="__election_8h_source_1l00274"/>00274 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__election_8h_source_1l00275"/>00275 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a59bbbe10e8f82e28edf933cd7e763e09">Election</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_election">Election</link>&amp;&#32;e);
+<anchor xml:id="__election_8h_source_1l00276"/>00276 
+<anchor xml:id="__election_8h_source_1l00281"/>00281 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;cSeats;
+<anchor xml:id="__election_8h_source_1l00282"/>00282 
+<anchor xml:id="__election_8h_source_1l00287"/>00287 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;cCandidates;
+<anchor xml:id="__election_8h_source_1l00288"/>00288 
+<anchor xml:id="__election_8h_source_1l00293"/>00293 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;cBallots;
+<anchor xml:id="__election_8h_source_1l00294"/>00294 &#32;&#32;&#32;&#32;
+<anchor xml:id="__election_8h_source_1l00301"/>00301 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;nDroopQuota;
+<anchor xml:id="__election_8h_source_1l00302"/>00302 
+<anchor xml:id="__election_8h_source_1l00307"/>00307 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;sElectionType;
+<anchor xml:id="__election_8h_source_1l00308"/>00308 
+<anchor xml:id="__election_8h_source_1l00315"/>00315 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;inputFiles;
+<anchor xml:id="__election_8h_source_1l00316"/>00316 
+<anchor xml:id="__election_8h_source_1l00322"/>00322 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;headers;
+<anchor xml:id="__election_8h_source_1l00323"/>00323 
+<anchor xml:id="__election_8h_source_1l00328"/>00328 &#32;&#32;&#32;&#32;vector&lt;Candidate&gt;&#32;vCandidates;
+<anchor xml:id="__election_8h_source_1l00329"/>00329 
+<anchor xml:id="__election_8h_source_1l00334"/>00334 &#32;&#32;&#32;&#32;vector&lt;Candidate*&gt;&#32;vWinners;
+<anchor xml:id="__election_8h_source_1l00335"/>00335 
+<anchor xml:id="__election_8h_source_1l00340"/>00340 &#32;&#32;&#32;&#32;vector&lt;Candidate*&gt;&#32;vLosers;
+<anchor xml:id="__election_8h_source_1l00341"/>00341 };
+<anchor xml:id="__election_8h_source_1l00342"/>00342 
+<anchor xml:id="__election_8h_source_1l00343"/>00343 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

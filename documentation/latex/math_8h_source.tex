@@ -1,0 +1,32 @@
+\hypertarget{math_8h_source}{}\doxysection{math.\+h}
+\label{math_8h_source}\index{helpers/math.h@{helpers/math.h}}
+\mbox{\hyperlink{math_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef MATH\_H}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00002}00002 \textcolor{preprocessor}{\#define MATH\_H}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00010}00010 \textcolor{keyword}{static} \textcolor{keywordtype}{int} opt\_int\_pow(\textcolor{keywordtype}{int} n)\{}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00011}00011     \textcolor{keywordtype}{int} r = 1;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00012}00012     \textcolor{keyword}{const} \textcolor{keywordtype}{int} x = 10;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00013}00013     \textcolor{keywordflow}{while} (n)\{}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00014}00014         \textcolor{keywordflow}{if} (n \& 1)\{}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00015}00015            r *= x;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00016}00016            n-\/-\/;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00017}00017         \}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00018}00018         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00019}00019             r *= x * x;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00020}00020             n -\/= 2;}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00021}00021         \}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00023}00023     \textcolor{keywordflow}{return} r; }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00029}\mbox{\hyperlink{math_8h_a819d456075bb2b4b250844103b3cae8d}{00029}} \textcolor{keywordtype}{int} \mbox{\hyperlink{math_8h_a819d456075bb2b4b250844103b3cae8d}{pow10}}[10] = \{}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00030}00030     1, 10, 100, 1000, 10000, }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00031}00031     100000, 1000000, 10000000, 100000000, 1000000000}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00032}00032 \};}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00038}00038 \textcolor{keyword}{static} \textcolor{keywordtype}{int} \&quick\_pow10(\textcolor{keywordtype}{int} n)\{ \textcolor{keywordflow}{return} \mbox{\hyperlink{math_8h_a819d456075bb2b4b250844103b3cae8d}{pow10}}[n]; \}}
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{math_8h_source_l00040}00040 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

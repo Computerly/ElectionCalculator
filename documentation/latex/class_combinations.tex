@@ -1,0 +1,140 @@
+\hypertarget{class_combinations}{}\doxysection{Combinations Class Reference}
+\label{class_combinations}\index{Combinations@{Combinations}}
+
+
+Helper class to \mbox{\hyperlink{class_i_r_v}{IRV}}.  
+
+
+
+
+{\ttfamily \#include $<$Combinations.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_combinations_ae7994808e00dbaf95f08fc84965c824d}{Combinations}} ()
+\item 
+\mbox{\hyperlink{class_combinations_a068122df79d72ceeeb420ec1ea1b321d}{$\sim$\+Combinations}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_combinations_a32b8f4a3054aa26eec676ab99f90b060}{index\+Of}} (int ranking, int combinations)
+\begin{DoxyCompactList}\small\item\em Finds the position of a ranking number in a combinations array. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_combinations_ad45f1a1978ccea1941a0082907474687}{size\+Of}} (unsigned short combinations)
+\begin{DoxyCompactList}\small\item\em Determines number of possible combinations of votes, given number of candidates. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_combinations_a96dc9a20d355bd4757e9277caa9adc22}{get\+Ranking\+Number}} (unsigned int index, unsigned int combinations)
+\begin{DoxyCompactList}\small\item\em Finds the ranking numnber given an index in a given combinations array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper class to \mbox{\hyperlink{class_i_r_v}{IRV}}. 
+
+Helps create ranking numbers. 
+
+Definition at line \mbox{\hyperlink{_combinations_8h_source_l00012}{12}} of file \mbox{\hyperlink{_combinations_8h_source}{Combinations.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_combinations_ae7994808e00dbaf95f08fc84965c824d}\label{class_combinations_ae7994808e00dbaf95f08fc84965c824d}} 
+\index{Combinations@{Combinations}!Combinations@{Combinations}}
+\index{Combinations@{Combinations}!Combinations@{Combinations}}
+\doxysubsubsection{\texorpdfstring{Combinations()}{Combinations()}}
+{\footnotesize\ttfamily Combinations\+::\+Combinations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_combinations_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{_combinations_8cpp_source}{Combinations.\+cpp}}.
+
+\mbox{\Hypertarget{class_combinations_a068122df79d72ceeeb420ec1ea1b321d}\label{class_combinations_a068122df79d72ceeeb420ec1ea1b321d}} 
+\index{Combinations@{Combinations}!````~Combinations@{$\sim$Combinations}}
+\index{````~Combinations@{$\sim$Combinations}!Combinations@{Combinations}}
+\doxysubsubsection{\texorpdfstring{$\sim$Combinations()}{~Combinations()}}
+{\footnotesize\ttfamily Combinations\+::$\sim$\+Combinations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_combinations_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_combinations_8cpp_source}{Combinations.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_combinations_a96dc9a20d355bd4757e9277caa9adc22}\label{class_combinations_a96dc9a20d355bd4757e9277caa9adc22}} 
+\index{Combinations@{Combinations}!getRankingNumber@{getRankingNumber}}
+\index{getRankingNumber@{getRankingNumber}!Combinations@{Combinations}}
+\doxysubsubsection{\texorpdfstring{getRankingNumber()}{getRankingNumber()}}
+{\footnotesize\ttfamily int Combinations\+::get\+Ranking\+Number (\begin{DoxyParamCaption}\item[{unsigned int}]{index,  }\item[{unsigned int}]{combinations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds the ranking numnber given an index in a given combinations array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index,index} & in combinations \\
+\hline
+{\em combinations} & arrray (index)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ranking number from given params. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_combinations_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{_combinations_8cpp_source}{Combinations.\+cpp}}.
+
+\mbox{\Hypertarget{class_combinations_a32b8f4a3054aa26eec676ab99f90b060}\label{class_combinations_a32b8f4a3054aa26eec676ab99f90b060}} 
+\index{Combinations@{Combinations}!indexOf@{indexOf}}
+\index{indexOf@{indexOf}!Combinations@{Combinations}}
+\doxysubsubsection{\texorpdfstring{indexOf()}{indexOf()}}
+{\footnotesize\ttfamily int Combinations\+::index\+Of (\begin{DoxyParamCaption}\item[{int}]{ranking,  }\item[{int}]{combinations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds the position of a ranking number in a combinations array. 
+
+Using a binary search, index\+Of find the position of the give ranking number in the given combinations array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ranking} & int (see \mbox{\hyperlink{class_i_r_v}{IRV}} for more information) \\
+\hline
+{\em combinations} & int references what combinations array to use.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of ranking number in combinations array 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_combinations_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{_combinations_8cpp_source}{Combinations.\+cpp}}.
+
+\mbox{\Hypertarget{class_combinations_ad45f1a1978ccea1941a0082907474687}\label{class_combinations_ad45f1a1978ccea1941a0082907474687}} 
+\index{Combinations@{Combinations}!sizeOf@{sizeOf}}
+\index{sizeOf@{sizeOf}!Combinations@{Combinations}}
+\doxysubsubsection{\texorpdfstring{sizeOf()}{sizeOf()}}
+{\footnotesize\ttfamily int Combinations\+::size\+Of (\begin{DoxyParamCaption}\item[{unsigned short}]{combinations }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Determines number of possible combinations of votes, given number of candidates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unsigned} & short number of candidates\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of combinations 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_combinations_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{_combinations_8cpp_source}{Combinations.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+helpers/\mbox{\hyperlink{_combinations_8h}{Combinations.\+h}}\item 
+helpers/\mbox{\hyperlink{_combinations_8cpp}{Combinations.\+cpp}}\end{DoxyCompactItemize}

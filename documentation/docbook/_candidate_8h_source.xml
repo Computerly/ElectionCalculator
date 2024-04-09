@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__candidate_8h_source" xml:lang="en-US">
+<title>Candidate.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__candidate_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;CANDIDATE_H</emphasis>
+<anchor xml:id="__candidate_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;CANDIDATE_H</emphasis>
+<anchor xml:id="__candidate_8h_source_1l00003"/>00003 
+<anchor xml:id="__candidate_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__candidate_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__candidate_8h_source_1l00006"/>00006 
+<anchor xml:id="__candidate_8h_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__party_8h">Party.h</link>&quot;</emphasis>
+<anchor xml:id="__candidate_8h_source_1l00008"/>00008 
+<anchor xml:id="__candidate_8h_source_1l00009"/>00009 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_party">Party</link>;
+<anchor xml:id="__candidate_8h_source_1l00010"/>00010 
+<anchor xml:id="__candidate_8h_source_1l00011"/><link linkend="_class_candidate">00011</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_candidate">Candidate</link>{
+<anchor xml:id="__candidate_8h_source_1l00012"/>00012 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__candidate_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<link linkend="_class_candidate_1aa2747741fb662af5e8f3d01d1d1a43b6">Candidate</link>();
+<anchor xml:id="__candidate_8h_source_1l00020"/>00020 
+<anchor xml:id="__candidate_8h_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<link linkend="_class_candidate_1aa2747741fb662af5e8f3d01d1d1a43b6">Candidate</link>(std::string&#32;name);
+<anchor xml:id="__candidate_8h_source_1l00029"/>00029 
+<anchor xml:id="__candidate_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<link linkend="_class_candidate_1aa2747741fb662af5e8f3d01d1d1a43b6">Candidate</link>(std::string&#32;name,&#32;std::string&#32;party);
+<anchor xml:id="__candidate_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;
+<anchor xml:id="__candidate_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_candidate_1a9555babb846eb95fef6330638e5df8e4">getNumVotes</link>();
+<anchor xml:id="__candidate_8h_source_1l00046"/>00046 
+<anchor xml:id="__candidate_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_candidate_1a4e3b593e8a65268416ac3f050cf6bb9c">isWinner</link>();
+<anchor xml:id="__candidate_8h_source_1l00054"/>00054 
+<anchor xml:id="__candidate_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_candidate_1a9dc0ef13c114e3a9103c88d64919dee1">isLoser</link>();
+<anchor xml:id="__candidate_8h_source_1l00062"/>00062 
+<anchor xml:id="__candidate_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a4224c7f51cb63e69605bd8451a389635">incrementVotes</link>(<emphasis role="keywordtype">int</emphasis>&#32;n&#32;=&#32;1);
+<anchor xml:id="__candidate_8h_source_1l00069"/>00069 
+<anchor xml:id="__candidate_8h_source_1l00075"/><link linkend="_class_candidate_1aaa427a0f8ab188e7a15d4b5372387acc">00075</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1aaa427a0f8ab188e7a15d4b5372387acc">incrementPartyVotes</link>(<emphasis role="keywordtype">int</emphasis>&#32;n&#32;=&#32;1);
+<anchor xml:id="__candidate_8h_source_1l00076"/>00076 
+<anchor xml:id="__candidate_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a32cf9b31e0283eb24253c26421decbd5">decrementVotes</link>(<emphasis role="keywordtype">int</emphasis>&#32;n&#32;=&#32;1);
+<anchor xml:id="__candidate_8h_source_1l00083"/>00083 
+<anchor xml:id="__candidate_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a18383878c328f64845b46b9f8df10cd1">setName</link>(std::string&#32;name);
+<anchor xml:id="__candidate_8h_source_1l00090"/>00090 
+<anchor xml:id="__candidate_8h_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a7a845d7f4f9de3de4edd8fea2e4d2cfd">setParty</link>(std::string&#32;party);
+<anchor xml:id="__candidate_8h_source_1l00097"/>00097 
+<anchor xml:id="__candidate_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a62c9714ed024011aa807198e0cdeaf70">setVotes</link>(<emphasis role="keywordtype">int</emphasis>&#32;n);
+<anchor xml:id="__candidate_8h_source_1l00104"/>00104 
+<anchor xml:id="__candidate_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a30c20d3678cd6e55355065d2fa6b3179">logVoteCount</link>();
+<anchor xml:id="__candidate_8h_source_1l00112"/>00112 
+<anchor xml:id="__candidate_8h_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1a06e5cfc8517529f1d1ea6e9ce8ec2181">setWinState</link>(<emphasis role="keywordtype">bool</emphasis>&#32;_win);
+<anchor xml:id="__candidate_8h_source_1l00119"/>00119 
+<anchor xml:id="__candidate_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_candidate_1ab7f754d6af134f03f4e3f0926a1efbf3">setLoseState</link>(<emphasis role="keywordtype">bool</emphasis>&#32;_lose);
+<anchor xml:id="__candidate_8h_source_1l00126"/>00126 
+<anchor xml:id="__candidate_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_candidate_1af862d92e21d66d74f1d5cae92937d3da">getName</link>();
+<anchor xml:id="__candidate_8h_source_1l00132"/>00132 
+<anchor xml:id="__candidate_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_candidate_1a459c7d0c4e5708ded61d1ad33182a1e3">getParty</link>();
+<anchor xml:id="__candidate_8h_source_1l00139"/>00139 
+<anchor xml:id="__candidate_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;<link linkend="_class_candidate_1a8b5d99efb1d7e2ece68cf0b10cfe59f4">getVoteHistory</link>();
+<anchor xml:id="__candidate_8h_source_1l00146"/>00146 
+<anchor xml:id="__candidate_8h_source_1l00147"/><link linkend="_class_candidate_1a0a8f074830cbcfe2eff08a2c78b8af6e">00147</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_class_candidate_1a0a8f074830cbcfe2eff08a2c78b8af6e">candidateName</link>;
+<anchor xml:id="__candidate_8h_source_1l00148"/>00148 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__candidate_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;numVotes;
+<anchor xml:id="__candidate_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;win;
+<anchor xml:id="__candidate_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;lose;
+<anchor xml:id="__candidate_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;std::string&#32;candidateParty;
+<anchor xml:id="__candidate_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;std::vector&lt;int&gt;&#32;vnVoteHistory;
+<anchor xml:id="__candidate_8h_source_1l00154"/>00154 };
+<anchor xml:id="__candidate_8h_source_1l00155"/>00155 
+<anchor xml:id="__candidate_8h_source_1l00156"/>00156 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

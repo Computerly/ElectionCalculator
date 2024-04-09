@@ -1,0 +1,328 @@
+\hypertarget{class_i_r_v}{}\doxysection{IRV Class Reference}
+\label{class_i_r_v}\index{IRV@{IRV}}
+
+
+{\ttfamily \#include $<$IRV.\+h$>$}
+
+Inheritance diagram for IRV\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_r_v}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV}} (vector$<$ string $>$ \+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_i_r_v}{IRV}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_i_r_v_a09a459a75055282e8d17ce307cfe653e}{$\sim$\+IRV}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV\+::\+IRV}} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a04ae8c5e99fce4eb302221f850904de5}{run\+Election}} ()
+\begin{DoxyCompactList}\small\item\em Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a2f64e517f315a0510f16920af733c865}{write\+To\+Audit}} (string s=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Method to write the election progression to an audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_aae6a20a766c9e6e2492b2069b4fb5248}{add\+Audit\+Line}} (string s)
+\begin{DoxyCompactList}\small\item\em Adds line to audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a9edf85c29fad64404c8d0e42bee903ff}{display\+Results}} (bool do\+Colors=true)
+\begin{DoxyCompactList}\small\item\em Method to display the \mbox{\hyperlink{class_i_r_v}{IRV}} election results to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a04e425b6602f4e390b12a260ff588b38}{digest}} (string buff)
+\begin{DoxyCompactList}\small\item\em Parses the election file and inserts ballots in the tally array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a231d64cf7feb73a1436650dead9cd545}{run\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a8cd20dbf4211087d3e5a0f962a8d9fae}{invalidate\+Ballot}} (string ballot)
+\begin{DoxyCompactList}\small\item\em Method to invalidate a ballot. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_ae4f0feda005a48723ad7368611bff74e}{write\+Invalid\+Ballots}} ()
+\begin{DoxyCompactList}\small\item\em Writes invalidated ballots to file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a3ed58707bc287c3f39ceb3c9b706bad1}{process\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Method to store headers(strings) into their respective variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_ab5dabb07b08c1ecbe24a3082365eb3ec}{confirm\+Headers\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Confirms everything processed thus far, appears correctly. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a5c291d6c4b5b8c1e9ce0f1c763de7c1e}{handle\+Win}} ()
+\begin{DoxyCompactList}\small\item\em Helper to handle the vote tally for a round. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_i_r_v_a2f710125e74170809d38a0caaabf59fa}{log\+Candidates}} ()
+\begin{DoxyCompactList}\small\item\em Helper to log the Candidates status quo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8h_source_l00019}{19}} of file \mbox{\hyperlink{_i_r_v_8h_source}{IRV.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_i_r_v_afda961271e64f47d75cd55a98b635a76}\label{class_i_r_v_afda961271e64f47d75cd55a98b635a76}} 
+\index{IRV@{IRV}!IRV@{IRV}}
+\index{IRV@{IRV}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{IRV()}{IRV()}}
+{\footnotesize\ttfamily IRV\+::\+IRV (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_i_r_v}{IRV}} object. 
+
+Initializes and confirms election
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::vector$<$std\+::string$>$} & \+\_\+file\+\_\+name. A vector of all files to run \mbox{\hyperlink{class_i_r_v}{IRV}} the election. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a09a459a75055282e8d17ce307cfe653e}\label{class_i_r_v_a09a459a75055282e8d17ce307cfe653e}} 
+\index{IRV@{IRV}!````~IRV@{$\sim$IRV}}
+\index{````~IRV@{$\sim$IRV}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{$\sim$IRV()}{~IRV()}}
+{\footnotesize\ttfamily IRV\+::$\sim$\+IRV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_i_r_v_afda961271e64f47d75cd55a98b635a76}{IRV\+::\+IRV}} object. 
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_r_v_aae6a20a766c9e6e2492b2069b4fb5248}\label{class_i_r_v_aae6a20a766c9e6e2492b2069b4fb5248}} 
+\index{IRV@{IRV}!addAuditLine@{addAuditLine}}
+\index{addAuditLine@{addAuditLine}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{addAuditLine()}{addAuditLine()}}
+{\footnotesize\ttfamily void IRV\+::add\+Audit\+Line (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Adds line to audit file. 
+
+Adds a string to a vector of strings to be added to an audit file
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to be added to the audit file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00401}{401}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_ab5dabb07b08c1ecbe24a3082365eb3ec}\label{class_i_r_v_ab5dabb07b08c1ecbe24a3082365eb3ec}} 
+\index{IRV@{IRV}!confirmHeadersDisplay@{confirmHeadersDisplay}}
+\index{confirmHeadersDisplay@{confirmHeadersDisplay}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{confirmHeadersDisplay()}{confirmHeadersDisplay()}}
+{\footnotesize\ttfamily void IRV\+::confirm\+Headers\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Confirms everything processed thus far, appears correctly. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a0019d751dfca855ee50b7800884450fb}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00069}{69}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a04e425b6602f4e390b12a260ff588b38}\label{class_i_r_v_a04e425b6602f4e390b12a260ff588b38}} 
+\index{IRV@{IRV}!digest@{digest}}
+\index{digest@{digest}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{digest()}{digest()}}
+{\footnotesize\ttfamily void IRV\+::digest (\begin{DoxyParamCaption}\item[{string}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Parses the election file and inserts ballots in the tally array. 
+
+Each ballot (row), is converted into a ranking number. Ranking numbers are formed by ordering the n\+Preference of the candidates. For example\+: \char`\"{}2,1,3,5,4\char`\"{} is a given ballot. The first choice is the second candidate. So the first number in the ranking number is 2. Then the second choice is the first candidate. So the second number in the ranking number is 1. This repeats until all choices are recorded. For this given ballot, the corollary ranking number is\+: \char`\"{}21354\char`\"{}.
+
+If a voter does not vote for all candidates (but at least one), it is translated into a zero. So for example, if not all of the candidates were chosen, a ballot could look like \char`\"{}4,,1,3,2\char`\"{}. Its corollary ranking number would be\+: \char`\"{}35410\char`\"{} because there was no fifth choice given.
+
+While digesting ballots and converting into rankings, the first choice is automatically tallied into the tally array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string,a} & line from the election file representing a ballot, where a \char`\"{}1\char`\"{} represents the voter\textquotesingle{}s first choice \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_aaaf320a6c7863b363f34bd47320b68ef}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00350}{350}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a9edf85c29fad64404c8d0e42bee903ff}\label{class_i_r_v_a9edf85c29fad64404c8d0e42bee903ff}} 
+\index{IRV@{IRV}!displayResults@{displayResults}}
+\index{displayResults@{displayResults}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{displayResults()}{displayResults()}}
+{\footnotesize\ttfamily void IRV\+::display\+Results (\begin{DoxyParamCaption}\item[{bool}]{do\+Colors = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to display the \mbox{\hyperlink{class_i_r_v}{IRV}} election results to the screen. 
+
+\begin{DoxyNote}{Note}
+Includes the election information as well
+\end{DoxyNote}
+@params bool do\+Colors (see \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election\+::display\+Results()}} for more) 
+
+Implements \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00262}{262}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a5c291d6c4b5b8c1e9ce0f1c763de7c1e}\label{class_i_r_v_a5c291d6c4b5b8c1e9ce0f1c763de7c1e}} 
+\index{IRV@{IRV}!handleWin@{handleWin}}
+\index{handleWin@{handleWin}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{handleWin()}{handleWin()}}
+{\footnotesize\ttfamily void IRV\+::handle\+Win (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper to handle the vote tally for a round. 
+
+\begin{DoxyNote}{Note}
+Adds the non-\/winning candidates to the loser vector 
+\end{DoxyNote}
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00383}{383}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a8cd20dbf4211087d3e5a0f962a8d9fae}\label{class_i_r_v_a8cd20dbf4211087d3e5a0f962a8d9fae}} 
+\index{IRV@{IRV}!invalidateBallot@{invalidateBallot}}
+\index{invalidateBallot@{invalidateBallot}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{invalidateBallot()}{invalidateBallot()}}
+{\footnotesize\ttfamily void IRV\+::invalidate\+Ballot (\begin{DoxyParamCaption}\item[{string}]{ballot }\end{DoxyParamCaption})}
+
+
+
+Method to invalidate a ballot. 
+
+Adds ballot to a vector of invalidated ballots, removes the ballot from the total ballot count, and creates a log in audit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & ballot, string representing a ballot to be invalidated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00449}{449}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a2f710125e74170809d38a0caaabf59fa}\label{class_i_r_v_a2f710125e74170809d38a0caaabf59fa}} 
+\index{IRV@{IRV}!logCandidates@{logCandidates}}
+\index{logCandidates@{logCandidates}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{logCandidates()}{logCandidates()}}
+{\footnotesize\ttfamily void IRV\+::log\+Candidates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Helper to log the Candidates status quo. 
+
+Logs the current vote count and adds a line in audit with vote count. 
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00441}{441}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a3ed58707bc287c3f39ceb3c9b706bad1}\label{class_i_r_v_a3ed58707bc287c3f39ceb3c9b706bad1}} 
+\index{IRV@{IRV}!processHeaders@{processHeaders}}
+\index{processHeaders@{processHeaders}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{processHeaders()}{processHeaders()}}
+{\footnotesize\ttfamily void IRV\+::process\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to store headers(strings) into their respective variables. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a9f2a807ba12358daa9d2ed94946748de}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a04ae8c5e99fce4eb302221f850904de5}\label{class_i_r_v_a04ae8c5e99fce4eb302221f850904de5}} 
+\index{IRV@{IRV}!runElection@{runElection}}
+\index{runElection@{runElection}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{runElection()}{runElection()}}
+{\footnotesize\ttfamily void IRV\+::run\+Election (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. 
+
+Calls methods stratigically to compute election results 
+
+Implements \mbox{\hyperlink{class_election_a1d84fd2f5cd7b14b2e9a729e7804286f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00086}{86}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a231d64cf7feb73a1436650dead9cd545}\label{class_i_r_v_a231d64cf7feb73a1436650dead9cd545}} 
+\index{IRV@{IRV}!runOff@{runOff}}
+\index{runOff@{runOff}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{runOff()}{runOff()}}
+{\footnotesize\ttfamily void IRV\+::run\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. 
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_ae4f0feda005a48723ad7368611bff74e}\label{class_i_r_v_ae4f0feda005a48723ad7368611bff74e}} 
+\index{IRV@{IRV}!writeInvalidBallots@{writeInvalidBallots}}
+\index{writeInvalidBallots@{writeInvalidBallots}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{writeInvalidBallots()}{writeInvalidBallots()}}
+{\footnotesize\ttfamily void IRV\+::write\+Invalid\+Ballots (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Writes invalidated ballots to file. 
+
+Similar to write\+To\+Audit, writes each line in invalid\+Ballots vector to a file of invalidated ballots. 
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00457}{457}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+\mbox{\Hypertarget{class_i_r_v_a2f64e517f315a0510f16920af733c865}\label{class_i_r_v_a2f64e517f315a0510f16920af733c865}} 
+\index{IRV@{IRV}!writeToAudit@{writeToAudit}}
+\index{writeToAudit@{writeToAudit}!IRV@{IRV}}
+\doxysubsubsection{\texorpdfstring{writeToAudit()}{writeToAudit()}}
+{\footnotesize\ttfamily void IRV\+::write\+To\+Audit (\begin{DoxyParamCaption}\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to write the election progression to an audit file. 
+
+Writes each line from audits vector to file
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & s is the file name of the to-\/be-\/generated audit file \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_a82e0c840e14b8b54cb40eef54dd29f1f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_i_r_v_8cpp_source_l00403}{403}} of file \mbox{\hyperlink{_i_r_v_8cpp_source}{IRV.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_i_r_v_8h}{IRV.\+h}}\item 
+\mbox{\hyperlink{_i_r_v_8cpp}{IRV.\+cpp}}\end{DoxyCompactItemize}

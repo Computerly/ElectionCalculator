@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_math_8h_source" xml:lang="en-US">
+<title>math.h</title>
+<indexterm><primary>helpers/math.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_math_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;MATH_H</emphasis>
+<anchor xml:id="_math_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;MATH_H</emphasis>
+<anchor xml:id="_math_8h_source_1l00003"/>00003 
+<anchor xml:id="_math_8h_source_1l00010"/>00010 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;opt_int_pow(<emphasis role="keywordtype">int</emphasis>&#32;n){
+<anchor xml:id="_math_8h_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;r&#32;=&#32;1;
+<anchor xml:id="_math_8h_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;10;
+<anchor xml:id="_math_8h_source_1l00013"/>00013 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(n){
+<anchor xml:id="_math_8h_source_1l00014"/>00014 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(n&#32;&amp;&#32;1){
+<anchor xml:id="_math_8h_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;*=&#32;x;
+<anchor xml:id="_math_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n--;
+<anchor xml:id="_math_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_math_8h_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_math_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;r&#32;*=&#32;x&#32;*&#32;x;
+<anchor xml:id="_math_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;n&#32;-=&#32;2;
+<anchor xml:id="_math_8h_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_math_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_math_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;r;&#32;
+<anchor xml:id="_math_8h_source_1l00024"/>00024 }
+<anchor xml:id="_math_8h_source_1l00029"/><link linkend="_math_8h_1a819d456075bb2b4b250844103b3cae8d">00029</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_math_8h_1a819d456075bb2b4b250844103b3cae8d">pow10</link>[10]&#32;=&#32;{
+<anchor xml:id="_math_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;1,&#32;10,&#32;100,&#32;1000,&#32;10000,&#32;
+<anchor xml:id="_math_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;100000,&#32;1000000,&#32;10000000,&#32;100000000,&#32;1000000000
+<anchor xml:id="_math_8h_source_1l00032"/>00032 };
+<anchor xml:id="_math_8h_source_1l00033"/>00033 
+<anchor xml:id="_math_8h_source_1l00038"/>00038 <emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;quick_pow10(<emphasis role="keywordtype">int</emphasis>&#32;n){&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_math_8h_1a819d456075bb2b4b250844103b3cae8d">pow10</link>[n];&#32;}
+<anchor xml:id="_math_8h_source_1l00039"/>00039 
+<anchor xml:id="_math_8h_source_1l00040"/>00040 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

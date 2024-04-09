@@ -1,0 +1,273 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_p_o" xml:lang="en-US">
+<title>PO Class Reference</title>
+<indexterm><primary>PO</primary></indexterm>
+<para>
+
+<para>Represents an <link linkend="_class_i_r_v">IRV</link> (Instant Runoff Voting) election. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;PO.h&gt;</computeroutput>
+</para>
+<para>Inheritance diagram for PO:    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_p_o.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_p_o_1a6b0d93e78bd6fb62a90faa710fa7104d">PO</link> (vector&lt; string &gt; _file_name)</para>
+
+<para>Construct a new <link linkend="_class_p_o">PO</link> object. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_class_p_o_1a72014c8c461b68470955dd0984bc1eec">~PO</link> ()</para>
+
+<para>Destroy the <link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV::IRV</link> object. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1aad1ca29b89c0515ff34459b6cdc3ab0b">runElection</link> ()</para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1afb780451687085bcc78ac106e7e27b4f">runOff</link> ()</para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1adaa1725adb8ab847e9f1f6569db9a91a">displayResults</link> (bool doColors=0)</para>
+
+<para>Method to display the <link linkend="_class_p_o">PO</link> election results to the screen. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1ac994e74935bcad8df1db591b5bda35c2">writeToAudit</link> (string s=&quot;&quot;)</para>
+
+<para>Method to write the election progression to an audit file. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1ac1b64bb0e8d3806ee868e7ef2470578f">digest</link> (string buff)</para>
+
+<para>Parses the election file and updates candidate&apos;s votes. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1a18a1823c5de1ac5918b0f955412afacd">processHeaders</link> ()</para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_p_o_1a3876aa6a9712fc8d8236a7488ae733f9">confirmHeadersDisplay</link> ()</para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Represents an <link linkend="_class_i_r_v">IRV</link> (Instant Runoff Voting) election. </para>
+
+
+
+<para>Implements <link linkend="_class_election">Election</link> </para>
+<para>
+Definition at line <link linkend="__p_o_8h_source_1l00017">17</link> of file <link linkend="__p_o_8h_source">PO.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_p_o_1a6b0d93e78bd6fb62a90faa710fa7104d"/><section>
+    <title>PO()</title>
+<indexterm><primary>PO</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>PO</secondary></indexterm>
+<para><computeroutput>PO::PO (vector&lt; string &gt; _file_name)</computeroutput></para><para>
+
+<para>Construct a new <link linkend="_class_p_o">PO</link> object. </para>
+</para>
+
+<para>Initializes and confirms election</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::vector&lt;std::string&gt;</entry><entry>
+<para>_file_name. A vector of all files to run <link linkend="_class_i_r_v">IRV</link> the election. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00013">13</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1a72014c8c461b68470955dd0984bc1eec"/><section>
+    <title>~PO()</title>
+<indexterm><primary>~PO</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>~PO</secondary></indexterm>
+<para><computeroutput>PO::~PO ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destroy the <link linkend="_class_i_r_v_1afda961271e64f47d75cd55a98b635a76">IRV::IRV</link> object. </para>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_p_o_1a3876aa6a9712fc8d8236a7488ae733f9"/><section>
+    <title>confirmHeadersDisplay()</title>
+<indexterm><primary>confirmHeadersDisplay</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>confirmHeadersDisplay</secondary></indexterm>
+<para><computeroutput>void PO::confirmHeadersDisplay ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Confirms everything processed thus far, appears correctly. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a0019d751dfca855ee50b7800884450fb">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00153">153</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1ac1b64bb0e8d3806ee868e7ef2470578f"/><section>
+    <title>digest()</title>
+<indexterm><primary>digest</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>digest</secondary></indexterm>
+<para><computeroutput>void PO::digest (string buff)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Parses the election file and updates candidate&apos;s votes. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string, a</entry><entry>
+<para>line from the election file representing a ballot, where a &quot;1&quot; represents the voter&apos;s vote. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1aaaf320a6c7863b363f34bd47320b68ef">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00140">140</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1adaa1725adb8ab847e9f1f6569db9a91a"/><section>
+    <title>displayResults()</title>
+<indexterm><primary>displayResults</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>displayResults</secondary></indexterm>
+<para><computeroutput>void PO::displayResults (bool doColors = <computeroutput>0</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to display the <link linkend="_class_p_o">PO</link> election results to the screen. </para>
+</para>
+
+<para><note><title>Note</title>
+
+<para>Includes the election information as well</para>
+</note>
+@params bool doColors (see <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election::displayResults()</link> for more) </para>
+<para>
+Implements <link linkend="_class_election_1a1a06089736577ef9dce522ccdc46fcb2">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00062">62</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1a18a1823c5de1ac5918b0f955412afacd"/><section>
+    <title>processHeaders()</title>
+<indexterm><primary>processHeaders</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>processHeaders</secondary></indexterm>
+<para><computeroutput>void PO::processHeaders ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to store headers(strings) into their respective variables. </para>
+</para>
+<para>
+Implements <link linkend="_class_election_1a9f2a807ba12358daa9d2ed94946748de">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00169">169</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1aad1ca29b89c0515ff34459b6cdc3ab0b"/><section>
+    <title>runElection()</title>
+<indexterm><primary>runElection</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>runElection</secondary></indexterm>
+<para><computeroutput>void PO::runElection ( )<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Main method for running the <link linkend="_class_i_r_v">IRV</link> election process. </para>
+</para>
+
+<para>Calls methods stratigically to compute election results </para>
+<para>
+Implements <link linkend="_class_election_1a1d84fd2f5cd7b14b2e9a729e7804286f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00029">29</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1afb780451687085bcc78ac106e7e27b4f"/><section>
+    <title>runOff()</title>
+<indexterm><primary>runOff</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>runOff</secondary></indexterm>
+<para><computeroutput>void PO::runOff ( )</computeroutput></para><para>
+
+<para>Computes runoff of the <link linkend="_class_i_r_v">IRV</link> election. </para>
+</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00132">132</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_p_o_1ac994e74935bcad8df1db591b5bda35c2"/><section>
+    <title>writeToAudit()</title>
+<indexterm><primary>writeToAudit</primary><secondary>PO</secondary></indexterm>
+<indexterm><primary>PO</primary><secondary>writeToAudit</secondary></indexterm>
+<para><computeroutput>void PO::writeToAudit (string s = <computeroutput>&quot;&quot;</computeroutput>
+)<computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Method to write the election progression to an audit file. </para>
+</para>
+
+<para>Writes each line from audits vector to file</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>std::string</entry><entry>
+<para>s is the file name of the to-be-generated audit file </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_class_election_1a82e0c840e14b8b54cb40eef54dd29f1f">Election</link>.</para>
+<para>
+Definition at line <link linkend="__p_o_8cpp_source_1l00100">100</link> of file <link linkend="__p_o_8cpp_source">PO.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+<link linkend="__p_o_8h">PO.h</link><link linkend="__p_o_8cpp">PO.cpp</link></section>
+</section>

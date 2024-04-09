@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_perm_generator_8py_source" xml:lang="en-US">
+<title>permGenerator.py</title>
+<indexterm><primary>helpers/permGenerator.py</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_perm_generator_8py_source_1l00001"/><link linkend="_namespaceperm_generator">00001</link> <emphasis role="comment">#&#32;****************************************************************************</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00002"/>00002 <emphasis role="comment">#&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Permutation&#32;Generator&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00003"/>00003 <emphasis role="comment">#&#32;*&#32;&#32;&#32;Permutation&#32;Generator&#32;outputs&#32;every&#32;possible&#32;combination&#32;a&#32;person&#32;can&#32;&#32;*</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00004"/>00004 <emphasis role="comment">#&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vote&#32;in&#32;an&#32;election&#32;of&#32;given&#32;length&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00005"/>00005 <emphasis role="comment">#&#32;****************************************************************************</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00006"/>00006 <emphasis role="keyword">import</emphasis>&#32;itertools
+<anchor xml:id="_perm_generator_8py_source_1l00007"/>00007 
+<anchor xml:id="_perm_generator_8py_source_1l00008"/><link linkend="_namespaceperm_generator_1adbe9b5776a9833bfdb029594405ce574">00008</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceperm_generator_1adbe9b5776a9833bfdb029594405ce574">pad</link>(s):
+<anchor xml:id="_perm_generator_8py_source_1l00009"/>00009 &#32;&#32;&#32;&#32;<emphasis role="keyword">global</emphasis>&#32;n
+<anchor xml:id="_perm_generator_8py_source_1l00010"/>00010 &#32;&#32;&#32;&#32;zeros&#32;=&#32;<emphasis role="stringliteral">&apos;0&apos;</emphasis>&#32;*&#32;(n&#32;-&#32;len(s))
+<anchor xml:id="_perm_generator_8py_source_1l00011"/>00011 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;s&#32;+&#32;zeros
+<anchor xml:id="_perm_generator_8py_source_1l00012"/>00012 
+<anchor xml:id="_perm_generator_8py_source_1l00013"/><link linkend="_namespaceperm_generator_1ad10636165ebd16db2136edd7cf8ee370">00013</link> <emphasis role="keyword">def&#32;</emphasis><link linkend="_namespaceperm_generator_1ad10636165ebd16db2136edd7cf8ee370">main</link>():
+<anchor xml:id="_perm_generator_8py_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;request&#32;length</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;generate&#32;from&#32;1&#32;to&#32;n,&#32;format&#32;with&#32;0&apos;s&#32;to&#32;fill&#32;to&#32;n</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;print&#32;list</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00017"/>00017 &#32;&#32;&#32;&#32;n&#32;=&#32;int(input(<emphasis role="stringliteral">&quot;Number&#32;of&#32;Candidates\n&gt;&gt;&gt;&#32;&quot;</emphasis>))
+<anchor xml:id="_perm_generator_8py_source_1l00018"/>00018 &#32;&#32;&#32;&#32;l&#32;=&#32;[]
+<anchor xml:id="_perm_generator_8py_source_1l00019"/>00019 &#32;&#32;&#32;&#32;dataset&#32;=&#32;[str(x)&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(1,&#32;n+1)]&#32;&#32;&#32;<emphasis role="comment">#&#32;generate&#32;list&#32;of&#32;number&#32;1&#32;to&#32;n</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;i&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(1,&#32;n+2):
+<anchor xml:id="_perm_generator_8py_source_1l00021"/>00021 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;l&#32;+=&#32;itertools.permutations(dataset,i)&#32;&#32;<emphasis role="comment">#&#32;add&#32;permutations&#32;of&#32;subset&#32;to&#32;list</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00022"/>00022 
+<anchor xml:id="_perm_generator_8py_source_1l00023"/>00023 &#32;&#32;&#32;&#32;intList&#32;=&#32;[]
+<anchor xml:id="_perm_generator_8py_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;l:
+<anchor xml:id="_perm_generator_8py_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tmp&#32;=&#32;<emphasis role="stringliteral">&apos;&apos;</emphasis>.join(x).ljust(n,&#32;<emphasis role="stringliteral">&apos;0&apos;</emphasis>)&#32;&#32;<emphasis role="comment">#&#32;join&#32;to&#32;string,&#32;pad&#32;with&#32;0&apos;s&#32;to&#32;n&#32;length</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;intList.append(int(tmp))&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Cast&#32;to&#32;int</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00027"/>00027 
+<anchor xml:id="_perm_generator_8py_source_1l00028"/>00028 &#32;&#32;&#32;&#32;intList.sort()&#32;&#32;<emphasis role="comment">#&#32;sort&#32;numerically</emphasis>
+<anchor xml:id="_perm_generator_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;print(intList)
+<anchor xml:id="_perm_generator_8py_source_1l00030"/>00030 &#32;&#32;&#32;&#32;print(f<emphasis role="stringliteral">&quot;Length:&#32;{len(intList)}&quot;</emphasis>)
+<anchor xml:id="_perm_generator_8py_source_1l00031"/>00031 
+<anchor xml:id="_perm_generator_8py_source_1l00032"/>00032 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&apos;__main__&apos;</emphasis>:
+<anchor xml:id="_perm_generator_8py_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<link linkend="_namespaceperm_generator_1ad10636165ebd16db2136edd7cf8ee370">main</link>()
+</programlisting></section>

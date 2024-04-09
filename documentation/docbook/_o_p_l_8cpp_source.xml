@@ -1,0 +1,277 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_p_l_8cpp_source" xml:lang="en-US">
+<title>OPL.cpp</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__o_p_l_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__o_p_l_8h">OPL.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;stdexcept&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;ctime&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&lt;stdio.h&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;iomanip&gt;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00009"/>00009 
+<anchor xml:id="__o_p_l_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_colors_8h">helpers/colors.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_config_8h">helpers/config.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00012"/>00012 
+<anchor xml:id="__o_p_l_8cpp_source_1l00013"/>00013 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__o_p_l_8cpp_source_1l00014"/>00014 
+<anchor xml:id="__o_p_l_8cpp_source_1l00015"/><link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">00015</link> <link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">OPL::OPL</link>(vector&lt;string&gt;&#32;_file_name)&#32;:&#32;<link linkend="_class_election">Election</link>(_file_name){
+<anchor xml:id="__o_p_l_8cpp_source_1l00016"/>00016 
+<anchor xml:id="__o_p_l_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Process&#32;Headers&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00020"/>00020 
+<anchor xml:id="__o_p_l_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47">processHeaders</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00022"/>00022 
+<anchor xml:id="__o_p_l_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Confirm&#32;Headers&#32;are&#32;processed&#32;correctly&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00026"/>00026 
+<anchor xml:id="__o_p_l_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<link linkend="_class_election_1ad5f014c63a9069df284ccbd1676f2cce">confirmHeaders</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00028"/>00028 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00029"/>00029 
+<anchor xml:id="__o_p_l_8cpp_source_1l00030"/>00030 <link linkend="_class_o_p_l_1a22c35b5bf51f6b8f8451a48fcc1f88ba">OPL::~OPL</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00031"/>00031 
+<anchor xml:id="__o_p_l_8cpp_source_1l00032"/><link linkend="_class_o_p_l_1aedd9d37949a496c00e0cbe2746833699">00032</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1aedd9d37949a496c00e0cbe2746833699">OPL::runElection</link>(){
+<anchor xml:id="__o_p_l_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Digest&#32;Ballots&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00036"/>00036 
+<anchor xml:id="__o_p_l_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a65200d7f72c9ac0f7678e91b4f660730">digestBallots</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00038"/>00038 
+<anchor xml:id="__o_p_l_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Compute&#32;Runoff&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__o_p_l_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db">runOff</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00044"/>00044 
+<anchor xml:id="__o_p_l_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Display&#32;Results&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00048"/>00048 
+<anchor xml:id="__o_p_l_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">displayResults</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00050"/>00050 
+<anchor xml:id="__o_p_l_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Write&#32;to&#32;Election&#32;Results&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00054"/>00054 
+<anchor xml:id="__o_p_l_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a9d6f8d633b57aa2cd89ce1ab6f7e553e">writeElectionResults</link>(<emphasis role="stringliteral">&quot;OPLElection_&quot;</emphasis>&#32;+&#32;to_string(<link linkend="_class_election_1a4c69a091a1504383315328f505a5f30f">getDroopQuota</link>())&#32;+&#32;<emphasis role="stringliteral">&quot;.txt&quot;</emphasis>);
+<anchor xml:id="__o_p_l_8cpp_source_1l00056"/>00056 
+<anchor xml:id="__o_p_l_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Write&#32;Audit&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00060"/>00060 
+<anchor xml:id="__o_p_l_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7">writeToAudit</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00062"/>00062 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00063"/>00063 
+<anchor xml:id="__o_p_l_8cpp_source_1l00064"/><link linkend="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db">00064</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db">OPL::runOff</link>(){
+<anchor xml:id="__o_p_l_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Calculate&#32;Droop&#32;Quota&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00068"/>00068 
+<anchor xml:id="__o_p_l_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a8b0fa9b711db7a7f7236d44749729c2c">setDroopQuota</link>(<link linkend="_class_election_1ade6ad99d57f425d06f7f6f5bf28bed5c">getNumBallots</link>()&#32;/&#32;<link linkend="_class_election_1a0b68106ee52f33286364ef5d617d77ee">getNumSeats</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00070"/>00070 
+<anchor xml:id="__o_p_l_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sort&#32;by&#32;votes&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00074"/>00074 
+<anchor xml:id="__o_p_l_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;sort(vParties.begin(),&#32;vParties.end(),&#32;[](<link linkend="_class_party">Party</link>&#32;&amp;a,&#32;<link linkend="_class_party">Party</link>&#32;&amp;b)&#32;{&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(a.getNumVotes()&#32;!=&#32;b.getNumVotes()){&#32;return&#32;a.getNumVotes()&#32;&gt;&#32;b.getNumVotes();&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_election_1a5a36c9bc9296e09825b49d8deb3f3874">Election::flipCoin</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;});
+<anchor xml:id="__o_p_l_8cpp_source_1l00079"/>00079 
+<anchor xml:id="__o_p_l_8cpp_source_1l00080"/>00080 
+<anchor xml:id="__o_p_l_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Initial&#32;Tally&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00084"/>00084 
+<anchor xml:id="__o_p_l_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_party">Party</link>&#32;&amp;i&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nSeats&#32;=&#32;i.getNumVotes()&#32;/&#32;getDroopQuota();
+<anchor xml:id="__o_p_l_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.incrementSeats(&#32;min(getNumSeats(),&#32;nSeats)&#32;);
+<anchor xml:id="__o_p_l_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;setNumberOfSeats(&#32;max(getNumSeats()&#32;-&#32;nSeats,&#32;0)&#32;);&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.setRemainder(i.getNumVotes()&#32;%&#32;getDroopQuota());
+<anchor xml:id="__o_p_l_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.log(&#32;i.getNumSeats()&#32;);
+<anchor xml:id="__o_p_l_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.log(&#32;i.getRemainder()&#32;);
+<anchor xml:id="__o_p_l_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00093"/>00093 
+<anchor xml:id="__o_p_l_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sort&#32;by&#32;remainder&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00097"/>00097 
+<anchor xml:id="__o_p_l_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;sort(vParties.begin(),&#32;vParties.end(),&#32;[](<link linkend="_class_party">Party</link>&#32;&amp;a,&#32;<link linkend="_class_party">Party</link>&#32;&amp;b)&#32;{&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;if(a.getRemainder()&#32;!=&#32;b.getRemainder()){&#32;return&#32;a.getRemainder()&#32;&gt;&#32;b.getRemainder();&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_class_election_1a5a36c9bc9296e09825b49d8deb3f3874">Election::flipCoin</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;});
+<anchor xml:id="__o_p_l_8cpp_source_1l00102"/>00102 
+<anchor xml:id="__o_p_l_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Distribute&#32;remaining&#32;seats&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00106"/>00106 
+<anchor xml:id="__o_p_l_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_party">Party</link>&#32;&amp;i&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.incrementSeats(&#32;min(getNumSeats(),&#32;1)&#32;);
+<anchor xml:id="__o_p_l_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i.log(min(getNumSeats(),&#32;1));
+<anchor xml:id="__o_p_l_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;setNumberOfSeats(&#32;max(getNumSeats()&#32;-&#32;1,&#32;0)&#32;);
+<anchor xml:id="__o_p_l_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00113"/>00113 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00114"/>00114 
+<anchor xml:id="__o_p_l_8cpp_source_1l00115"/><link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">00115</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">OPL::displayResults</link>(<emphasis role="keywordtype">bool</emphasis>&#32;doColors&#32;<emphasis role="comment">/*=&#32;false*/</emphasis>){
+<anchor xml:id="__o_p_l_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(doColors)&#32;{&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Election&#32;Results:\n&quot;</emphasis>;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(doColors)&#32;{&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Type:&#32;OPL\n&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Number&#32;of&#32;Candidates:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>()&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Number&#32;of&#32;Seats:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[2]&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Number&#32;of&#32;Ballots:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1ade6ad99d57f425d06f7f6f5bf28bed5c">getNumBallots</link>()&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Calculated&#32;Droop&#32;Quota:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1a4c69a091a1504383315328f505a5f30f">getDroopQuota</link>()&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Candidates:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[4];
+<anchor xml:id="__o_p_l_8cpp_source_1l00125"/>00125 
+<anchor xml:id="__o_p_l_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;column&#32;=&#32;[](<emphasis role="keyword">auto</emphasis>&#32;s,&#32;<emphasis role="keywordtype">int</emphasis>&#32;width){
+<anchor xml:id="__o_p_l_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;sep&#32;=&#32;<emphasis role="stringliteral">&quot;&#32;|&#32;&quot;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;sep&#32;&lt;&lt;&#32;setw(width)&#32;&lt;&lt;&#32;s&#32;&lt;&lt;&#32;sep&#32;&lt;&lt;&#32;setw(3);
+<anchor xml:id="__o_p_l_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;};
+<anchor xml:id="__o_p_l_8cpp_source_1l00130"/>00130 
+<anchor xml:id="__o_p_l_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;partyWidth&#32;=&#32;7;
+<anchor xml:id="__o_p_l_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_party">Party</link>&#32;&amp;p&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;partyWidth&#32;=&#32;max(partyWidth,&#32;(<emphasis role="keywordtype">int</emphasis>)p.getPartyName().length());
+<anchor xml:id="__o_p_l_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00135"/>00135 
+<anchor xml:id="__o_p_l_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(doColors)&#32;{&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ac4723c5ee12cfca16e2172b57b99cb07">BOLDMAGENTA</link>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Parties&quot;</emphasis>,&#32;partyWidth);
+<anchor xml:id="__o_p_l_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Votes&quot;</emphasis>,&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Seats&quot;</emphasis>,&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Remainder&quot;</emphasis>,&#32;9);
+<anchor xml:id="__o_p_l_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Seats&quot;</emphasis>,&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;Final&#32;Seats&quot;</emphasis>,&#32;11);
+<anchor xml:id="__o_p_l_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;column(<emphasis role="stringliteral">&quot;%vote/%seats&quot;</emphasis>,&#32;12);
+<anchor xml:id="__o_p_l_8cpp_source_1l00146"/>00146 
+<anchor xml:id="__o_p_l_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(doColors)&#32;{&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00148"/>00148 
+<anchor xml:id="__o_p_l_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00150"/>00150 
+<anchor xml:id="__o_p_l_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_party">Party</link>&#32;&amp;i&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getPartyName(),&#32;partyWidth);
+<anchor xml:id="__o_p_l_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getNumVotes(),&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getHistory(0),&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getHistory(1),&#32;9);
+<anchor xml:id="__o_p_l_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getHistory(2),&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>());
+<anchor xml:id="__o_p_l_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(i.getNumSeats(),&#32;11);
+<anchor xml:id="__o_p_l_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;percentVotes&#32;=&#32;((float)i.getNumVotes()&#32;/&#32;(float)<link linkend="_class_election_1ade6ad99d57f425d06f7f6f5bf28bed5c">getNumBallots</link>())&#32;*&#32;100;
+<anchor xml:id="__o_p_l_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;percentSeats&#32;=&#32;((float)i.getNumSeats()&#32;/&#32;stof(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[2]))&#32;*&#32;100;
+<anchor xml:id="__o_p_l_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;column(&#32;to_string(percentVotes)&#32;+&#32;<emphasis role="stringliteral">&quot;%&#32;/&#32;&quot;</emphasis>&#32;+&#32;to_string(percentSeats)&#32;+&#32;<emphasis role="stringliteral">&quot;%&quot;</emphasis>,&#32;12);
+<anchor xml:id="__o_p_l_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00165"/>00165 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00166"/>00166 
+<anchor xml:id="__o_p_l_8cpp_source_1l00167"/><link linkend="_class_o_p_l_1a5419c9d466da3dca3e51a616bda6c428">00167</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a5419c9d466da3dca3e51a616bda6c428">OPL::digest</link>(<emphasis role="keywordtype">string</emphasis>&#32;buff){
+<anchor xml:id="__o_p_l_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos&#32;=&#32;0;
+<anchor xml:id="__o_p_l_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;buff.length();&#32;i++){
+<anchor xml:id="__o_p_l_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(buff[i]&#32;==&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>)&#32;{&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(i&#32;==&#32;0&#32;||&#32;buff[i&#32;-&#32;1]&#32;==&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>)&#32;{&#32;pos++;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">continue</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;{&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_election_1a89c14e25245d84d5214e58809f04e336">getCandidates</link>().at(pos).incrementVotes();
+<anchor xml:id="__o_p_l_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">getParty</link>(<link linkend="_class_election_1a89c14e25245d84d5214e58809f04e336">getCandidates</link>().at(pos).<link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">getParty</link>())-&gt;<link linkend="_class_party_1a7d33d2aa3635b5cf7eab8856c351f550">incrementVotes</link>();
+<anchor xml:id="__o_p_l_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pos++;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00179"/>00179 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00180"/>00180 
+<anchor xml:id="__o_p_l_8cpp_source_1l00181"/><link linkend="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7">00181</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7">OPL::writeToAudit</link>(<emphasis role="keywordtype">string</emphasis>&#32;s){
+<anchor xml:id="__o_p_l_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;time_t&#32;t&#32;=&#32;time(<emphasis role="keyword">nullptr</emphasis>);
+<anchor xml:id="__o_p_l_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(s.length()&#32;==&#32;0){
+<anchor xml:id="__o_p_l_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;s&#32;=&#32;<emphasis role="stringliteral">&quot;OPLElectionAudit&quot;</emphasis>&#32;+&#32;to_string(t)&#32;+&#32;<emphasis role="stringliteral">&quot;.txt&quot;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;ofstream&#32;auditFile(s);
+<anchor xml:id="__o_p_l_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(auditFile.good()){
+<anchor xml:id="__o_p_l_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_config_8h_1a7eaa04366167815aabce5f711f4c1c4d">SHUFFLE</link>)&#32;{&#32;auditFile&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;SHUFFLE&#32;Enabled\n&quot;</emphasis>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;auditFile&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;SHUFFLE&#32;Disabled\n&quot;</emphasis>;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00190"/>00190 
+<anchor xml:id="__o_p_l_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;auditFile&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Election&#32;type:&#32;OPL\n&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Election&#32;was&#32;ran&#32;on:&#32;&quot;</emphasis>&lt;&lt;&#32;asctime(localtime(&amp;t))&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;streambuf&#32;*psbuf,&#32;*backup;
+<anchor xml:id="__o_p_l_8cpp_source_1l00195"/>00195 
+<anchor xml:id="__o_p_l_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;backup&#32;=&#32;std::cout.rdbuf();&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;back&#32;up&#32;cout&apos;s&#32;streambuf</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00197"/>00197 
+<anchor xml:id="__o_p_l_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;psbuf&#32;=&#32;auditFile.rdbuf();&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;get&#32;file&apos;s&#32;streambuf</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout.rdbuf(psbuf);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;assign&#32;streambuf&#32;to&#32;cout</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00200"/>00200 
+<anchor xml:id="__o_p_l_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">displayResults</link>(<emphasis role="keyword">false</emphasis>);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prevent&#32;colors</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00202"/>00202 
+<anchor xml:id="__o_p_l_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout.rdbuf(backup);&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;restore&#32;cout&apos;s&#32;original&#32;streambuf</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00204"/>00204 
+<anchor xml:id="__o_p_l_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;auditFile&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;---&#32;END&#32;OF&#32;AUDIT&#32;FILE&#32;---&quot;</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00206"/>00206 
+<anchor xml:id="__o_p_l_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;auditFile.close();
+<anchor xml:id="__o_p_l_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ad243f93c16bc4c1d3e0a13b84421d760">CYAN</link>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Audit&#32;file&#32;created&#32;at:&#32;&quot;</emphasis>&#32;+&#32;s&#32;+&#32;<emphasis role="stringliteral">&quot;\n&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="__o_p_l_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1a8d23feea868a983c8c2b661e1e16972f">RED</link>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;ERROR:&#32;Creating&#32;audit&#32;file&#32;failed!\n&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00213"/>00213 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00214"/>00214 
+<anchor xml:id="__o_p_l_8cpp_source_1l00215"/><link linkend="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47">00215</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47">OPL::processHeaders</link>(){
+<anchor xml:id="__o_p_l_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>().size()&#32;!=&#32;5)&#32;{
+<anchor xml:id="__o_p_l_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1a8d23feea868a983c8c2b661e1e16972f">RED</link>&#32;&lt;&lt;<emphasis role="stringliteral">&quot;ERROR.&#32;Unexpected&#32;header&#32;size\nExpected&#32;5,&#32;found&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>().size()&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(-1);
+<anchor xml:id="__o_p_l_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a2679563e40fa9fefa255377bcafc9c0e">setElectionType</link>(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[0]);
+<anchor xml:id="__o_p_l_8cpp_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a97214525cf583a21e43f80a770ed23dc">setNumberOfCandidates</link>(stoi(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[1]));
+<anchor xml:id="__o_p_l_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;<link linkend="_class_election_1a948d46c6c930e1a759df8370282e382b">setNumberOfSeats</link>(stoi(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[2]));
+<anchor xml:id="__o_p_l_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<link linkend="_class_election_1af03da7d47d1d0e594dde51971e26889a">addBallots</link>(stoi(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[3]));
+<anchor xml:id="__o_p_l_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;stringstream&#32;cStream(<link linkend="_class_election_1abfa41a8e17a3a1869fc42aabb0054bbc">getHeader</link>()[4]);
+<anchor xml:id="__o_p_l_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(cStream.good()){
+<anchor xml:id="__o_p_l_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;candidate;
+<anchor xml:id="__o_p_l_8cpp_source_1l00228"/>00228 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;party;
+<anchor xml:id="__o_p_l_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;getline(cStream,&#32;candidate,&#32;<emphasis role="charliteral">&apos;/&apos;</emphasis>);
+<anchor xml:id="__o_p_l_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;getline(cStream,&#32;party,&#32;<emphasis role="charliteral">&apos;,&apos;</emphasis>);
+<anchor xml:id="__o_p_l_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00232"/>00232 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;addParty(string&#32;p)&#32;=&gt;&#32;checks&#32;if&#32;p&#32;is&#32;in&#32;array,&#32;if&#32;not&#32;creates&#32;new&#32;party,&#32;if&#32;does&#32;not&#32;create&#32;new&#32;party.</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00233"/>00233 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;getParty(string&#32;p)&#32;=&gt;&#32;returns&#32;index&#32;to&#32;party&#32;matching&#32;string&#32;p&#32;if&#32;string&#32;p&#32;does&#32;not&#32;exist&#32;returns&#32;nullptr.</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00234"/>00234 <emphasis role="comment"></emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00235"/>00235 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363">addParty</link>(party);
+<anchor xml:id="__o_p_l_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_class_election_1aef61e7926b2322a0ae07cc0873a14401">addCandidate</link>(<link linkend="_class_candidate">Candidate</link>(candidate,&#32;party));&#32;<emphasis role="comment">//add&#32;the&#32;candidate&#32;to&#32;the&#32;candidates&#32;vector&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00239"/>00239 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00240"/>00240 
+<anchor xml:id="__o_p_l_8cpp_source_1l00241"/><link linkend="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363">00241</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363">OPL::addParty</link>(<emphasis role="keywordtype">string</emphasis>&#32;p){&#32;<emphasis role="comment">//&#32;adds&#32;unique</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;if&#32;p&#32;exists</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_class_party">Party</link>&#32;&amp;i&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(i.getPartyName()&#32;==&#32;p)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>;&#32;}&#32;<emphasis role="comment">//&#32;found,&#32;we&#32;do&#32;nothing</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;vParties.push_back(<link linkend="_class_party">Party</link>(p));
+<anchor xml:id="__o_p_l_8cpp_source_1l00247"/>00247 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00248"/>00248 
+<anchor xml:id="__o_p_l_8cpp_source_1l00249"/><link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">00249</link> <link linkend="_class_party">Party</link>&#32;*<link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">OPL::getParty</link>(<emphasis role="keywordtype">string</emphasis>&#32;p){
+<anchor xml:id="__o_p_l_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_class_party">Party</link>&#32;&amp;i&#32;:&#32;vParties){
+<anchor xml:id="__o_p_l_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(i.getPartyName()&#32;==&#32;p)&#32;{&#32;<emphasis role="keywordflow">return</emphasis>&#32;&amp;i;&#32;}&#32;<emphasis role="comment">//&#32;found,&#32;give&#32;back&#32;address&#32;to&#32;party;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">nullptr</emphasis>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00254"/>00254 }
+<anchor xml:id="__o_p_l_8cpp_source_1l00255"/>00255 
+<anchor xml:id="__o_p_l_8cpp_source_1l00256"/><link linkend="_class_o_p_l_1ace92dde13267db78dc93987743cdc2b0">00256</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1ace92dde13267db78dc93987743cdc2b0">OPL::confirmHeadersDisplay</link>(){
+<anchor xml:id="__o_p_l_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Election&#32;Type:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>&#32;&lt;&lt;&#32;<link linkend="_class_election_1af9ffbf9414f3129a2db5cab5b2827751">getElectionType</link>()&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Number&#32;of&#32;Candidates:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>&#32;&lt;&lt;&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>()&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Number&#32;of&#32;Seats:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>&#32;&lt;&lt;&#32;<link linkend="_class_election_1a0b68106ee52f33286364ef5d617d77ee">getNumSeats</link>()&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Approximate&#32;number&#32;of&#32;Ballots:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>&#32;&lt;&lt;&#32;<link linkend="_class_election_1ade6ad99d57f425d06f7f6f5bf28bed5c">getNumBallots</link>()&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Candidates:&#32;&quot;</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1aa4ef051614aa0bd503b0a18ee158c5d7">BOLDWHITE</link>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00264"/>00264 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Print&#32;each&#32;candidate&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8cpp_source_1l00267"/>00267 
+<anchor xml:id="__o_p_l_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>();&#32;i++){
+<anchor xml:id="__o_p_l_8cpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<link linkend="_class_election_1a89c14e25245d84d5214e58809f04e336">getCandidates</link>().at(i).getName()&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;/&apos;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_class_election_1a89c14e25245d84d5214e58809f04e336">getCandidates</link>().at(i).getParty();
+<anchor xml:id="__o_p_l_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(i&#32;!=&#32;<link linkend="_class_election_1aea563e0f8efc014fe5bc6ca55b078d9a">getNumCandidates</link>()&#32;-&#32;1)&#32;{&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;&quot;</emphasis>;&#32;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8cpp_source_1l00271"/>00271 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__o_p_l_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<link linkend="_colors_8h_1ab702106cf3b3e96750b6845ded4e0299">RESET</link>;
+<anchor xml:id="__o_p_l_8cpp_source_1l00273"/>00273 }
+</programlisting></section>

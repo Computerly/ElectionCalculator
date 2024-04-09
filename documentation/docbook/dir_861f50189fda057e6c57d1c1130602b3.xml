@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_861f50189fda057e6c57d1c1130602b3" xml:lang="en-US">
+<title>helpers Directory Reference</title>
+<indexterm><primary>helpers Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_colors_8h">colors.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combinations_8cpp">Combinations.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="__combinations_8h">Combinations.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_config_8h">config.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_math_8h">math.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_perm_generator_8py">permGenerator.py</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

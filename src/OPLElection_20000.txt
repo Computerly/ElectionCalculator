@@ -1,0 +1,11 @@
+Election Results:
+Type: OPL
+Number of Candidates: 5
+Number of Seats: 5
+Number of Ballots: 100000
+Calculated Droop Quota: 20000
+Candidates: Rosen/D,Susan/D,Kleinberg/R,Himmelberg/R,Chou/I
+ | Parties |  | Votes |  | Seats |  | Remainder |  | Seats |  | Final Seats |  | %vote/%seats |   
+ |       R |  | 39886 |  |     1 |  |     19886 |  |     1 |  |           2 |  |    39% / 40% |   
+ |       D |  | 40084 |  |     2 |  |        84 |  |     0 |  |           2 |  |    40% / 40% |   
+ |       I |  | 20030 |  |     1 |  |        30 |  |     0 |  |           1 |  |    20% / 20% |   

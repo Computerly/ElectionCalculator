@@ -1,0 +1,77 @@
+\hypertarget{_combinations_8cpp_source}{}\doxysection{Combinations.\+cpp}
+\label{_combinations_8cpp_source}\index{helpers/Combinations.cpp@{helpers/Combinations.cpp}}
+\mbox{\hyperlink{_combinations_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_combinations_8h}{Combinations.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00004}00004 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00006}\mbox{\hyperlink{class_combinations_ae7994808e00dbaf95f08fc84965c824d}{00006}} \mbox{\hyperlink{class_combinations_ae7994808e00dbaf95f08fc84965c824d}{Combinations::Combinations}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00007}\mbox{\hyperlink{class_combinations_a068122df79d72ceeeb420ec1ea1b321d}{00007}} \mbox{\hyperlink{class_combinations_a068122df79d72ceeeb420ec1ea1b321d}{Combinations::\string~Combinations}}() \{\}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00009}\mbox{\hyperlink{class_combinations_a32b8f4a3054aa26eec676ab99f90b060}{00009}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_combinations_a32b8f4a3054aa26eec676ab99f90b060}{Combinations::indexOf}}(\textcolor{keywordtype}{int} ranking, \textcolor{keywordtype}{int} combinations)\{}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00010}00010     \textcolor{keywordflow}{return} binarySearch(COMBINATIONS[combinations -\/ 1], 0, sizes[combinations -\/ 1], ranking);}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00011}00011 \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00013}\mbox{\hyperlink{class_combinations_ad45f1a1978ccea1941a0082907474687}{00013}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_combinations_ad45f1a1978ccea1941a0082907474687}{Combinations::sizeOf}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} combinations)\{}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00014}00014     \textcolor{keywordflow}{return} sizes[combinations -\/ 1];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00015}00015 \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00016}\mbox{\hyperlink{class_combinations_a96dc9a20d355bd4757e9277caa9adc22}{00016}} \textcolor{keywordtype}{int} \mbox{\hyperlink{class_combinations_a96dc9a20d355bd4757e9277caa9adc22}{Combinations::getRankingNumber}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} index, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} combinations)\{}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00017}00017     \textcolor{keywordflow}{return} COMBINATIONS[combinations -\/ 1][index];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00018}00018 \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00020}00020 \textcolor{keywordtype}{int} Combinations::binarySearch(\textcolor{keyword}{const} \textcolor{keywordtype}{int} arr[], \textcolor{keywordtype}{int} l, \textcolor{keywordtype}{int} r, \textcolor{keywordtype}{int} \&ranking)}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00022}00022     \textcolor{keywordflow}{if} (r >= l) \{}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00023}00023         \textcolor{keywordtype}{int} idx = l + (r -\/ l) / 2;}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00025}00025         \textcolor{keywordflow}{if} (arr[idx] == ranking) \{ \textcolor{keywordflow}{return} idx; \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00027}00027         \textcolor{keywordflow}{if} (arr[idx] > ranking)  \{ \textcolor{keywordflow}{return} binarySearch(arr, l, idx -\/ 1, ranking); \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00029}00029         \textcolor{keywordflow}{return} binarySearch(arr, idx + 1, r, ranking);}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00030}00030     \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00031}00031     \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00032}00032 \}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00033}00033     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00034}00034     \textcolor{comment}{// *                               1 Combination                              *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00035}00035     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00036}00036     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_1[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00038}00038     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00039}00039     \textcolor{comment}{// *                              4 Combinations                              *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00040}00040     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00041}00041     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_2[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00042}00042     }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00043}00043     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00044}00044     \textcolor{comment}{// *                              15 Combinations                             *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00045}00045     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00046}00046     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_3[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00048}00048     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00049}00049     \textcolor{comment}{// *                              64 Combinations                             *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00050}00050     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00051}00051     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_4[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00053}00053     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00054}00054     \textcolor{comment}{// *                             325 Combinations                             *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00055}00055     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00056}00056     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_5[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00058}00058     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00059}00059     \textcolor{comment}{// *                             1956 Combinations                            *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00060}00060     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00061}00061     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::COMBINATIONS\_6[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00063}00063     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00064}00064     \textcolor{comment}{// *                           Array of Combinations                          *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00065}00065     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00066}00066     \textcolor{keyword}{constexpr} \textcolor{keyword}{const} \textcolor{keywordtype}{int} *Combinations::COMBINATIONS[];}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00068}00068     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00069}00069     \textcolor{comment}{// *                  Array of lengths of combination arrays                  *}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00070}00070     \textcolor{comment}{// ****************************************************************************}}
+\DoxyCodeLine{\Hypertarget{_combinations_8cpp_source_l00071}00071     \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} Combinations::sizes[];}
+
+\end{DoxyCode}

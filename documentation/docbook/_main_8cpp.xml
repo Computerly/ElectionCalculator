@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__main_8cpp" xml:lang="en-US">
+<title>Main.cpp File Reference</title>
+<indexterm><primary>Main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;sys/stat.h&gt;
+#include &lt;chrono&gt;
+#include &lt;fstream&gt;
+#include &quot;Election.h&quot;
+#include &quot;IRV.h&quot;
+#include &quot;OPL.h&quot;
+#include &quot;PO.h&quot;
+#include &quot;helpers/colors.h&quot;
+#include &quot;helpers/config.h&quot;
+</programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="__main_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089">main</link> (int argc, char const *argv[])</para>
+
+<para>Main function for facilitating system execution. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="__main_8cpp_1a7eaa04366167815aabce5f711f4c1c4d">SHUFFLE</link> = true</para>
+
+<para>Configuration file. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__main_8cpp_1abf9e6b7e6f15df4b525a2e7705ba3089"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>Main.cpp</secondary></indexterm>
+<indexterm><primary>Main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char const * argv[])</computeroutput></para><para>
+
+<para>Main function for facilitating system execution. </para>
+</para>
+
+<para>Checks if &quot;-S&quot; has been passed to enable shuffle. Asks for input files until successful. Runs appropriate election based on first line in the first election file passed. Tracks how long an election takes to run and outputs time after election finishes.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>argc</entry><entry>
+<para>Number of command line arguments </para>
+</entry>
+                            </row>
+                            <row>
+<entry>argv</entry><entry>
+<para>The actual command line arguments </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>int The return value, where 0 represents successful execution, anything else error </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="__main_8cpp_source_1l00031">31</link> of file <link linkend="__main_8cpp_source">Main.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="__main_8cpp_1a7eaa04366167815aabce5f711f4c1c4d"/><section>
+    <title>SHUFFLE</title>
+<indexterm><primary>SHUFFLE</primary><secondary>Main.cpp</secondary></indexterm>
+<indexterm><primary>Main.cpp</primary><secondary>SHUFFLE</secondary></indexterm>
+<para><computeroutput>bool SHUFFLE = true</computeroutput></para><para>
+
+<para>Configuration file. </para>
+</para>
+
+<para>stores global shuffle boolean </para>
+<para>
+Definition at line <link linkend="__main_8cpp_source_1l00017">17</link> of file <link linkend="__main_8cpp_source">Main.cpp</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__party_8h" xml:lang="en-US">
+<title>Party.h File Reference</title>
+<indexterm><primary>Party.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;vector&gt;
+#include &lt;string&gt;
+#include &quot;Candidate.h&quot;
+</programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_party">Party</link></para>
+
+<para>Represents a <link linkend="_class_party">Party</link> in election. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

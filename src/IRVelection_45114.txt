@@ -1,0 +1,16 @@
+
+Election Results:
+Type: IRV
+Number of Candidates: 5
+Number of Seats: 1
+Number of Ballots: 90227
+Calculated Droop Quota: 45114
+Candidates: Rosen/D,Susan/D,Kleinberg/R,Himmelberg/R,Chou/I
+ |            Candidates |  |          1st Round |  |          2nd Round |  |          3rd Round |   
+ |  Candidate |  | Party |  |  Votes |  |     +- |  |  Votes |  |     +- |  |  Votes |  |     +- |   
+ |      Susan |  |     D |  |  18298 |  | +18298 |  |  36167 |  | +17869 |  |  45531 |  | +27662 |   
+ |       Chou |  |     I |  |  18016 |  | +18016 |  |  18016 |  |      0 |  |  18016 |  | +18016 |   
+ | Himmelberg |  |     R |  |  18068 |  | +18068 |  |  18823 |  |   +755 |  |  19115 |  | +18360 |   
+ |  Kleinberg |  |     R |  |  17869 |  | +17869 |  |   8377 |  | +-9492 |  |   3119 |  | +12611 |   
+ |      Rosen |  |     D |  |  17976 |  | +17976 |  |  35845 |  | +17869 |  |  35845 |  | +17976 |   
+

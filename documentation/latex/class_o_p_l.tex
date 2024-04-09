@@ -1,0 +1,324 @@
+\hypertarget{class_o_p_l}{}\doxysection{OPL Class Reference}
+\label{class_o_p_l}\index{OPL@{OPL}}
+
+
+Represents an \mbox{\hyperlink{class_o_p_l}{OPL}} (Open \mbox{\hyperlink{class_party}{Party}} Listing) election.  
+
+
+
+
+{\ttfamily \#include $<$OPL.\+h$>$}
+
+Inheritance diagram for OPL\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_p_l}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_o_p_l_afa08a2192fc766429cdf2fa288f6a06b}{OPL}} (vector$<$ string $>$ \+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Construct a new \mbox{\hyperlink{class_o_p_l}{OPL}} object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_o_p_l_a22c35b5bf51f6b8f8451a48fcc1f88ba}{$\sim$\+OPL}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the \mbox{\hyperlink{class_o_p_l_afa08a2192fc766429cdf2fa288f6a06b}{OPL\+::\+OPL}} object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_o_p_l_a77cc401b4c3f4ac76a777ec3181a4a64}{get\+Num\+Parties}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of parties participating in the election. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_party}{Party}} $>$ \& \mbox{\hyperlink{class_o_p_l_a266e693fb56998fc47931a0081d90aba}{get\+Parties}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of the parties participating in the election. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_party}{Party}} $\ast$ \mbox{\hyperlink{class_o_p_l_a3fd27e1c4d55d841ccde1cdd7a39cee0}{get\+Party}} (string p)
+\begin{DoxyCompactList}\small\item\em Gets a pointer to a \mbox{\hyperlink{class_party}{Party}} object with \mbox{\hyperlink{class_party}{Party}}\textquotesingle{}s name matching string p. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_a8a4ab400f39d698cc68ad639644e0363}{add\+Party}} (string p)
+\begin{DoxyCompactList}\small\item\em Uniquely adds a \mbox{\hyperlink{class_party}{Party}} object with name p. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_aedd9d37949a496c00e0cbe2746833699}{run\+Election}} ()
+\begin{DoxyCompactList}\small\item\em Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_ae682d1d7e09be192e7f2ded71b9ef0db}{run\+Off}} ()
+\begin{DoxyCompactList}\small\item\em Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_af6a5fa25cd1fd48cd27eeb480e53b548}{display\+Results}} (bool do\+Colors=true)
+\begin{DoxyCompactList}\small\item\em Method to display the \mbox{\hyperlink{class_i_r_v}{IRV}} election results to the screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_aaffe593d59e44f2d8ffcc08fbdd844e7}{write\+To\+Audit}} (string s=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Method to write the election progression to an audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_ae85e2dd6e582337dc4ffec599516446a}{add\+Audit\+Line}} (string s)
+\begin{DoxyCompactList}\small\item\em Adds line to audit file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_a5419c9d466da3dca3e51a616bda6c428}{digest}} (string buff)
+\begin{DoxyCompactList}\small\item\em Parses the election file and updates candidate and party votes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_a553330ef2125955e8d8e6644c67d5e47}{process\+Headers}} ()
+\begin{DoxyCompactList}\small\item\em Method to store headers(strings) into their respective variables. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_o_p_l_ace92dde13267db78dc93987743cdc2b0}{confirm\+Headers\+Display}} ()
+\begin{DoxyCompactList}\small\item\em Confirms everything processed thus far, appears correctly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Represents an \mbox{\hyperlink{class_o_p_l}{OPL}} (Open \mbox{\hyperlink{class_party}{Party}} Listing) election. 
+
+Implements \mbox{\hyperlink{class_election}{Election}} 
+
+Definition at line \mbox{\hyperlink{_o_p_l_8h_source_l00021}{21}} of file \mbox{\hyperlink{_o_p_l_8h_source}{OPL.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_o_p_l_afa08a2192fc766429cdf2fa288f6a06b}\label{class_o_p_l_afa08a2192fc766429cdf2fa288f6a06b}} 
+\index{OPL@{OPL}!OPL@{OPL}}
+\index{OPL@{OPL}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{OPL()}{OPL()}}
+{\footnotesize\ttfamily OPL\+::\+OPL (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Construct a new \mbox{\hyperlink{class_o_p_l}{OPL}} object. 
+
+Initializes and confirms election
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::vector$<$std\+::string$>$} & \+\_\+file\+\_\+name. A vector of all files to run \mbox{\hyperlink{class_i_r_v}{IRV}} the election. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_a22c35b5bf51f6b8f8451a48fcc1f88ba}\label{class_o_p_l_a22c35b5bf51f6b8f8451a48fcc1f88ba}} 
+\index{OPL@{OPL}!````~OPL@{$\sim$OPL}}
+\index{````~OPL@{$\sim$OPL}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{$\sim$OPL()}{~OPL()}}
+{\footnotesize\ttfamily OPL\+::$\sim$\+OPL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destroy the \mbox{\hyperlink{class_o_p_l_afa08a2192fc766429cdf2fa288f6a06b}{OPL\+::\+OPL}} object. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_o_p_l_ae85e2dd6e582337dc4ffec599516446a}\label{class_o_p_l_ae85e2dd6e582337dc4ffec599516446a}} 
+\index{OPL@{OPL}!addAuditLine@{addAuditLine}}
+\index{addAuditLine@{addAuditLine}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{addAuditLine()}{addAuditLine()}}
+{\footnotesize\ttfamily void OPL\+::add\+Audit\+Line (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Adds line to audit file. 
+
+Adds a string to a vector of strings to be added to an audit file
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & String to be added to the audit file \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_o_p_l_a8a4ab400f39d698cc68ad639644e0363}\label{class_o_p_l_a8a4ab400f39d698cc68ad639644e0363}} 
+\index{OPL@{OPL}!addParty@{addParty}}
+\index{addParty@{addParty}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{addParty()}{addParty()}}
+{\footnotesize\ttfamily void OPL\+::add\+Party (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})}
+
+
+
+Uniquely adds a \mbox{\hyperlink{class_party}{Party}} object with name p. 
+
+Creates and adds a new \mbox{\hyperlink{class_party}{Party}} object with name p to the vector of parties. 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & name of party \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00241}{241}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_ace92dde13267db78dc93987743cdc2b0}\label{class_o_p_l_ace92dde13267db78dc93987743cdc2b0}} 
+\index{OPL@{OPL}!confirmHeadersDisplay@{confirmHeadersDisplay}}
+\index{confirmHeadersDisplay@{confirmHeadersDisplay}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{confirmHeadersDisplay()}{confirmHeadersDisplay()}}
+{\footnotesize\ttfamily void OPL\+::confirm\+Headers\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Confirms everything processed thus far, appears correctly. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a0019d751dfca855ee50b7800884450fb}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00256}{256}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_a5419c9d466da3dca3e51a616bda6c428}\label{class_o_p_l_a5419c9d466da3dca3e51a616bda6c428}} 
+\index{OPL@{OPL}!digest@{digest}}
+\index{digest@{digest}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{digest()}{digest()}}
+{\footnotesize\ttfamily void OPL\+::digest (\begin{DoxyParamCaption}\item[{string}]{buff }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Parses the election file and updates candidate and party votes. 
+
+Parses who was voted for, then updates the candidates votes count, then finds the candidate\textquotesingle{}s party and updates the party\textquotesingle{}s total votes as well.
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string,a} & line from the election file representing a ballot, where a \char`\"{}1\char`\"{} represents the voter\textquotesingle{}s vote \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_aaaf320a6c7863b363f34bd47320b68ef}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_af6a5fa25cd1fd48cd27eeb480e53b548}\label{class_o_p_l_af6a5fa25cd1fd48cd27eeb480e53b548}} 
+\index{OPL@{OPL}!displayResults@{displayResults}}
+\index{displayResults@{displayResults}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{displayResults()}{displayResults()}}
+{\footnotesize\ttfamily void OPL\+::display\+Results (\begin{DoxyParamCaption}\item[{bool}]{do\+Colors = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to display the \mbox{\hyperlink{class_i_r_v}{IRV}} election results to the screen. 
+
+\begin{DoxyNote}{Note}
+Includes the election information as well
+\end{DoxyNote}
+@params bool do\+Colors (see \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election\+::display\+Results()}} for more) 
+
+Implements \mbox{\hyperlink{class_election_a1a06089736577ef9dce522ccdc46fcb2}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_a77cc401b4c3f4ac76a777ec3181a4a64}\label{class_o_p_l_a77cc401b4c3f4ac76a777ec3181a4a64}} 
+\index{OPL@{OPL}!getNumParties@{getNumParties}}
+\index{getNumParties@{getNumParties}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{getNumParties()}{getNumParties()}}
+{\footnotesize\ttfamily int OPL\+::get\+Num\+Parties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the number of parties participating in the election. 
+
+\begin{DoxyReturn}{Returns}
+int representing the number of parties in the election 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_l_a266e693fb56998fc47931a0081d90aba}\label{class_o_p_l_a266e693fb56998fc47931a0081d90aba}} 
+\index{OPL@{OPL}!getParties@{getParties}}
+\index{getParties@{getParties}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{getParties()}{getParties()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_party}{Party}} $>$ \& OPL\+::get\+Parties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the vector of the parties participating in the election. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$\+Party$>$ reference to the vector of parties 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_o_p_l_a3fd27e1c4d55d841ccde1cdd7a39cee0}\label{class_o_p_l_a3fd27e1c4d55d841ccde1cdd7a39cee0}} 
+\index{OPL@{OPL}!getParty@{getParty}}
+\index{getParty@{getParty}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{getParty()}{getParty()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_party}{Party}} $\ast$ OPL\+::get\+Party (\begin{DoxyParamCaption}\item[{string}]{p }\end{DoxyParamCaption})}
+
+
+
+Gets a pointer to a \mbox{\hyperlink{class_party}{Party}} object with \mbox{\hyperlink{class_party}{Party}}\textquotesingle{}s name matching string p. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & name of party \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Point to a \mbox{\hyperlink{class_party}{Party}} object or null if none found 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00249}{249}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_a553330ef2125955e8d8e6644c67d5e47}\label{class_o_p_l_a553330ef2125955e8d8e6644c67d5e47}} 
+\index{OPL@{OPL}!processHeaders@{processHeaders}}
+\index{processHeaders@{processHeaders}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{processHeaders()}{processHeaders()}}
+{\footnotesize\ttfamily void OPL\+::process\+Headers (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to store headers(strings) into their respective variables. 
+
+
+
+Implements \mbox{\hyperlink{class_election_a9f2a807ba12358daa9d2ed94946748de}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00215}{215}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_aedd9d37949a496c00e0cbe2746833699}\label{class_o_p_l_aedd9d37949a496c00e0cbe2746833699}} 
+\index{OPL@{OPL}!runElection@{runElection}}
+\index{runElection@{runElection}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{runElection()}{runElection()}}
+{\footnotesize\ttfamily void OPL\+::run\+Election (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Main method for running the \mbox{\hyperlink{class_i_r_v}{IRV}} election process. 
+
+Calls methods stratigically to compute election results 
+
+Implements \mbox{\hyperlink{class_election_a1d84fd2f5cd7b14b2e9a729e7804286f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_ae682d1d7e09be192e7f2ded71b9ef0db}\label{class_o_p_l_ae682d1d7e09be192e7f2ded71b9ef0db}} 
+\index{OPL@{OPL}!runOff@{runOff}}
+\index{runOff@{runOff}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{runOff()}{runOff()}}
+{\footnotesize\ttfamily void OPL\+::run\+Off (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Computes runoff of the \mbox{\hyperlink{class_i_r_v}{IRV}} election. 
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+\mbox{\Hypertarget{class_o_p_l_aaffe593d59e44f2d8ffcc08fbdd844e7}\label{class_o_p_l_aaffe593d59e44f2d8ffcc08fbdd844e7}} 
+\index{OPL@{OPL}!writeToAudit@{writeToAudit}}
+\index{writeToAudit@{writeToAudit}!OPL@{OPL}}
+\doxysubsubsection{\texorpdfstring{writeToAudit()}{writeToAudit()}}
+{\footnotesize\ttfamily void OPL\+::write\+To\+Audit (\begin{DoxyParamCaption}\item[{string}]{s = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Method to write the election progression to an audit file. 
+
+Writes each line from audits vector to file
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & s is the file name of the to-\/be-\/generated audit file \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_election_a82e0c840e14b8b54cb40eef54dd29f1f}{Election}}.
+
+
+
+Definition at line \mbox{\hyperlink{_o_p_l_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{_o_p_l_8cpp_source}{OPL.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_o_p_l_8h}{OPL.\+h}}\item 
+\mbox{\hyperlink{_o_p_l_8cpp}{OPL.\+cpp}}\end{DoxyCompactItemize}

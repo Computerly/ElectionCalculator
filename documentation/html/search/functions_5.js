@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['getcandidates_0',['getCandidates',['../class_election.html#a89c14e25245d84d5214e58809f04e336',1,'Election']]],
+  ['getdroopquota_1',['getDroopQuota',['../class_election.html#a4c69a091a1504383315328f505a5f30f',1,'Election']]],
+  ['getelectiontype_2',['getElectionType',['../class_election.html#af9ffbf9414f3129a2db5cab5b2827751',1,'Election']]],
+  ['getheader_3',['getHeader',['../class_election.html#abfa41a8e17a3a1869fc42aabb0054bbc',1,'Election']]],
+  ['gethistory_4',['getHistory',['../class_party.html#a6b94f18eb753e0ecaac6bd8a39c762b7',1,'Party']]],
+  ['getlosers_5',['getLosers',['../class_election.html#a698e580dcf403280456bc77f70799405',1,'Election']]],
+  ['getname_6',['getName',['../class_candidate.html#af862d92e21d66d74f1d5cae92937d3da',1,'Candidate']]],
+  ['getnumballots_7',['getNumBallots',['../class_election.html#ade6ad99d57f425d06f7f6f5bf28bed5c',1,'Election']]],
+  ['getnumcandidates_8',['getNumCandidates',['../class_election.html#aea563e0f8efc014fe5bc6ca55b078d9a',1,'Election']]],
+  ['getnumlosers_9',['getNumLosers',['../class_election.html#a80881f59d3a334dc61a0a3d086456635',1,'Election']]],
+  ['getnumparties_10',['getNumParties',['../class_o_p_l.html#a77cc401b4c3f4ac76a777ec3181a4a64',1,'OPL']]],
+  ['getnumseats_11',['getNumSeats',['../class_election.html#a0b68106ee52f33286364ef5d617d77ee',1,'Election::getNumSeats()'],['../class_party.html#ab932eef76367372050d26d862e05db20',1,'Party::getNumSeats()']]],
+  ['getnumvotes_12',['getNumVotes',['../class_candidate.html#a9555babb846eb95fef6330638e5df8e4',1,'Candidate::getNumVotes()'],['../class_party.html#a811267ac4e72134c41aedbbc7294ac14',1,'Party::getNumVotes()']]],
+  ['getnumwinners_13',['getNumWinners',['../class_election.html#ad1870564672bdb4d2d054d4b7f065d5d',1,'Election']]],
+  ['getparties_14',['getParties',['../class_o_p_l.html#a266e693fb56998fc47931a0081d90aba',1,'OPL']]],
+  ['getparty_15',['getParty',['../class_candidate.html#a459c7d0c4e5708ded61d1ad33182a1e3',1,'Candidate::getParty()'],['../class_o_p_l.html#a3fd27e1c4d55d841ccde1cdd7a39cee0',1,'OPL::getParty()']]],
+  ['getpartyname_16',['getPartyName',['../class_party.html#a293a3b078fea59f28a96a82cfec2af8b',1,'Party']]],
+  ['getrankingnumber_17',['getRankingNumber',['../class_combinations.html#a96dc9a20d355bd4757e9277caa9adc22',1,'Combinations']]],
+  ['getremainder_18',['getRemainder',['../class_party.html#ad14b136bbc9fc8f330e695e8dc45d35a',1,'Party']]],
+  ['getvotehistory_19',['getVoteHistory',['../class_candidate.html#a8b5d99efb1d7e2ece68cf0b10cfe59f4',1,'Candidate']]],
+  ['getwinners_20',['getWinners',['../class_election.html#a0258ea1cae7db815ff507c82ce1d75a0',1,'Election']]]
+];

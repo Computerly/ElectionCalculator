@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__o_p_l_8h_source" xml:lang="en-US">
+<title>OPL.h</title>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__o_p_l_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;OPL_H</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;OPL_H</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00003"/>00003 
+<anchor xml:id="__o_p_l_8h_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00007"/>00007 
+<anchor xml:id="__o_p_l_8h_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__election_8h">Election.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__candidate_8h">Candidate.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="__party_8h">Party.h</link>&quot;</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00011"/>00011 
+<anchor xml:id="__o_p_l_8h_source_1l00012"/>00012 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__o_p_l_8h_source_1l00013"/>00013 
+<anchor xml:id="__o_p_l_8h_source_1l00014"/>00014 
+<anchor xml:id="__o_p_l_8h_source_1l00021"/><link linkend="_class_o_p_l">00021</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_o_p_l">OPL</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_class_election">Election</link>
+<anchor xml:id="__o_p_l_8h_source_1l00022"/>00022 {
+<anchor xml:id="__o_p_l_8h_source_1l00023"/>00023 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="__o_p_l_8h_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Constructor&#32;and&#32;Destructor&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<link linkend="_class_o_p_l_1afa08a2192fc766429cdf2fa288f6a06b">OPL</link>(vector&lt;string&gt;&#32;_file_name);
+<anchor xml:id="__o_p_l_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00041"/><link linkend="_class_o_p_l_1a22c35b5bf51f6b8f8451a48fcc1f88ba">00041</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_o_p_l_1a22c35b5bf51f6b8f8451a48fcc1f88ba">~OPL</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00042"/>00042 
+<anchor xml:id="__o_p_l_8h_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Getters&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00046"/>00046 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00052"/><link linkend="_class_o_p_l_1a77cc401b4c3f4ac76a777ec3181a4a64">00052</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_class_o_p_l_1a77cc401b4c3f4ac76a777ec3181a4a64">getNumParties</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00053"/>00053 
+<anchor xml:id="__o_p_l_8h_source_1l00059"/><link linkend="_class_o_p_l_1a266e693fb56998fc47931a0081d90aba">00059</link> &#32;&#32;&#32;&#32;vector&lt;Party&gt;&#32;&amp;<link linkend="_class_o_p_l_1a266e693fb56998fc47931a0081d90aba">getParties</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00060"/>00060 
+<anchor xml:id="__o_p_l_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<link linkend="_class_party">Party</link>&#32;*<link linkend="_class_o_p_l_1a3fd27e1c4d55d841ccde1cdd7a39cee0">getParty</link>(<emphasis role="keywordtype">string</emphasis>&#32;p);
+<anchor xml:id="__o_p_l_8h_source_1l00068"/>00068 
+<anchor xml:id="__o_p_l_8h_source_1l00069"/>00069 
+<anchor xml:id="__o_p_l_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Setters&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00073"/>00073 
+<anchor xml:id="__o_p_l_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a8a4ab400f39d698cc68ad639644e0363">addParty</link>(<emphasis role="keywordtype">string</emphasis>&#32;p);
+<anchor xml:id="__o_p_l_8h_source_1l00081"/>00081 
+<anchor xml:id="__o_p_l_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;*&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Other&#32;Methods&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;****************************************************************************</emphasis>
+<anchor xml:id="__o_p_l_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1aedd9d37949a496c00e0cbe2746833699">runElection</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00093"/>00093 
+<anchor xml:id="__o_p_l_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1ae682d1d7e09be192e7f2ded71b9ef0db">runOff</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00099"/>00099 
+<anchor xml:id="__o_p_l_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1af6a5fa25cd1fd48cd27eeb480e53b548">displayResults</link>(<emphasis role="keywordtype">bool</emphasis>&#32;doColors&#32;=&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="__o_p_l_8h_source_1l00108"/>00108 
+<anchor xml:id="__o_p_l_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1aaffe593d59e44f2d8ffcc08fbdd844e7">writeToAudit</link>(<emphasis role="keywordtype">string</emphasis>&#32;s&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+<anchor xml:id="__o_p_l_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00125"/><link linkend="_class_o_p_l_1ae85e2dd6e582337dc4ffec599516446a">00125</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1ae85e2dd6e582337dc4ffec599516446a">addAuditLine</link>(<emphasis role="keywordtype">string</emphasis>&#32;s);
+<anchor xml:id="__o_p_l_8h_source_1l00126"/>00126 
+<anchor xml:id="__o_p_l_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a5419c9d466da3dca3e51a616bda6c428">digest</link>(<emphasis role="keywordtype">string</emphasis>&#32;buff);
+<anchor xml:id="__o_p_l_8h_source_1l00137"/>00137 
+<anchor xml:id="__o_p_l_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1a553330ef2125955e8d8e6644c67d5e47">processHeaders</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00143"/>00143 
+<anchor xml:id="__o_p_l_8h_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_o_p_l_1ace92dde13267db78dc93987743cdc2b0">confirmHeadersDisplay</link>();
+<anchor xml:id="__o_p_l_8h_source_1l00149"/>00149 
+<anchor xml:id="__o_p_l_8h_source_1l00150"/>00150 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="__o_p_l_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nDroopQuota;
+<anchor xml:id="__o_p_l_8h_source_1l00156"/>00156 
+<anchor xml:id="__o_p_l_8h_source_1l00161"/>00161 &#32;&#32;&#32;&#32;vector&lt;string&gt;&#32;audits;
+<anchor xml:id="__o_p_l_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;
+<anchor xml:id="__o_p_l_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;vector&lt;Party&gt;&#32;vParties;
+<anchor xml:id="__o_p_l_8h_source_1l00168"/>00168 };
+<anchor xml:id="__o_p_l_8h_source_1l00169"/>00169 
+<anchor xml:id="__o_p_l_8h_source_1l00170"/>00170 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_class_candidate">Candidate</link><link linkend="_class_combinations">Combinations</link>
+<para>Helper class to <link linkend="_class_i_r_v">IRV</link> </para>
+<link linkend="_class_election">Election</link><link linkend="_class_i_r_v">IRV</link><link linkend="_class_o_p_l">OPL</link>
+<para>Represents an <link linkend="_class_o_p_l">OPL</link> (Open <link linkend="_class_party">Party</link> Listing) election </para>
+<link linkend="_class_party">Party</link>
+<para>Represents a <link linkend="_class_party">Party</link> in election </para>
+<link linkend="_class_p_o">PO</link>
+<para>Represents an <link linkend="_class_i_r_v">IRV</link> (Instant Runoff Voting) election </para>
+</section>
